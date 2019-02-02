@@ -1,0 +1,5 @@
+numpy
+keras
+textblob
+spacy
+tf-nightly
