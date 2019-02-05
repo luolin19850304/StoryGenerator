@@ -11,16 +11,15 @@ import numpy as np
 ROOT: str = dirname(abspath(__file__))
 
 CHUNK_REGEX = re.compile(
-    rb"(([.!?]([.!?]{2})?|-{1,2}|[:;, \n\r])|(([A-Z]?[a-z]+|[A-Z][a-z]*)(-[a-z]+)*('[a-z]{,7})?))")
+    rb"(([.!?]([.!?]{2})?|-{1,2}|[:;, \n])|(([A-Z]?[a-z]+|[A-Z][a-z]*)(-[a-z]+)*('[a-z]{,7})?))")
 
 TEXT: Optional[bytes] = None
-NGRAM_PS: Optional[List[Dict[int, float]]] = None
+NGRAM_PS: Optional[Dict[Tuple, Dict[bytes, float]]] = None
 NGRAM_INDEX: Optional[np.ndarray] = None
 NGRAM_INDEX_REV: Optional[Dict[Tuple, int]] = None
 TOKENS: Optional[List[bytes]] = None
 COUNTS: Optional[Counter] = None
 PS: Optional[Dict[bytes, float]] = None
-NGRAMS: List[Optional[List[Tuple]]] = [None for _ in range(15)]
 
 
 def tokenize(txt: bytes) -> List[bytes]:
@@ -43,74 +42,48 @@ def get_counts() -> Counter:
     return COUNTS
 
 
-def get_ngrams(n=2, max_ngrams=10) -> List[Tuple[bytes]]:
-    assert n > 1, f'ngram len must be > 2 but got n = {n}'
-    global NGRAMS
-    if NGRAMS[n - 1] is not None:
-        return NGRAMS[n - 1]
-    NGRAMS = [[] for _ in range(max_ngrams)]
-    tokens = get_tokens()
-    for i in range(len(tokens) - n):
-        NGRAMS[n - 1].append(tuple(tokens[i:i + n]))
-    return NGRAMS[n - 1]
-
-
-def get_indexes() -> Dict[bytes, float]:
+def get_ps() -> Dict[bytes, float]:
     global PS
     if PS is not None:
         return PS
     PS = dict(get_counts())
     no_tokens: int = sum(PS.values())
-    i = 0
     for token in PS:
         PS[token] /= no_tokens
     return PS
 
 
-def get_indexes_ngrams(n=2) -> Tuple[np.ndarray, Dict[Tuple, int], List[Dict[bytes, float]]]:
-    global NGRAM_INDEX, NGRAM_INDEX_REV, NGRAM_PS
+def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
+    global NGRAM_PS
 
     assert n >= 1, f'ngram len must be >= 1 but got n = {n}'
-    if NGRAM_INDEX is not None and NGRAM_INDEX_REV is not None and NGRAM_PS is not None:
-        return NGRAM_INDEX, NGRAM_INDEX_REV, NGRAM_PS
+    if NGRAM_PS is not None:
+        return NGRAM_PS
 
     tokens: List[bytes] = get_tokens()
 
-    index: List[Tuple] = []
-    index_rev: Dict[Tuple, int] = dict()
-    ps: List[Dict[bytes, float]] = []
-    idx = 0
-
-    for i in range(len(tokens) - n):
-        for m in range(1, n + 1):
-            token_group: Tuple = tuple(tokens[i:i + m])
-            if token_group not in index_rev:
-                index.append(token_group)
-                index_rev[token_group] = idx
-                idx += 1
-                ps.append(dict())
+    NGRAM_PS = dict()
 
     for i in range(len(tokens) - n - 1):
         for m in range(1, n + 1):
             words_before: Tuple = tuple(tokens[i:i + m])
-            words_before_idx: int = index_rev[words_before]
             next_word: bytes = tokens[i + m]
-            if next_word in ps[words_before_idx]:
-                ps[words_before_idx][next_word] += 1
+            if words_before not in NGRAM_PS:
+                NGRAM_PS[words_before] = {next_word: 1}
+            elif next_word in NGRAM_PS[words_before]:
+                NGRAM_PS[words_before][next_word] += 1
             else:
-                ps[words_before_idx][next_word] = 1
+                NGRAM_PS[words_before][next_word] = 1
 
-    for words_before_idx in range(len(ps)):
+    for ngram in NGRAM_PS:
         total = 0
-        for count in ps[words_before_idx].values():
+        for count in NGRAM_PS[ngram].values():
             total += count
-        for next_word in ps[words_before_idx]:
-            ps[words_before_idx][next_word] /= total
+        if total > 0:
+            for next_word in NGRAM_PS[ngram]:
+                NGRAM_PS[ngram][next_word] /= total
 
-    NGRAM_INDEX = np.array(index)
-    NGRAM_INDEX_REV = index_rev
-    NGRAM_PS = ps
-    return NGRAM_INDEX, NGRAM_INDEX_REV, NGRAM_PS
+    return NGRAM_PS
 
 
 def root_path(*parts, mkparent=True, mkdir=False, mkfile=False) -> str:
