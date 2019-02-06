@@ -53,7 +53,7 @@ Fudge had talked for more than an hour. At one point, he had refused to say a ce
 "I'm sorry... You think that He-Who-Must-Not-Be-Named is still alive, then?"
 "Well, Dumbledore says he is," said Fudge, as he had fastened his pin-striped cloak under his chin, "but we've never found him. If you ask me, he's not dangerous unless he's got support, so it's Black we ought to be worrying about. You'll put out that warning, then? Excellent. Well, I hope we don't see each other again, Prime Minister! Good night."
 But they had seen each other again. Less than a year later a harassed-looking Fudge had appeared out of thin air in the cabinet room to inform the Prime Minister that there had been a spot of bother at the Kwidditch (or that was what it had sounded like) World Cup and that several Muggles had been "involved," but that the Prime Minister was not to worry, the fact that You-Know-Who's Mark had been seen again meant nothing; Fudge was sure it was an isolated incident, and the Muggle Liaison Office was dealing with all memory modifications as they spoke.
-"Oh, and I almost forgot," Fudge had added. "We're importing three foreign dragons and a sphinx for the Triwizard Tournament, quite routine, but the Department for the Regulation and Control of Magical Creatures tells me that it’s down in the rule book that we have to notify you if we're bringing highly dangerous creatures into the country."
+"Oh, and I almost forgot," Fudge had added. "We're importing three foreign dragons and a sphinx for the Triwizard Tournament, quite routine, but the Department for the Regulation and Control of Magical Creatures tells me that it's down in the rule book that we have to notify you if we're bringing highly dangerous creatures into the country."
 "I--what--dragons?" spluttered the Prime Minister.
 "Yes, three," said Fudge. "And a sphinx. Well, good day to you."
 The Prime Minister had hoped beyond hope that dragons and sphinxes would be the worst of it, but no. Less than two years later, Fudge had erupted out of the fire yet again, this time with the news that there had been a mass breakout from Azkaban.
@@ -426,15 +426,15 @@ It looked as though Uncle Vernon was bursting with any number of unpleasant reto
 "You see," Dumbledore said, turning back to Harry and again speaking as though Uncle Vernon had not uttered, "if you have indeed inherited the house, you have also inherited --"
 He flicked his wand for a fifth time. There was a loud crack, and a house-elf appeared, with a snout for a nose, giant bat's ears, and enormous bloodshot eyes, crouching on the Dursleys' shag carpet and covered in grimy rags. Aunt Petunia let out a hair-raising shriek; nothing this filthy had entered her house in living memory. Dudley drew his large, bare, pink feet off the floor and sat with them raised almost above his head, as though he thought the creature might run up his pajama trousers, and Uncle Vernon bellowed, "What the hell is that?"
 "Kreacher," finished Dumbledore.
-"Kreacher won’t, Kreacher won't, Kreacher won’t!" croaked the house-elf, quite as loudly as Uncle Vernon, stamping his long, gnarled feet and pulling lii.s ears. "Kreacher belongs to Miss Bellatrix, oh yes, Kreacher belongs to the Blacks, Kreacher wants his new mistress, Kreacher won't go to the Potter brat, Kreacher won't, won't, won’t --"
+"Kreacher won't, Kreacher won't, Kreacher won't!" croaked the house-elf, quite as loudly as Uncle Vernon, stamping his long, gnarled feet and pulling lii.s ears. "Kreacher belongs to Miss Bellatrix, oh yes, Kreacher belongs to the Blacks, Kreacher wants his new mistress, Kreacher won't go to the Potter brat, Kreacher won't, won't, won't --"
 "As you can see, Harry," said Dumbledore loudly, over Kreacher's continued croaks of "wont, won't, won't," "Kreacher is showing a certain reluctance to pass into your ownership."
 "I don't care," said Harry again, looking with disgust at the writhing, stamping house-elf. "I don't want him."
-"Won't, won’t, won't, won't --"
+"Won't, won't, won't, won't --"
 "You would prefer him to pass into the ownership of Bellatrix Lestrange? Bearing in mind that he has lived at the headquarters of the Order of the Phoenix for the past year?"
-"Won't, won't, won’t, won't --"
+"Won't, won't, won't, won't --"
 Harry stared at Dumbledore. He knew that Kreacher could not be permitted to go and live with Bellatrix Lestrange, but the idea of owning him, of having responsibility for the creature that had betrayed Sirius, was repugnant.
 "Give him an order," said Dumbledore. "If he has passed into your ownership, he will have to obey. If not, then we shall have to think of some other means of keeping him from his rightful mistress."
-"Won't, won't, won’t, WON'T!"
+"Won't, won't, won't, WON'T!"
 Kreacher's voice had risen to a scream. Harry could think of nothing to say, except, "Kreacher, shut up!"
 It looked for a moment as though Kreacher was going to choke. He grabbed his throat, his mouth still working furiously, his eyes bulging. After a few seconds of frantic gulping, he threw himself face forward onto the carpet (Aunt Petunia whimpered) and beat the floor with his hands and feet, giving himself over to a violent, but entirely silent, tantrum.
 "Well, that simplifies matters," said Dumbledore cheerfully. "It means that Sirius knew what he was doing. You are the rightful owner of number twelve, Grimmauld Place and of Kreacher."
@@ -483,9 +483,9 @@ He came to an abrupt halt at the end of Privet Drive.
 "You have not, of course, passed your Apparition Test," he said.
 "No," said Harry. "I thought you had to be seventeen?"
 "You do," said Dumbledore. "So you will need to hold on to my arm very tightly. My left, if you don't mind -- as you have noticed, my wand arm is a little fragile at the moment."
-Harry gripped Dumbledore’s proffered forearm.
+Harry gripped Dumbledore's proffered forearm.
 "Very good," said Dumbledore. "Well, here we go."
-Harry felt Dumbledore’s arm twist away from him and redoubled his grip; the next thing he knew, everything went black; he was being pressed very hard from all directions; he could not breathe, there were iron bands tightening around his chest; his eyeballs were being forced back into his head; his eardrums were being pushed deeper into his skull and then ---
+Harry felt Dumbledore's arm twist away from him and redoubled his grip; the next thing he knew, everything went black; he was being pressed very hard from all directions; he could not breathe, there were iron bands tightening around his chest; his eyeballs were being forced back into his head; his eardrums were being pushed deeper into his skull and then ---
 He gulped great lungfulls of cold night air and opened his streaming eyes. He felt as though he had just been forced through a very tight rubber tube. It was a few seconds before he realized that Privet Drive had vanished. He and Dumbledore were now standing in what appeared to be a deserted village square, in the center of which stood an old war memorial and a few benches. His comprehension catching up with his senses, Harry realized that he had just Apparated for the first time in his life.
 "Are you all right?" asked Dumbledore, looking down at him solicitously. "The sensation does take some getting used to."
 "I'm fine," said Harry, rubbing his ears, which felt as though they had left Privet Drive rather reluctantly. "But I think I might prefer brooms..."
@@ -937,7 +937,7 @@ She jumped up and started walking round and round the kitchen, twisting her fing
 "Mrs. Weasley, you're quite, quite sure no owls have arrived this morning?"
 "Yes, dear, I'd have noticed," said Mrs. Weasley patiently. "But it's barely nine, there's still plenty of time..."
 "I know I messed up Ancient Runes," muttered Hermione feverishly, "I definitely made at least one serious mistranslation. And the Defense Against the Dark Arts practical was no good at all. I thought Transfiguration went all right at the time, but looking back..."
-"Hermione, will you shut up, you're not the only one who's nervous!" barked Ron. "And when you've got your eleven 'Outstanding OWLs...’"
+"Hermione, will you shut up, you're not the only one who's nervous!" barked Ron. "And when you've got your eleven 'Outstanding OWLs...'"
 "Don't, don't, don't!" said Hermione, flapping her hands hysterically. "I know I've failed everything!"
 "What happens if we fail?" Harry asked the room at large, but it was again Hermione who answered.
 "We discuss our options with our Head of House, I asked Professor McGonagall at the end of last term."
@@ -989,7 +989,7 @@ Harry looked back down at his results. They were as good as he could have hoped 
 It was odd, really, seeing that it had been a Death Eater in disguise who had first told Harry he would make a good Auror, but somehow the idea had taken hold of him, and he couldn't really think of anything else he would like to be. Moreover, it had seemed the right destiny for him since he had heard the prophecy a few weeks ago... Neither can live while the other survives...Wouldn't he be living up to the prophecy, and giving himself the best chance of survival, if he joined those highly trained wizards whose job it was to find and kill Voldemort?
 Chapter 6: Draco's Detour
 Harry remained within the confines of the Burrow's garden over the next few weeks. He spent most of his days playing two-a-side Quidditch in the Weasleys' orchard (he and Hermione against Ron and Ginny; Hermione was dreadful and Ginny good, so they were reasonably well matched) and his evenings eating triple helpings of everything Mrs. Weasley put in front of him.
-It would have been a happy, peaceful holiday had it not been for the stones of disappearances, odd accidents, even of deaths now appearing almost daily in the Prophet. Sometimes Bill and Mr. Weasley brought home news before it even reached the paper. To Mrs. Weasley’s displeasure, Harry's sixteenth birthday celebrations were marred by grisly tidings brought to the party by Remus Lupin, who was looking gaunt and grim, his brown hair streaked liberally with gray, his clothes more ragged and patched than ever.
+It would have been a happy, peaceful holiday had it not been for the stones of disappearances, odd accidents, even of deaths now appearing almost daily in the Prophet. Sometimes Bill and Mr. Weasley brought home news before it even reached the paper. To Mrs. Weasley's displeasure, Harry's sixteenth birthday celebrations were marred by grisly tidings brought to the party by Remus Lupin, who was looking gaunt and grim, his brown hair streaked liberally with gray, his clothes more ragged and patched than ever.
 "There have been another couple of dementor attacks," he announced, as Mrs. Weasley passed him a large slice of birthday cake. "And they've found Igor Karkaroff's body in a shack up north. The Dark Mark had been set over it... well, frankly, I'm surprised he stayed alive for even a year after deserting the Death Eaters; Sirius's brother, Regulus, only managed a few days as far as I can remember."
 "Yes, well," said Mrs. Weasley, frowning, "perhaps we should talk about something diff..."
 "Did you hear about Florean Fortescue, Remus?" asked Bill, who was being plied with wine by Fleur. "The man who ran..."
@@ -1092,7 +1092,7 @@ THE CONSTIPATION SENSATION
 THAT'S GRIPPING THE NATION!
 Harry started to laugh. He heard a weak sort of moan beside him and looked around to see Mrs. Weasley gazing, dumbfounded, at the poster. Her lips moved silently, mouthing the name "U-No-Poo."
 "They'll be murdered in their beds!" she whispered.
-"No they won’t!" said Ron, who, like Harry, was laughing. "This is brilliant!"
+"No they won't!" said Ron, who, like Harry, was laughing. "This is brilliant!"
 And he and Harry led the way into the shop. It was packed with customers; Harry could not get near the shelves. He stared around, looking up at the boxes piled to the ceiling: Here were the Skiving Snackboxes that the twins had perfected during their last, unfinished year at Hogwarts; Harry noticed that the Nosebleed Nougat was most popular, with only one battered box left on the shelf. There were bins full of trick wands, the cheapest merely turning into rubber chickens or pairs of briefs when waved, the most expensive beating the unwary user around the head and neck, and boxes of quills, which came in Self-Inking, Spell-Checking, and Smart-Answer varieties. A space cleared in the crowd, and Harry pushed his way toward the counter, where a gaggle of delighted ten-year-olds was watching a tiny little wooden man slowly ascending the steps to a real set of gallows, both perched on a box that read: Reusable hangman - spell it or he'll swing!
 "Patented Daydream Charms"
 Hermione had managed to squeeze through to a large display near the counter and was reading the information on the back of a box bearing a highly colored picture of a handsome youth and a swooning girl who were standing on the deck of a pirate ship.
@@ -1233,7 +1233,7 @@ Harry spent a lot of the last week of the holidays pondering the meaning of Malf
 "Maybe he's broken his Hand of Glory" said Ron vaguely, as he attempted to straighten his broomstick's bent tail twigs. "Remember that shriveled-up arm Malfoy had?"
 "But what about when he said, 'Don't forget to keep that one safe'?" asked Harry for the umpteenth time. "That sounded to me like Borgin's got another one of the broken objects, and Malfoy wants both."
 "You reckon?" said Ron, now trying to scrape some dirt off his broom handle.
-"Yeah, I do," said Harry. When neither Ron nor Hermione answered, he said, "Malfoy's father's in Azkaban. Don't you think Malfoy’d like revenge?"
+"Yeah, I do," said Harry. When neither Ron nor Hermione answered, he said, "Malfoy's father's in Azkaban. Don't you think Malfoy'd like revenge?"
 Ron looked up, blinking.
 "Malfoy, revenge? What can he do about it?"
 "That's my point, I don't know!" said Harry, frustrated. "But he's up to something and I think we should take it seriously. His father's a Death Eater and ..."
@@ -1341,7 +1341,7 @@ Quibbler.
 Harry laughed uncomfortably and changed the subject to OWL. results as soon as he could. While Neville recited his grades and wondered aloud
 whether he would be allowed to take a Transfiguration NEWT, with only an "Acceptable," Harry watched him without really listening.
 Neville's childhood had been blighted by Voldemort just as much as Harry's had, but Neville had no idea how close he had come to having Harry's destiny. The prophecy could have referred to either of them, yet, for his own inscrutable reasons, Voldemort had chosen to believe that Harry was the one meant.
-Had Voldemort chosen Neville, it would be Neville sitting opposite Harry bearing the lightning-shaped scar and the weight of the prophecy... Or would it? Would Neville’s mother have died to save him, as Lily had died for Harry? Surely she would... But what if she had been unable to stand between her son and Voldemort? Would there then have been no "Chosen One" at all? An empty seat where Neville now sat and a scarless Harry who would have been kissed good-bye by his own mother, not Ron's?
+Had Voldemort chosen Neville, it would be Neville sitting opposite Harry bearing the lightning-shaped scar and the weight of the prophecy... Or would it? Would Neville's mother have died to save him, as Lily had died for Harry? Surely she would... But what if she had been unable to stand between her son and Voldemort? Would there then have been no "Chosen One" at all? An empty seat where Neville now sat and a scarless Harry who would have been kissed good-bye by his own mother, not Ron's?
 "You all right, Harry? You look funny," said Neville.
 Harry started. "Sorry ... I ..."
 "Wrackspurt got you?" asked Luna sympathetically, peering at Harry through her enormous colored spectacles.
@@ -1494,21 +1494,21 @@ The cold night air was soothing on his throbbing nose. Tonks was looking at him;
 "No problem," said Tonks, without smiling. From what Harry could see in the darkness, she was as mousy-haired and miserable-lookinng as she had been when he had met her at the Burrow. "I can fix your nose if you stand still."
 Harry did not think much of this idea; he had been intending to visit Madam Pomfrey, the matron, in whom he had a little more confidence when it came to Healing Spells, but it seemed rude to say this, so he stayed stock-still and closed his eyes,
 "Episkey" said Tonks.
-Harry’s nose felt very hot, and then very cold. He raised a hand and felt gingerly. It seemed to be mended.
+Harry's nose felt very hot, and then very cold. He raised a hand and felt gingerly. It seemed to be mended.
 "Thanks a lot!"
 "You'd better put that cloak back on, and we can walk up to the school," said Tonks, still unsmiling. As Harry swung the cloak back over himself, she waved her wand; an immense silvery four-legged creature erupted from it and streaked off into the darkness.
 ''Was that a Patronus?" asked Harry, who had seen Dumbledore send messages like this.
 "Yes, I'm sending word to the castle that I've got you or they'll worry. Come on, we'd better not dawdle."
 They set off toward the lane that led to the school.
 "How did you find me?"
-"I noticed you hadn't left the train and I knew you had that cloak. I thought you might be hiding for some reason. When I saw the blinds were drawn down on that compartment I thought I’d check."
+"I noticed you hadn't left the train and I knew you had that cloak. I thought you might be hiding for some reason. When I saw the blinds were drawn down on that compartment I thought I'd check."
 "But what are you doing here, anyway?" Harry asked.
 "I'm stationed in Hogsmeade now, to give the school extra protection," said Tonks.
 "Is it just you who's stationed up here, or -- ?"
 "No, Proudfoot, Savage, and Dawlish are here too."
 "Dawlish, that Auror Dumbledore attacked last year?"
 "That's right."
-They trudged up the dark, deserted lane, following the freshly made carriage tracks. Harry looked sideways at Tonks under his cloak. Last year she had been inquisitive (to the point of being a little annoying at times), she had laughed easily, she had made jokes. Now she seemed older and much more serious and purposeful. Was this all the effect of what had happened at the Ministry? He reflected uncomfortably that Hermione would have suggested he say something consoling about Sirius to her, that it hadn't been her fault at all, but he couldn't bring himself to do it. He was far from blaming her for Sirius's death; it was no more her fault than anyone else’s (and much less than his), but he did not like talking about Sirius if he could avoid it. And so they tramped on through the cold night in silence, Tonks's long cloak whispering on the ground behind them.
+They trudged up the dark, deserted lane, following the freshly made carriage tracks. Harry looked sideways at Tonks under his cloak. Last year she had been inquisitive (to the point of being a little annoying at times), she had laughed easily, she had made jokes. Now she seemed older and much more serious and purposeful. Was this all the effect of what had happened at the Ministry? He reflected uncomfortably that Hermione would have suggested he say something consoling about Sirius to her, that it hadn't been her fault at all, but he couldn't bring himself to do it. He was far from blaming her for Sirius's death; it was no more her fault than anyone else's (and much less than his), but he did not like talking about Sirius if he could avoid it. And so they tramped on through the cold night in silence, Tonks's long cloak whispering on the ground behind them.
 Having always traveled there by carriage, Harry had never before appreciated just how far Hogwarts was from Hogsmeade Station. With great relief he finally saw the tall pillars on either side of the gates, each topped with a winged boar. He was cold, he was hungry and he was quite keen to leave this new, gloomy Tonks behind. But when he put out a hand to push open the gates, he found them chained shut.
 "Alohomora!" he said confidently, pointing his wand at the padlock, but nothing happened.
 "That won't work on these," said Tonks. "Dumbledore bewitched them himself."
@@ -1529,7 +1529,7 @@ As Snape swung the lantern about, Harry saw, fleetingly, a look of shock and ang
 "Good night," Harry called to her over his shoulder, as he began the walk up to the school with Snape. "Thanks for ... everything,"
 "See you, Harry."
 Snape did not speak for a minute or so. Harry felt as though his body was generating waves of hatred so powerful that it seemed incredible that Snape could not feel them burning him. He had loathed Snape from their first encounter, but Snape had placed himself forever and irrevocably beyond the possibility of Harry's forgiveness by his attitude toward Sirius. Whatever Dumbledore said, Harry had had time to think over the summer, and had concluded that Snape's snide remarks to Sirius about remaining safely hidden while the rest of the Order of the Phoenix were off fighting Voldemort had probably been a powerful factor in Sirius rushing off to the Ministry the night that he had died. Harry clung to this notion, because it enabled him to blame Snape, which felt satisfying, and also because he knew that if anyone was not sorry that Sirius was dead, it was the man now striding next to him in the darkness.
-"Fifty points from Gryffindor for lateness, I think," said Snape. "And, let me see, another twenty for your Muggle attire. You know, I don’t believe any House has ever been in negative figures this early in the term: We haven't even started pudding. You might have set a record, Potter."
+"Fifty points from Gryffindor for lateness, I think," said Snape. "And, let me see, another twenty for your Muggle attire. You know, I don't believe any House has ever been in negative figures this early in the term: We haven't even started pudding. You might have set a record, Potter."
 The fury and hatred bubbling inside Harry seemed to blaze white-hot, but he would rather have been immobilized all the way
 back to London than tell Snape why he was late.
 "I suppose you wanted to make an entrance, did you?" Snape continued. "And with no flying car available you decided that bursting into the Great Hall halfway through the feast ought to create a dramatic effect."
@@ -1589,10 +1589,10 @@ Snape, who was sitting on Dumbledore's right, did not stand up his mention of hi
 "That job's jinxed. No ones lasted more than a year... Quirrell actually died doing it... Personally, I'm going to keep my fingers crossed for another death..."
 "Harry!" said Hermione, shocked and reproachful.
 "He might just go back to teaching Potions at the end of the year," said Ron reasonably. "That Slughorn bloke might not want to stay long-term. Moody didn't."
-"Dumbledore cleared his throat. Harry, Ron, and Hermione were not the only ones who had been talking; the whole Hall had erupted in a buzz of conversation at the news that Snape had finally achieved his heart’s desire. Seemingly oblivious to the sensational nature of the news he had just imparted, Dumbledore said nothing more about staff appointments, but waited a few seconds to ensure that the silence was absolute before continuing.
+"Dumbledore cleared his throat. Harry, Ron, and Hermione were not the only ones who had been talking; the whole Hall had erupted in a buzz of conversation at the news that Snape had finally achieved his heart's desire. Seemingly oblivious to the sensational nature of the news he had just imparted, Dumbledore said nothing more about staff appointments, but waited a few seconds to ensure that the silence was absolute before continuing.
 "Now, as everybody in this Hall knows, Lord Voldemort and his followers are once more at large and gaining in strength."
 The silence seemed to tauten and strain as Dumbledore spoke. Harry glanced at Malfoy. Malfoy was not looking at Dumbledore, but making his fork hover in midair with his wand, as though he found the headmaster's words unworthy of his attention.
-"I cannot emphasize strongly enough how dangerous the present situation is, and how much care each of us at Hogwarts must take to ensure that we remain safe. The castle’s magical fortifications have been strengthened over the summer, we are protected in new and more powerful ways, but we must still guard scrupulously against carelessness on the part of any student or member of staff. I urge you, therefore, to abide by any security restrictions that you teachers might impose upon you, however irksome you might find them -- in particular, the rule that you are not to be out of after hours. I implore you, should you notice anything strange or suspicious within or outside the castle, to report it to a member of staff immediately. I trust you to conduct yourselves, always, with the utmost regard for your own and others' safety."
+"I cannot emphasize strongly enough how dangerous the present situation is, and how much care each of us at Hogwarts must take to ensure that we remain safe. The castle's magical fortifications have been strengthened over the summer, we are protected in new and more powerful ways, but we must still guard scrupulously against carelessness on the part of any student or member of staff. I urge you, therefore, to abide by any security restrictions that you teachers might impose upon you, however irksome you might find them -- in particular, the rule that you are not to be out of after hours. I implore you, should you notice anything strange or suspicious within or outside the castle, to report it to a member of staff immediately. I trust you to conduct yourselves, always, with the utmost regard for your own and others' safety."
 Dumbledore's blue eyes swept over the students before he smiled once more.
 "But now, your beds await, as warm and comfortable as you could possibly wish, and I know that your top priority is to be well-rested for your lessons tomorrow. Let us therefore say good night. Pip pip!"
 With the usual deafening scraping noise, the benches moved back and the hundreds of students began to file out of the Great Hall toward their dormitories. Harry, who was in no hurry at all to leave with the gawping crowd, nor to get near enough to Malfoy to allow him to retell the story of the nose-stamping, lagged behind, pretending to retie the lace on his trainer, allowing most of Gryffindors to draw ahead of him. Hermione had darted ahead to fulfill her prefect's duty of shepherding the first years, but Ron remained with Harry.
@@ -1752,7 +1752,7 @@ But she turned slightly pink and did not complete the sentence.
 "Granger? Granger? Can you possibly be related to Hector Dagworth-Granger, who founded the Most Extraordinary Society of Potioneers?"
 "No. I don't think so, sir. I'm Muggle-born, you see."
 Harry saw Malfoy lean close to Nott and whisper something; both of them sniggered, but Slughorn showed no dismay; on the contrary, he beamed and looked from Hermione to Harry, who was sitting next to her.
-"Oho! ‘One of my best friends is Muggle-born, and she's the best in our year!' I'm assuming this is the very friend of whom you spoke, Harry?"
+"Oho! 'One of my best friends is Muggle-born, and she's the best in our year!' I'm assuming this is the very friend of whom you spoke, Harry?"
 "Yes, sir," said Harry.
 "Well, well, take twenty well-earned points for Gryffindor, Miss Granger," said Slughorn genially.
 Malfoy looked rather as he had done the time Hermione had punched him in the face. Hermione turned to Harry with a radiant expression and whispered, "Did you really tell him I'm the best in the year? Oh, Harry!"
@@ -1898,8 +1898,8 @@ This time, ready for it, Harry recognized Parseltongue; even while he could unde
 "It's your son I'm here to see, Mr. Gaunt," said Ogden, as he mopped the last of the pus from the front of his coat. "That was Morfin, wasn't it?"
 "Ah, that was Morfin," said the old man indifferently. "Are you pure-blood?" he asked, suddenly aggressive.
 "That's neither here nor there," said Ogden coldly, and Harry felt his respect for Ogden rise. Apparently Gaunt felt rather differently.
-He squinted into Ogden’s face and muttered, in what was clearly supposed to be an offensive tone, "Now I come to think about it, I've seen noses like yours down in the village."
-"I don't doubt it, if your son’s been let loose on them," said Ogden. "Perhaps we could continue this discussion inside?"
+He squinted into Ogden's face and muttered, in what was clearly supposed to be an offensive tone, "Now I come to think about it, I've seen noses like yours down in the village."
+"I don't doubt it, if your son's been let loose on them," said Ogden. "Perhaps we could continue this discussion inside?"
 "Inside?"
 "Yes, Mr. Gaunt. I've already told you. I'm here about Morfin. We sent an owl --"
 "I've no use for owls," said Gaunt. "I don't open letters."
@@ -1925,7 +1925,7 @@ Without looking at anybody or thanking Ogden, Merope picked up the pot and retur
 "Mr. Gaunt," Ogden began again, "as I've said: the reason for my visit --"
 "I heard you the first time!" snapped Gaunt. "And so what? Morfin gave a Muggle a bit of what was coming to him -- what about it, then?"
 "Morfin has broken Wizarding law," said Ogden sternly.
-"'Morfin has broken Wizarding law.'" Gaunt imitated Ogden’s voice, making it pompous and singsong. Morfin cackled again. "He taught a filthy Muggle a lesson, that's illegal now, is it?"
+"'Morfin has broken Wizarding law.'" Gaunt imitated Ogden's voice, making it pompous and singsong. Morfin cackled again. "He taught a filthy Muggle a lesson, that's illegal now, is it?"
 "Yes," said Ogden. "I'm afraid it is."
 He pulled from an inside pocket a small scroll of parchment and unrolled it.
 "What's that, then, his sentence?" said Gaunt, his voice rising angrily.
@@ -2166,7 +2166,7 @@ chain of apothecaries -- and, of course, I hope very much that Miss Granger will
 Slughorn made Hermione a little bow as he finished speaking. It was as though Ron was not present; Slughorn did not so much as look at him.
 "I can't come, Professor," said Harry at once. "I've got a detention with Professor Snape."
 "Oh dear!" said Slughorn, his face falling comically. "Dear, dear, I was counting on you, Harry! Well, now, I'll just have to have a word with Severus and explain the situation. I'm sure I'll be able to persuade him to postpone your detention. Yes, I'll see you both later!" He bustled away out of the Hall.
-"He's got no chance of persuading Snape," said Harry, the moment Slughorn was out of earshot. "This detention’s already been postponed once; Snape did it for Dumbledore, but he won't do it for anyone else."
+"He's got no chance of persuading Snape," said Harry, the moment Slughorn was out of earshot. "This detention's already been postponed once; Snape did it for Dumbledore, but he won't do it for anyone else."
 "Oh, I wish you could come, I don't want to go on my own!" said Hermione anxiously; Harry knew that she was thinking about McLaggen.
 "I doubt you'll be alone, Ginny'll probably be invited," snapped Ron, who did not seem to have taken kindly to being ignored by Slughorn.
 After dinner they made their way back to Gryffindor Tower. The common room was very crowded, as most people had finished dinner by now, but
@@ -2217,7 +2217,7 @@ Harry frowned at her.
 "Well... yeah, it was, but so what?"
 "So you just decided to try out an unknown, handwritten incantation and see what would happen?"
 "Why does it matter if it's handwritten?" said Harry, preferring not to answer the rest of the question.
-"Because it’s probably not Ministry of Magic approved," said Hermione. "And also," she added, as Harry and Ron rolled their eyes, "because I'm starting to think this Prince character was a bit dodgy."
+"Because it's probably not Ministry of Magic approved," said Hermione. "And also," she added, as Harry and Ron rolled their eyes, "because I'm starting to think this Prince character was a bit dodgy."
 Both Harry and Ron shouted her down at once.
 "It was a laugh!" said Ron, upending a ketchup bottle over his sausages. "Just a laugh, Hermione, that's all!"
 "Dangling people upside down by the ankle?" said Hermi-one. "Who puts their time and energy into making up spells like that?"
@@ -2585,7 +2585,7 @@ Harry obeyed, his mind still full of what he had just seen.
 "Time is making fools of us again," said Dumbledore, indicating the dark sky beyond the windows. "But before we part, I want to draw your attention to certain features of the scene we have just witnessed, for they have a great bearing on the matters we shall be discussing in future meetings.
 "Firstly, I hope you noticed Riddle's reaction when I mentioned that another shared his first name, 'Tom'?"
 Harry nodded.
-"There he showed his contempt for anything that tied him to other people, anything that made him ordinary. Even then, he wished to be different, separate, notorious. He shed his name, as you know, within a few short years of that conversation and created the mask of ‘Lord Voldemort' behind which he has been hidden for so long.
+"There he showed his contempt for anything that tied him to other people, anything that made him ordinary. Even then, he wished to be different, separate, notorious. He shed his name, as you know, within a few short years of that conversation and created the mask of 'Lord Voldemort' behind which he has been hidden for so long.
 "I trust that you also noticed that Tom Riddle was already highly self-sufficient, secretive, and, apparently, friendless? He did not want help or companionship on his trip to Diagon Alley. He preferred to operate alone. The adult Voldemort is the same. You will hear many of his Death Eaters claiming that they are in his confidence, that they alone are close to him, even understand him. They are deluded. Lord Voldemort has never had a friend, nor do I believe that he has ever wanted one.
 "And lastly -- I hope you are not too sleepy to pay attention to this, Harry -- the young Tom Riddle liked to collect trophies. You saw the box of stolen articles he had hidden in his room. These were taken from victims of his bullying behavior, souvenirs, if you will, of particularly unpleasant bits of magic. Bear in mind this magpie-like tendency, for this, particularly, will be important later.
 "And now, it really is time for bed."
@@ -2596,7 +2596,7 @@ Dumbledore beamed at him, peering over the top of his halfw moon spectacles.
 "Very astute, Harry, but the mouth organ was only ever a mouth organ."
 And on that enigmatic note he waved to Harry, who understood himself to be dismissed.
 Chapter 14: Felix Felicis
-Harry had Herbology first thing the following morning. He had been unable to tell Ron and Hermione about his lesson with Dumbledore over breakfast for fear of being over-heard, but he filled them in as they walked across the vegetable patch toward the greenhouses. The weekend’s brutal wind had died out at last; the weird mist had returned and it took them a little longer than usual to find the correct greenhouse.
+Harry had Herbology first thing the following morning. He had been unable to tell Ron and Hermione about his lesson with Dumbledore over breakfast for fear of being over-heard, but he filled them in as they walked across the vegetable patch toward the greenhouses. The weekend's brutal wind had died out at last; the weird mist had returned and it took them a little longer than usual to find the correct greenhouse.
 "Wow, scary thought, the boy You-Know-Who," said Ron qui-etly, as they took their places around one of the gnarled Snargaluff stumps that formed this terms project, and began pulling on their protective gloves. "But I still don't get why Dumbledore's showing you all this. I mean, it's really interesting and everything, but what's the point?"
 "Dunno," said Harry, inserting a gum shield. "But he says its all important and it'll help me survive."
 "I think it's fascinating," said Hermione earnestly. "It makes absolute sense to know as much about Voldemort as possible. How else will you find out his weaknesses?"
@@ -2626,7 +2626,7 @@ Harry suddenly wished the pod had flown a little farther, so that he need not ha
 There was a pause while Harry continued to pound the resilient pod with a trowel.
 "No, I wouldn't," said Ron, in a very quiet voice.
 Harry missed the pod, hit the bowl, and shattered it.
-‘"Reparo,"' he said hastily, poking the pieces with his wand, and the bowl sprang back together again. The crash, however, appeared to have awoken Ron and Hermione to Harry's presence. Hermione looked flustered and immediately started fussing about for her copy of "Flesh-Eating Trees of the World" to find out the correct way to juice Snargaluff pods; Ron, on the other hand, looked sheepish but also rather pleased with himself.
+'"Reparo,"' he said hastily, poking the pieces with his wand, and the bowl sprang back together again. The crash, however, appeared to have awoken Ron and Hermione to Harry's presence. Hermione looked flustered and immediately started fussing about for her copy of "Flesh-Eating Trees of the World" to find out the correct way to juice Snargaluff pods; Ron, on the other hand, looked sheepish but also rather pleased with himself.
 "Hand that over, Harry," said Hermione hurriedly. "It says we're supposed to puncture them with something sharp... ."
 Harry passed her the pod in the bowl; he and Ron both snapped their goggles back over their eyes and dived, once more, for the stump. It was not as though he was really surprised, thought Harry, as he wrestled with a thorny vine intent upon throttling him; he had had an inkling that this might happen sooner or later. But he was not sure how he felt about it.... He and
 Cho were now too em-barrassed to look at each other, let alone talk to each other; what if Ron and Hermione started going out together, then split up? Could their friendship survive it? Harry remembered the few weeks when they had not been talking to each other in the third year; he had not enjoyed trying to bridge the distance between them. And then, what if they didn't split up? What if they became like Bill and Fleur, and it became excruciatingly embarrassing to be in their presence, so that he was shut out for good?
@@ -2637,11 +2637,11 @@ Katie Bell was still in St. Mungo's Hospital with no prospect of leaving, which 
 against Slytherin was loom-ing, and he finally had to accept that she would not be back in time to play.
 Harry did not think he could stand another full-House tryout. With a sinking feeling that had little to do with Quidditch, he cor-nered Dean Thomas after Transfiguration one day. Most of the class had already left, although several twittering yellow birds were still zooming around the room, all of Hermione's creation; nobody else had succeeded in conjuring so much as a feather from thin air.
 "Are you still interested in playing Chaser?"
-"Wha -- ? Yeah, of course!" said Dean excitedly. Over Dean’s shoulder, Harry saw Seamus Finnegan slamming his books into his bag, looking sour. One of the reasons why Harry would have pre-ferred not to have to ask Dean to play was that he knew Seamus would not like it. On the other hand, he had to do what was best for the team, and Dean had outflown Seamus at the tryouts.
+"Wha -- ? Yeah, of course!" said Dean excitedly. Over Dean's shoulder, Harry saw Seamus Finnegan slamming his books into his bag, looking sour. One of the reasons why Harry would have pre-ferred not to have to ask Dean to play was that he knew Seamus would not like it. On the other hand, he had to do what was best for the team, and Dean had outflown Seamus at the tryouts.
 "Well then, you're in," said Harry. "There's a practice tonight, seven o'clock."
 "Right," said Dean. "Cheers, Harry! Blimey, I can't wait to tell Ginny!"
 He sprinted out of the room, leaving Harry and Seamus alone together, an uncomfortable moment made no easier when a bird dropping landed on Seamus's head as one of Hermione's canaries whizzed over them.
-Seamus was not the only person disgruntled by the choice of Katie’s substitute. There was much muttering in the common room about the fact that Harry had now chosen two of his class-mates for the team. As Harry had endured much worse mutterings than this in his school career, he was not particularly bothered, but all the same, the pressure was increasing to provide a win in the upcoming match against Slytherin. If Gryffindor won, Harry knew that the whole House would forget that they had criticized him and swear that they had always known it was a great team. If they lost... well, Harry thought wryly, he had still endured worse mutterings. . . .
+Seamus was not the only person disgruntled by the choice of Katie's substitute. There was much muttering in the common room about the fact that Harry had now chosen two of his class-mates for the team. As Harry had endured much worse mutterings than this in his school career, he was not particularly bothered, but all the same, the pressure was increasing to provide a win in the upcoming match against Slytherin. If Gryffindor won, Harry knew that the whole House would forget that they had criticized him and swear that they had always known it was a great team. If they lost... well, Harry thought wryly, he had still endured worse mutterings. . . .
 Harry had no reason to regret his choice once he saw Dean fly that evening; he worked well with Ginny and Demelza. The Beaters, Peakes and Coote, were getting better all the time. The only problem was Ron.
 Harry had known all along that Ron was an inconsistent player who suffered from nerves and a lack of confidence, and unfortu-nately, the looming prospect of the opening game of the season seemed to have brought out all his old insecurities. After letting in half a dozen goals, most of them scored by Ginny, his technique became wilder and wilder, until he finally punched an oncoming Demelza Robins in the mouth.
 "It was an accident, I'm sorry, Demelza, really sorry!" Ron shouted after her as she zigzagged back to the ground, dripping blood everywhere. "I just --"
@@ -2676,7 +2676,7 @@ A streak of orange light flew under Harrys left arm and missed Ginny by inches; 
 And with that, she stormed away. Harry quickly let go of Ron; the look on his face was murderous. They both stood there, breath-ing heavily, until Mrs. Norris, Rich's cat, appeared around the cor-ner, which broke the tension.
 "C'mon," said Harry, as the sound of Filch's shuffling feet reached their ears.
 They hurried up the stairs and along a seventh-floor corridor. "Oi, out of the way!" Ron barked at a small girl who jumped in fright and dropped a bottle of toadspawn.
-Harry hardly noticed the sound of shattering glass; he felt dis-oriented, dizzy; being struck by a lightning bolt must be something like this. It's just because she's Ron’s sister, he told himself. You just didn't like seeing her kissing Dean because she's Ron's sister... .
+Harry hardly noticed the sound of shattering glass; he felt dis-oriented, dizzy; being struck by a lightning bolt must be something like this. It's just because she's Ron's sister, he told himself. You just didn't like seeing her kissing Dean because she's Ron's sister... .
 But unbidden into his mind came an image of that same de-serted corridor with himself kissing Ginny instead... . The mon-ster in his chest purred . . . but then he saw Ron ripping open the tapestry curtain and drawing his wand on Harry, shouting things like "betrayal of trust" . . . "supposed to be my friend" . . .
 "D'you think Hermione did snog Krum?" Ron asked abruptly, as they approached the Fat Lady. Harry gave a guilty start and wrenched his imagination away from a corridor in which no Ron intruded, in which he and Ginny were quite alone -- "What?" he said confusedly. "Oh ... er ..." The honest answer was "yes," but he did not want to give it. However, Ron seemed to gather the worst from the look on Harry's face.
 "Dilligrout," he said darkly to the Fat Lady, and they climbed through the portrait hole into the common room.
@@ -2684,10 +2684,10 @@ Neither of them mentioned Ginny or Hermione again; indeed, they barely spoke to 
 Harry lay awake for a long time, looking up at the canopy of his four-poster and trying to convince himself that his feelings for Ginny were entirely elder-brotherly. They had lived, had they not, like brother and sister all summer, playing Quidditch, teasing Ron, and having a laugh about Bill and Phlegm? He had known Ginny for years now.... It was natural that he should feel protective . . . natural that he should want to look out for her . . . want to rip Dean limb from limb for kissing her... No ... he would have to control that particular brotherly feeling. . . .
 Ron gave a great grunting snore.
 She's Ron's sister, Harry told himself firmly. Ron's sister. She's out-of-bounds. He would not risk his friendship with Ron for anything. He punched his pillow into a more comfortable shape and waited for sleep to come, trying his utmost not to allow his thoughts to stray anywhere near Ginny.
-Harry awoke next morning feeling slightly dazed and confused by a series of dreams in which Ron had chased him with a Beater’s bat, but by midday he would have happily exchanged the dream Ron for the real one, who was not only cold-shouldering Ginny and Dean, but also treating a hurt and bewildered Hermione with an icy, sneering indifference. What was more, Ron seemed to have become, overnight, as touchy and ready to lash out as the average Blast-Ended Skrewt. Harry spent the day attempting to keep the peace between Ron and Hermione with no success; finally, Hermione departed for bed in high dudgeon, and Ron stalked off to the boys' dormitory after swearing angrily at several frightened first years for looking at him.
-To Harry’s dismay, Ron's new aggression did not wear off over the next few days. Worse still, it coincided with an even deeper dip in his Keeping skills, which made him still more aggressive, so that during the final Quidditch practice before Saturdays match, he failed to save every single goal the Chasers aimed at him, but bellowed at everybody so much that he reduced Demelza Robins to tears.
+Harry awoke next morning feeling slightly dazed and confused by a series of dreams in which Ron had chased him with a Beater's bat, but by midday he would have happily exchanged the dream Ron for the real one, who was not only cold-shouldering Ginny and Dean, but also treating a hurt and bewildered Hermione with an icy, sneering indifference. What was more, Ron seemed to have become, overnight, as touchy and ready to lash out as the average Blast-Ended Skrewt. Harry spent the day attempting to keep the peace between Ron and Hermione with no success; finally, Hermione departed for bed in high dudgeon, and Ron stalked off to the boys' dormitory after swearing angrily at several frightened first years for looking at him.
+To Harry's dismay, Ron's new aggression did not wear off over the next few days. Worse still, it coincided with an even deeper dip in his Keeping skills, which made him still more aggressive, so that during the final Quidditch practice before Saturdays match, he failed to save every single goal the Chasers aimed at him, but bellowed at everybody so much that he reduced Demelza Robins to tears.
 "You shut up and leave her alone!" shouted Peakes, who was about two-thirds Ron's height, though admittedly carrying a heavy bat.
-"ENOUGH!" bellowed Harry, who had seen Ginny glowering in Ron’s direction and, remembering her reputation as an accom-plished caster of the Bat-Bogey Hex, soared over to intervene be-fore things got out of hand. "Peakes, go and pack up the Bludgers. Demelza, pull yourself together, you played really well today, Ron ..." he waited until the rest of the team were out of earshot before saying it, "you're my best mate, but carry on treating the rest of them like this and I'm going to kick you off the team."
+"ENOUGH!" bellowed Harry, who had seen Ginny glowering in Ron's direction and, remembering her reputation as an accom-plished caster of the Bat-Bogey Hex, soared over to intervene be-fore things got out of hand. "Peakes, go and pack up the Bludgers. Demelza, pull yourself together, you played really well today, Ron ..." he waited until the rest of the team were out of earshot before saying it, "you're my best mate, but carry on treating the rest of them like this and I'm going to kick you off the team."
 He really thought for a moment that Ron might hit him, but then something much worse happened: Ron seemed to sag on his broom. all the fight went out of him and he said, "I resign. I'm pathetic."
 "You're not pathetic and you're not resigning!" said Harry fiercely, seizing Ron by the front of his robes. "You can save any-thing when you're on form, it's a mental problem you've got!" "You calling me mental?" "Yeah, maybe I am!"
 They glared at each other for a moment, then Ron shook his head wearily. "I know you haven't got any time to find another Keeper, so I'll play tomorrow, but if we lose, and we will, I'm tak-ing myself off the team."
@@ -2763,7 +2763,7 @@ Ron and Harry were the last two in the changing room. They were just about to le
 "I didn't put it in!" said Harry, grinning broadly. He slipped his hand inside his jacket pocket and drew out the tiny bottle that Hermione had seen in his hand that morning. It was full of golden potion and the cork was still tightly sealed with wax. "I wanted Ron to think I'd done it, so I faked it when I knew you were look-ing." He looked at Ron. "You saved everything because you felt lucky. You did it all yourself."
 He pocketed the potion again.
 "There really wasn't anything in my pumpkin juice?" Ron said, astounded. "But the weather's good... and Vaisey couldn't play. ... I honestly haven't been given lucky potion?" ]
-Harry shook his head. Ron gaped at him for a moment, then rounded on Hermione, imitating her voice. "You added Felix Felicis to Ron’s juice this morning, that's why he saved everything! See! I can save goals without help, Hermione!"
+Harry shook his head. Ron gaped at him for a moment, then rounded on Hermione, imitating her voice. "You added Felix Felicis to Ron's juice this morning, that's why he saved everything! See! I can save goals without help, Hermione!"
 "I never said you couldn't -- Ron, you thought you'd been given it too!"
 But Ron had already strode past her out of the door with his broomstick over his shoulder.
 "Er," said Harry into the sudden silence; he had not expected his plan to backfire like this, "shall... shall we go up to the party, then?"
@@ -3029,8 +3029,8 @@ too!"
 "Gits," said Ron darkly, watching Fred and George setting off across the snowy yard. "Would've only taken them ten seconds and then we could've gone too."
 "I couldn't," said Harry. "I promised Dumbledore I wouldn't wander off while I'm staying here."
 "Oh yeah," said Ron. He peeled a few more sprouts and then said, "Are you going to tell Dumbledore what you heard Snape and Malfoy saying to each other?"
-"Yep," said Harry. "I'm going to tell anyone who can put a stop to it, and Dumbledore’s top of the list. I might have another word with your dad too."
-"Pity you didn't hear what Malfoy’s actually doing, though." "I couldn't have done, could I? That was the whole point, he was refusing to tell Snape."
+"Yep," said Harry. "I'm going to tell anyone who can put a stop to it, and Dumbledore's top of the list. I might have another word with your dad too."
+"Pity you didn't hear what Malfoy's actually doing, though." "I couldn't have done, could I? That was the whole point, he was refusing to tell Snape."
 There was silence for a moment or two, then Ron said, " 'Course, you know what they'll all say? Dad and Dumbledore and all of them? They'll say Snape isn't really trying to help Malfoy, he was just trying to find out what Malfoy's up to."
 "They didn't hear him," said Harry flatly. "No one's that good an actor, not even Snape."
 "Yeah ... I'm just saying, though/' said Ron.
@@ -3065,9 +3065,9 @@ Malfoy and Snape, As Harry spoke, he saw Lupin's head turn a lit-tle toward him,
 Oh, my poor heart, where has it gone? It's left me for a spell...
 "Has it occurred to you, Harry," said Mr. Weasley, "that Snape was simply pretending -- ?"
 "Pretending to offer help, so that he could find out what Malfoy's up to?" said Harry quickly. "Yeah, I thought you'd say that. But how do we know?"
-"It isn't our business to know," said Lupin unexpectedly. He had turned his back on the fire now and faced Harry across Mr. Weasley. "It's Dumbledore’s business. Dumbledore trusts Severus, and that ought to be good enough for all of us."
+"It isn't our business to know," said Lupin unexpectedly. He had turned his back on the fire now and faced Harry across Mr. Weasley. "It's Dumbledore's business. Dumbledore trusts Severus, and that ought to be good enough for all of us."
 "But," said Harry, "just say -- just say Dumbledores wrong about Snape --"
-"People have said it, many times. It comes down to whether or not you trust Dumbledore’s judgment. I do; therefore, I trust Severus."
+"People have said it, many times. It comes down to whether or not you trust Dumbledore's judgment. I do; therefore, I trust Severus."
 "But Dumbledore can make mistakes," argued Harry. "He says it himself. And you" -- he looked Lupin straight in the eye -- "do you honestly like Snape?"
 "I neither like nor dislike Severus," said Lupin. "No, Harry, I am speaking the truth," he added, as Harry pulled a skeptical expres-sion. "We shall never be bosom friends, perhaps; after all that hap-pened between James and Sirius and Severus, there is too much bitterness there. But I do not forget that during the year I taught at Hogwarts, Severus made the Wolfsbane Potion for me every month, made it perfectly, so that I did not have to suffer as I usu-ally do at the full moon."
 "But he 'accidentally' let it slip that you're a werewolf, so you had to leave!" said Harry angrily.
@@ -3123,7 +3123,7 @@ Harry looked more closely and let out a shout of laughter, Dan
 gling from the chain in large gold letters were the words:
 "My sweetheart"
 "Nice," he said. "Classy. You should definitely wear it in front ol Fred and George."
-"If you tell them," said Ron, shoving the necklace out of sight under his pillow, "I -- I -- I’ll --"
+"If you tell them," said Ron, shoving the necklace out of sight under his pillow, "I -- I -- I'll --"
 "Stutter at me?" said Harry, grinning. "Come on, would I?"
 "How could she think I'd like something like that, though?" Ron demanded of thin air, looking rather shocked.
 "Well, think back," said Harry. "Have you ever let it slip that you'd like to go out in public with the words 'My Sweetheart' round your neck?"
@@ -3217,9 +3217,9 @@ They stood in silence as icy as the ground beneath their feet. The gnome had fin
 "And you wouldn't tell me if you knew," said Scrimgeour, "would you?"
 "No, 1 wouldn't," said Harry.
 "Well, then, I shall have to see whether I can't find out by other means."
-"You can try," said Harry indifferently. "But you seem cleverer than Fudge, so I'd have thought you'd have learned from his mis-takes. He tried interfering at Hogwarts. You might have noticed he's not Minister anymore, but Dumbledore’s still headmaster. I'd leave Dumbledore alone, if I were you."
+"You can try," said Harry indifferently. "But you seem cleverer than Fudge, so I'd have thought you'd have learned from his mis-takes. He tried interfering at Hogwarts. You might have noticed he's not Minister anymore, but Dumbledore's still headmaster. I'd leave Dumbledore alone, if I were you."
 There was a long pause.
-"Well, it is clear to me that he has done a very good job on you," said Scrimgeour, his eyes cold and hard behind his wire-rimmed glasses, "Dumbledore’s man through and through, aren't you, Potter?"
+"Well, it is clear to me that he has done a very good job on you," said Scrimgeour, his eyes cold and hard behind his wire-rimmed glasses, "Dumbledore's man through and through, aren't you, Potter?"
 "Yeah, I am," said Harry. "Glad we straightened that out."
 And turning his back on the Minister of Magic, he strode back toward the house.
 Chapter 17: A Sluggish Memory
@@ -3236,7 +3236,7 @@ Harry stepped into the emerald fire and shouted "Hogwarts!" He had one last flee
 Harry straightened his glasses and flattened his hair as Ron came spinning into view. When Ginny had arrived, all three of them trooped out of McGonagall's office and off toward Gryffindor Tower. Harry glanced out of the corridor windows as they passed; the sun was already sinking over grounds carpeted in deeper snow than had lain over the Burrow garden. In the distance, he could see Hagrid feeding Buckbeak in front of his cabin.
 "Baubles," said Ron confidently, when they reached the Fat Lady, who was looking rather paler than usual and winced at his loud voice.
 "No," she said.
-"What d’you mean, ‘no’ ?
+"What d'you mean, 'no' ?
 "There is a new password," she said. "And please don't shout."
 "But we've been away, how're we supposed to -- ?"
 "Harry! Ginny!"
@@ -3248,7 +3248,7 @@ Hermione was hurrying toward them, very pink-faced and wearing a cloak, hat, and
 "Overindulged over Christmas, apparently," said Hermione, rolling her eyes as she led the way into the packed common room. "She and her friend
 Violet drank their way through all the wine in that picture of drunk monks down by the Charms corridor. Anyway..."
 She rummaged in her pocket for a moment, then pulled out a scroll of parchment with Dumbledore's writing on it.
-"Great," said Harry, unrolling it at once to discover that his next lesson with Dumbledore was scheduled for the following night. "I’ve got loads to tell him -- and you. Let's sit down --"
+"Great," said Harry, unrolling it at once to discover that his next lesson with Dumbledore was scheduled for the following night. "I've got loads to tell him -- and you. Let's sit down --"
 But at that moment there was a loud squeal of "Won-Won!" and Lavender Brown came hurtling out of nowhere and flung herself into Ron's arms. Several onlookers sniggered; Hermione gave a tinkling laugh and said, "There's a cable over here... Coming. Ginny?"
 "No, thanks, I said I'd meet Dean," said Ginny, though Harry could not help noticing that she did not sound very enthusiastic. Leaving Ron and Lavender locked in a kind of vertical wrestling, match, Harry led Hermione over to the spare table.
 "So how was your Christmas?"
@@ -3260,14 +3260,14 @@ But at that moment there was a loud squeal of "Won-Won!" and Lavender Brown came
 She looked too fierce to argue with at that moment, so Harry dropped the subject of Ron and recounted all that he had overheard between Malfoy and Snape. When he had finished, Hermione sat in thought for a moment and then said, "Don't you think -- ?"
 "-- he was pretending to offer help so that he could trick Malfoy into telling him what he's doing?"
 "Well, yes," said Hermione.
-"Ron’s dad and Lupin think so," Harry said grudgingly. "But this definitely proves Malfoy’s planning something, you can't deny that."
+"Ron's dad and Lupin think so," Harry said grudgingly. "But this definitely proves Malfoy's planning something, you can't deny that."
 "No, I can't," she answered slowly.
 "And he's acting on Voldemort's orders, just like I said!"
 "Hmm .. . did either of them actually mention Voldemort's name?"
 Harry frowned, trying to remember. "I'm not sure ... Snape definitely said 'your master,' and who else would that be?"
 "I don't know," said Hermione, biting her lip. "Maybe his father?"
 She stared across the room, apparently lost in thought, not even noticing Lavender tickling Ron. "How's Lupin?"
-"Not great," said Harry, and he told her all about Lupin’s mission among the werewolves and the difficulties he was facing. "Have you heard of this Fenrir Greyback?"
+"Not great," said Harry, and he told her all about Lupin's mission among the werewolves and the difficulties he was facing. "Have you heard of this Fenrir Greyback?"
 "Yes, I have!" said Hermione, sounding startled. "And so have you, Harry!"
 "When, History of Magic? You know full well I never listened ..."
 "No, no, not History of Magic -- Malfoy threatened Borgin with Kim!" said Hermione. "Back in Knockturn Alley, don't you remember? He told Borgin that Greyback was an old family friend and that he'd be checking up on Borgin's progress!"
@@ -3281,7 +3281,7 @@ APPARITION LESSONS
 If you are seventeen years of age, or will turn seventeen on or before the 31st August next, you are eligible for a twelve-week course of Apparition Lessons from a Ministry of Magic Apparition instructor. Please sign below if you would like to participate. Cost: 12 Galleons.
 Harry and Ron joined the crowd that was jostling around the notice and taking it in turns to write their names at the bottom. Ron was just taking out his quill to sign after Hermione when Lavender crept up behind him, slipped her hands over his eyes, and trilled, "Guess who, Won-Won?" Harry turned to see Hermione stalking off; he caught up with her, having no wish to stay behind with Ron and Lavender, but to his surprise, Ron caught up with them only a little way beyond the portrait hole, his ears bright red and his expression disgruntled. Without a word, Hermione sped up to walk with Neville.
 "So -- Apparition," said Ron, his tone making it perfectly plain that Harry was not to mention what had just happened. "Should be a laugh, eh?"
-"I dunno," said Harry. "Maybe it's better when you do it yourself, I didn’t enjoy it much when Dumbledore took me along for the ride."
+"I dunno," said Harry. "Maybe it's better when you do it yourself, I didn't enjoy it much when Dumbledore took me along for the ride."
 "I forgot you'd already done it.... I'd better pass my test first
 time," said Ron, looking anxious. "Fred and George did," "Charlie failed, though, didn't he?" "Yeah, but Charlie's bigger than me" -- Ron held his arms out from his body as though he was a gorilla -- "so Fred and George
 didn't go on about it much ... not to his face anyway . . ." "When can we take the actual test?" "Soon as we're seventeen. That's only March for me!" "Yeah, but you wouldn't be able to Apparate in here, not in the castle . . ."
@@ -3289,9 +3289,9 @@ didn't go on about it much ... not to his face anyway . . ." "When can we take t
 Ron was not the only one to be excited at the prospect of Apparition. All that day there was much talk about the forthcoming , lessons; a great deal of store was set by being able to vanish and reappear at will.
 "How cool will it be when we can just --" Seamus clicked his ringers to indicate disappearance. "Me cousin Fergus does it just to annoy me, you wait till I can do it back... He'll never have another peaceful moment. . . ."
 Lost in visions of this happy prospect, he flicked his wand a little too enthusiastically, so that instead of producing the fountain of pure water that was the object of today's Charms lesson, he let out a hoselike jet that ricocheted off the ceiling and knocked Professor Flitwick flat on his face.
-"Harry’s already Apparated," Ron told a slightly abashed Seamus, after Professor Flitwick had dried himself off with a wave of his wand and set Seamus lines: "I am a wizard, not a baboon brandishing a stick." "Dum -- er -- someone took him. Side-Along-Apparition, you know."
+"Harry's already Apparated," Ron told a slightly abashed Seamus, after Professor Flitwick had dried himself off with a wave of his wand and set Seamus lines: "I am a wizard, not a baboon brandishing a stick." "Dum -- er -- someone took him. Side-Along-Apparition, you know."
 "Whoa!" whispered Seamus, and he, Dean, and Neville put their heads a little closer to hear what Apparition felt like. For the rest of the day, Harry was besieged with requests from the other sixth years to describe the sensation of Apparition. All of them seemed awed, rather than put off, when he told them how uncomfortable it was, and he was still answering detailed questions at ten to eight that evening, when he was forced to lie and say that he needed to return a book to the library, so as to escape in time for his lesson with Dumbledore.
-The lamps in Dumbledore’s office were lit, the portraits of previous headmasters were snoring gently in their frames, and the Pen-sieve was ready upon the desk once more. Dumbledore’s hands lay on either side of it, the right one as blackened and burnt-looking as ever. It did not seem to have healed at all and Harry wondered, for perhaps the hundredth time, what had caused such a distinctive injury, but did not ask; Dumbledore had said that he would know eventually and there was, in any case, another subject he wanted to discuss. But before Harry could say anything about Snape and Malfoy, Dumbledore spoke.
+The lamps in Dumbledore's office were lit, the portraits of previous headmasters were snoring gently in their frames, and the Pen-sieve was ready upon the desk once more. Dumbledore's hands lay on either side of it, the right one as blackened and burnt-looking as ever. It did not seem to have healed at all and Harry wondered, for perhaps the hundredth time, what had caused such a distinctive injury, but did not ask; Dumbledore had said that he would know eventually and there was, in any case, another subject he wanted to discuss. But before Harry could say anything about Snape and Malfoy, Dumbledore spoke.
 "I hear that you met the Minister of Magic over Christmas?" "Yes," said Harry. "He's not very happy with me."
 "No," sighed Dumbledore. "He is not very happy with me either. We must try not to sink beneath our anguish, Harry, but battle on."
 Harry grinned.
@@ -3306,7 +3306,7 @@ support --"
 "He accused me of being 'Dumbledore's man through and through.'"
 "How very rude of him."
 "I told him I was."
-Dumbledore opened his mouth to speak and then closed it again. Behind Harry, Fawkes the phoenix let out a low, soft, musical cry. To Harry’s intense embarrassment, he suddenly realized
+Dumbledore opened his mouth to speak and then closed it again. Behind Harry, Fawkes the phoenix let out a low, soft, musical cry. To Harry's intense embarrassment, he suddenly realized
 that Dumbledore's bright blue eyes looked rather watery, ami stared hastily at his own knees. When Dumbledore spoke, however, his voice was quite steady.
 "I am very touched, Harry."
 "Scrimgeour wanted to know where you go when you're not at Hogwarts," said Harry, still looking fixedly at his knees.
@@ -3361,7 +3361,7 @@ Riddle spoke in Parseltongue. The man skidded into the table, sending moldy pots
 "Dead," said the other. "Died years ago, didn't he?"
 Riddle frowned.
 "Who are you, then?"
-"I’m Morfin, ain't I?"
+"I'm Morfin, ain't I?"
 "Marvolo's son?"
 "'Course I am, then..." • ,, .
 Morfin pushed the hair out of his dirty face, the better to see Riddle, and Harry saw that he wore Marvolo's black-stoned ring on his right hand.
@@ -3398,7 +3398,7 @@ Harry looked around as Dumbledore appeared beside him and saw that they were sta
 "Sir, is it true that Professor Merrythought is retiring?" he asked.
 "Tom, Tom, if I knew I couldn't tell you," said Slughorn, wagging a reproving, sugar-covered finger at Riddle, though ruining the effect slightly by winking. "I must say, I'd like to know where you get your information, boy, more knowledgeable than half the staff, you are."
 Riddle smiled; the other boys laughed and cast him admiring looks.
-"What with your uncanny ability to know things you shouldn’t, and your careful flattery of the people who matter -- thank you fm the pineapple, by the way, you're quite right, it is my favorite -- "
+"What with your uncanny ability to know things you shouldn't, and your careful flattery of the people who matter -- thank you fm the pineapple, by the way, you're quite right, it is my favorite -- "
 As several of the boys tittered, something very odd happened. The whole room was suddenly filled with a thick white fog, so that Harry could see nothing but the face of Dumbledore, who was standing beside him. Then Slughorn's voice rang out through the mist, unnaturally loudly, "You'll go wrong, boy, mark my words. "
 The fog cleared as suddenly as it had appeared and yet nobody made any allusion to it, nor did anybody look as though anything unusual had just happened. Bewildered, Harry looked around as a small golden clock standing upon Slughorn's desk chimed eleven o'clock.
 "Good gracious, is it that time already?" said Slughorn. "You'd better get going, boys, or we'll all be in trouble. Lestrange, I want your essay by tomorrow or it's detention. Same goes for you, Avery."
@@ -3408,7 +3408,7 @@ Slughorn pulled himself out of his armchair and carried his empty glass over to 
 "Ask away, then, m'boy, ask away..."
 "Sir, I wondered what you know about... about Horcruxes?"
 And it happened all over again: The dense fog filled the room so that Harry could not see Slughorn or Voldemort at all; only Dumbledore, smiling serenely beside him. Then Slughorn's voice boomed out again, just as it had done before.
-"I don't know anything about Horcruxes and I wouldn't tell you if I did! Now get out of here at once and don’t let me catch you mentioning them again!"
+"I don't know anything about Horcruxes and I wouldn't tell you if I did! Now get out of here at once and don't let me catch you mentioning them again!"
 "Well, that's that," said Dumbledore placidly beside Harry.
 "Time to go."
 And Harry's feet left the floor to fall, seconds later, back onto the
@@ -3727,7 +3727,7 @@ him, a crossbow in his hand, leaving a trail of muddy dolphin-sized footprints a
 "Oh ... yes. .." said Madam Pomfrey, who seemed to have been counting Hagrid as several people due to his vastness. To cover her confusion, she hurried off to clear up his muddy foot prints with her wand.
 "I don' believe this," said Hagrid hoarsely, shaking his great shaggy head as he stared down at Ron. "Jus' don' believe it... Look at him lyin' there... . Who'd want ter hurt him, eh?"
 "That's just what we were discussing," said Harry. "We don't know."
-"Someone couldn’ have a grudge against the Gryfinndor Quidditch team, could they?" said Hagrid anxiously. "Firs' Katie, now Ron ..."
+"Someone couldn' have a grudge against the Gryfinndor Quidditch team, could they?" said Hagrid anxiously. "Firs' Katie, now Ron ..."
 "I cant see anyone trying to bump off a Quidditch team," said
 I m urge.
 Wood might've done the Slytherins if he could've got away with it," said Fred fairly.
@@ -3742,24 +3742,24 @@ Harry could not think of any reply to this and was almost gl.i«l when Madam Pom
 "I spect he's got hundreds of ideas, brain like his," said Hagrid. "But he doesn' know who sent that necklace nor put poison in that wine, or they'dve bin caught, wouldn they? Wha' worries me," said Hagrid, lowering his voice and glancing over his shoulder (Harry, for good measure, checked the ceiling for Peeves), "is how long Hogwarts can stay open if kids are bein' attacked. Chamber o' Secrets all over again, isn' it? There'll be panic, more parents takin their kids outta school, an nex' thing yeh know the board o' governors ..."
 Hagrid stopped talking as the ghost of a long-haired woman drifted serenely past, then resumed in a hoarse whisper, "... the board o' governors'll be talkin about shuttin' us up fer good."
 "Surely not?" said Hermione, looking worried.
-"Gotta see it from their point o' view," said Hagrid heavily. "I mean, it's always bin a bit of a risk sendin a kid ter Hogwarts, hasn’ it? Yer expect accidents, don' yeh, with hundreds of underage wizards all locked up tergether, but attempted murder, tha's tliff'rent. 'S'no wonder Dumbledore's angry with Sn --"
+"Gotta see it from their point o' view," said Hagrid heavily. "I mean, it's always bin a bit of a risk sendin a kid ter Hogwarts, hasn' it? Yer expect accidents, don' yeh, with hundreds of underage wizards all locked up tergether, but attempted murder, tha's tliff'rent. 'S'no wonder Dumbledore's angry with Sn --"
 Hagrid stopped in his tracks, a familiar, guilty expression on what was visible of his face above his tangled black beard.
 "What?" said Harry quickly. "Dumbledore's angry with Snape?"
-"I never said tha’," said Hagrid, though his look of panic could not have been a bigger giveaway. "Look at the time, it's gettin' on fer midnight, I need ter --"
+"I never said tha'," said Hagrid, though his look of panic could not have been a bigger giveaway. "Look at the time, it's gettin' on fer midnight, I need ter --"
 "Hagrid, why is Dumbledore angry with Snape?" Harry asked loudly.
-"Shhhh!" said Hagrid, looking both nervous and angry. "Don’ shout stuff like that, Harry, d'yeh wan’ me ter lose me job? Mind, I don' suppose yeh'd care, would yeh, not now yeh've given up Care of Mag--"
+"Shhhh!" said Hagrid, looking both nervous and angry. "Don' shout stuff like that, Harry, d'yeh wan' me ter lose me job? Mind, I don' suppose yeh'd care, would yeh, not now yeh've given up Care of Mag--"
 "Don't try and make me feel guilty, it wont work!" said Harry forcefully. "What's Snape done?"
-"I dunno, Harry, I shouldn'ta heard it at all! I -- well, I was comin’ outta the forest the other evenin’ an' I overheard 'em talking-- well, arguin’. Didn't like ter draw attention to meself, so I sorta skulked an tried not ter listen, but it was a -- well, a heated discussion an' it wasn’ easy ter block it out."
+"I dunno, Harry, I shouldn'ta heard it at all! I -- well, I was comin' outta the forest the other evenin' an' I overheard 'em talking-- well, arguin'. Didn't like ter draw attention to meself, so I sorta skulked an tried not ter listen, but it was a -- well, a heated discussion an' it wasn' easy ter block it out."
 "Well?" Harry urged him, as Hagrid shuffled his enormous feet uneasily.
-"Well -- I jus' heard Snape sayin’ Dumbledore took too much fer granted an maybe he -- Snape -- didn’ wan’ ter do it any more --"
+"Well -- I jus' heard Snape sayin' Dumbledore took too much fer granted an maybe he -- Snape -- didn' wan' ter do it any more --"
 "Do what?"
-"I dunno, Harry, it sounded like Snape was feelin’ a bit overworked, tha's all -- anyway, Dumbledore told him flat out he'd agreed ter do it an' that was all there was to it. Pretty firm with him. An' then he said summat abou’ Snape makin' investigations in his House, in Slytherin. Well, there's nothin' strange abou' that!" Hagrid added hastily, as Harry and Hermione exchanged looks full of meaning. "All the Heads o' Houses were asked ter look inter that necklace business --"
+"I dunno, Harry, it sounded like Snape was feelin' a bit overworked, tha's all -- anyway, Dumbledore told him flat out he'd agreed ter do it an' that was all there was to it. Pretty firm with him. An' then he said summat abou' Snape makin' investigations in his House, in Slytherin. Well, there's nothin' strange abou' that!" Hagrid added hastily, as Harry and Hermione exchanged looks full of meaning. "All the Heads o' Houses were asked ter look inter that necklace business --"
 "Yeah, but Dumbledore's not having rows with the rest of them, is he?" said Harry.
 "Look," Hagrid twisted his crossbow uncomfortably in his hands; there was a loud splintering sound and it snapped in two. "I know what yeh're like abou' Snape, Harry, an' I don' want yeh ter go readin' more inter this than there is."
 "Look out," said Hermione tersely.
 They turned just in time to see the shadow of Argus Filch looming over the wall behind them before the man himself turned the corner, hunchbacked, his jowls aquiver.
 "Oho!" he wheezed. "Out of bed so late, this'll mean detention!"
-"No it won', Filch," said Hagrid shortly. "They're with me, aren’ they?"
+"No it won', Filch," said Hagrid shortly. "They're with me, aren' they?"
 "And what difference does that make?" asked Filch obnoxiously.
 "I'm a ruddy teacher, aren' I, yeh sneakin' Squib!" said Hagrid, firing up at once.
 There was a nasty hissing noise as Filch swelled with fury; Mrs. Norris had arrived, unseen, and was twisting herself sinuously around Filch's skinny ankles.
@@ -3772,7 +3772,7 @@ So Dumbledore had argued with Snape. In spite of all he had told Harry, in spite
 Was it because Dumbledore did not want Harry to do anything foolish, to take matters into his own hands, that he had pretended there was nothing in Harry's suspicions? That seemed likely. It , might even be that Dumbledore did not want anything to distract Harry from their lessons, or from procuring that memory from Slughorn. Perhaps Dumbledore did not think it right to confide suspicions about his staff to sixteen-year-olds....
 "There you are, Potter!"
 Harry jumped to his feet in shock, his wand at the ready. He had been quite convinced that the common room was empty; he had not been at all prepared for a hulking figure to rise suddenly out of a distant chair. A closer look showed him that it was Cormac McLaggen.
-"I've been waiting for you to come back," said McLaggen, disregarding Harry’s drawn wand. "Must’ve fallen asleep. Look, I saw them taking Weasley up to the hospital wing earlier. Didn't look like he'll be fit for next week's match."
+"I've been waiting for you to come back," said McLaggen, disregarding Harry's drawn wand. "Must've fallen asleep. Look, I saw them taking Weasley up to the hospital wing earlier. Didn't look like he'll be fit for next week's match."
 It took Harry a few moments to realize what McLaggen was talking about.
 "Oh ... right. . . Quidditch," he said, putting his wand back into the belt of his jeans and running a hand wearily through his hair. "Yeah ... he might not make it."
 "Well, then, I'll be playing Keeper, won't I?" said McLaggen.
@@ -3883,7 +3883,7 @@ Two house-elves were rolling around on the floor in the middle of the dormitory,
 "Kreacher will not insult Harry Potter in front of Dobby, no he won't, or Dobby will shut Kreacher's mouth for him!" cried Dobby in a high-pitched voice.
 "-- kicky, scratchy!" cried Peeves happily, now pelting bits of' chalk at the elves to enrage them further. "Tweaky, pokey!"
 "Kreacher will say what he likes about his master, oh yes, and what a master he is, filthy friend of Mudbloods, oh, what would poor Kreacher's mistress say -- ?"
-Exactly what Kreacher's mistress would have said they did not find out, for at that moment Dobby sank his knobbly little fist into Kreacher’s mouth and knocked out half of his teeth. Harry and Ron both leapt out of their beds and wrenched the two elves apart, though they continued to try and kick and punch each other, egged on by Peeves, who swooped around the lamp squealing, "Stick your fingers up his nosey, draw his cork and pull his earsies --"
+Exactly what Kreacher's mistress would have said they did not find out, for at that moment Dobby sank his knobbly little fist into Kreacher's mouth and knocked out half of his teeth. Harry and Ron both leapt out of their beds and wrenched the two elves apart, though they continued to try and kick and punch each other, egged on by Peeves, who swooped around the lamp squealing, "Stick your fingers up his nosey, draw his cork and pull his earsies --"
 Harry aimed his wand at Peeves and said, "Langlock!" Peeves clutched at his throat, gulped, then swooped from the room making obscene gestures but unable to speak, owing to the fact that his tongue had just glued itself to the roof of his mouth.
 "Nice one," said Ron appreciatively, lifting Dobby into the air so that his flailing limbs no longer made contact with Kreacher. "That was another Prince hex, wasn't it?"
 "Yeah," said Harry, twisting Kreacher's wizened arm into a half nelson. "Right -- I'm forbidding you to fight each other! Well, Kreacher, you're forbidden to fight Dobby. Dobby, I know I'm not allowed to give you orders --"
@@ -3925,7 +3925,7 @@ It was a small roll of parchment, which Harry recognized at once as another invi
 "You know, she's grown on me, Luna," he said, as they set off again for the Great Hall. "I know she's insane, but it's in a good --" He stopped talking very suddenly. Lavender Brown was standing at the foot of the marble staircase looking thunderous. "Hi," said Ron nervously.
 "C'mon," Harry muttered to Hermione, and they sped past, though not before they had heard Lavender say, "Why didn't you tell me you were getting out today? And why was she with you?"
 Ron looked both sulky and annoyed when he appeared at breakfast half an hour later, and though he sat with Lavender, Harry did not see them exchange a word all the time they were together. Hermione was acting as though she was quite oblivious to all of this, but once or twice Harry saw an inexplicable smirk cross her face. All that day she seemed to be in a particularly good mood, and that evening in the common room she even consented to look over (in other words, finish writing) Harry's Herbology essay, something she had been resolutely refusing to do up to this point, because she had known that Harry would then let Ron copy his work.
-"Thanks a lot, Hermione," said Harry, giving her a hasty pat on the back as he checked his watch and saw that it was nearly eight o'clock. "Listen, I’ve got to hurry or I'll be late for Dumbledore...."
+"Thanks a lot, Hermione," said Harry, giving her a hasty pat on the back as he checked his watch and saw that it was nearly eight o'clock. "Listen, I've got to hurry or I'll be late for Dumbledore...."
 She did not answer, but merely crossed out a few of his feebler sentences in a weary sort of way. Grinning, Harry hurried out through the portrait hole and off to the headmasters office. The gargoyle leapt aside at the mention of toffee eclairs, and Harry took the spiral staircase two steps at a time, knocking on the door just as a clock within chimed eight.
 "Enter," called Dumbledore, but as Harry put out a hand to push the door, it was wrenched open from inside. There stood Professor Trelawney.
 "Aha!" she cried, pointing dramatically at Harry as she blinked at him through her magnifying spectacles.
@@ -3943,7 +3943,7 @@ Dumbledore heaved a deep sigh, then said, "But never mind my staffing problems. 
 "I see," said Dumbledore eventually, peering at Harry over the top of his half-moon spectacles and giving Harry the usual sensation that he was being X-rayed. "And you feel that you have exerted your very best efforts in this matter, do you? That you have exercised all of your considerable ingenuity?
 That you have left no depth of cunning unplumbed in your quest to retrieve the memory?"
 "Well," Harry stalled, at a loss for what to say next. His single attempt to get hold of the memory suddenly seemed embarrassingly feeble. "Well ... the day Ron swallowed love potion by mistake I took him to Professor Slughorn. I thought maybe if I got Professor Slughorn in a good enough mood --" "And did that work?" asked Dumbledore. "Well, no, sir, because Ron got poisoned --" "-- which, naturally, made you forget all about trying to retrieve the memory; I would have expected nothing else, while your best friend was in danger. Once it became clear that Mr. Weasley was going to make a full recovery, however, I would have hoped that you returned to the task I set you. I thought I made it clear to you how very important that memory is. Indeed, I did my best to impress upon you that it is the most crucial memory of all and that we will be wasting our time without it."
-A hot, prickly feeling of shame spread from the top of Harry’s head all the way down his body. Dumbledore had not raised his voice, he did not even sound angry, but Harry would have preferred him to yell; this cold disappointment was worse than anything.
+A hot, prickly feeling of shame spread from the top of Harry's head all the way down his body. Dumbledore had not raised his voice, he did not even sound angry, but Harry would have preferred him to yell; this cold disappointment was worse than anything.
 "Sir," he said, a little desperately, "it isn't that I wasn't bothered or anything, I've just had other -- other things ..."
 "Other things on your mind," Dumbledore finished the sentence for him. "I see."
 Silence fell between them again, the most uncomfortable silence Harry had ever experienced with Dumbledore; it seemed to go on and on, punctuated only by the little grunting snores of the portrait of Armando Dippet over Dumbledore's head. Harry felt strangely diminished, as though he had shrunk a little since he had entered the room. When he could stand it no longer he said, "Professor Dumbledore, I'm really sorry. I should have done more.... I should have realized you wouldn't have asked me to do it if it wasn't really important."
@@ -3984,7 +3984,7 @@ Harry got to his feet and bent once more over the rippling silver contents of th
 She tucked away her powder puff as the house-elf straightened up. The top of the elf's head barely reached the seat of Hepzibah's chair, and her papery skin hung off her frame just like the crisp linen sheet she wore draped like a toga.
 "How do I look?" said Hepzibah, turning her head to admire the various angles of her face in the mirror.
 "Lovely, madam," squeaked Hokey.
-Harry could only assume that it was down in Hokey’s contract that she must lie through her teeth when asked this question, because Hepzibah Smith looked a long way from lovely in his opinion.
+Harry could only assume that it was down in Hokey's contract that she must lie through her teeth when asked this question, because Hepzibah Smith looked a long way from lovely in his opinion.
 A tinkling doorbell rang and both mistress and elf jumped.
 "Quick, quick, he's here, Hokey!" cried Hepzibah and the elf scurried out of the room, which was so crammed with objects that it was difficult to see how anybody could navigate their way across it without knocking over at least a dozen things: There were cabinets full of little lacquered boxes, cases full of gold-embossed books, shelves of orbs and celestial globes, and many flourishing potted plants in brass containers. In fact, the room looked like a cross between a magical antique shop and a conservatory.
 The house-elf returned within minutes, followed by a tall young man Harry had no difficulty whatsoever in recognizing as Voldemort. He was plainly dressed in a black suit; his hair was a little longer than it had been at school and his cheeks were hollowed, but all of this suited him; he looked more handsome than ever. He picked his way through the cramped room with an air that showed he had visited many times before and bowed low over Hepzibah's fat little hand, brushing it with his lips.
@@ -3996,7 +3996,7 @@ The house-elf had come dashing back into the room carrying a tray of little cake
 Voldemort smiled mechanically and Hepzibah simpered.
 "Well, what's your excuse for visiting this time?" she asked, bat-ring her lashes.
 "Mr. Burke would like to make an improved offer for the goblin-made armor," said Voldemort. "Five hundred Galleons, he feels it is a more than fair --"
-"Now, now, not so fast, or I’ll think you're only here for my trinkets!" pouted Hepzibah.
+"Now, now, not so fast, or I'll think you're only here for my trinkets!" pouted Hepzibah.
 "I am ordered here because of them," said Voldemort quietly. "I am only a poor assistant, madam, who must do as he is told. Mr. Burke wishes me to inquire --"
 "Oh, Mr. Burke, phooey!" said Hepzibah, waving a little hand. "I've something to show you that I've never shown Mr. Burke! Can you keep a secret, Tom? Will you promise you won't tell Mr. Burke I've got it? He'd never let me rest if he knew I'd shown it to you, and I'm not selling, not to Burke, not to anyone! But you, Tom, you'll appreciate it for its history, not how many Galleons you can get for it."
 "I'd be glad to see anything Miss Hepzibah shows me," said Voldemort quietly, and Hepzibah gave another girlish giggle.
@@ -4004,11 +4004,11 @@ Voldemort smiled mechanically and Hepzibah simpered.
 "Here, madam," squeaked the house-elf, and Harry saw two leather boxes, one on top of the other, moving across the room as if of their own volition, though he knew the tiny elf was holding them over her head as she wended her way between tables, ***pouffes, and footstools.
 "Now," said Hepzibah happily, taking the boxes from the elf, laying them in her lap, and preparing to open the topmost one, "I think you'll like this, Tom... . Oh, if my family knew I was showing you. . . . They can't wait to get their hands on this!"
 She opened the lid. Harry edged forward a little to get a better view and saw what looked like a small golden cup with two finely wrought handles.
-"I wonder whether you know what it is, Tom? Pick it up, have a good look!" whispered Hepzibah, and Voldemort stretched out a long-fingered hand and lifted the cup by one handle out of its snug silken wrappings. Harry thought he saw a red gleam in his dark eyes. His greedy expression was curiously mirrored on Hepzibah’s face, except that her tiny eyes were fixed upon Voldemort's handsome features.
+"I wonder whether you know what it is, Tom? Pick it up, have a good look!" whispered Hepzibah, and Voldemort stretched out a long-fingered hand and lifted the cup by one handle out of its snug silken wrappings. Harry thought he saw a red gleam in his dark eyes. His greedy expression was curiously mirrored on Hepzibah's face, except that her tiny eyes were fixed upon Voldemort's handsome features.
 "A badger," murmured Voldemort, examining the engraving upon the cup. "Then this was ... ?"
 "Helga Hufflepuff's, as you very well know, you clever boy!" said Hepzibah, leaning forward with a loud creaking of corsets and actually pinching his hollow cheek. "Didn't I tell you I was distantly descended? This has been handed down in the family for years and years. Lovely, isn't it? And all sorts of powers it's supposed to possess too, but I haven't tested them thoroughly, I just keep it nice and safe in here... ."
 She hooked the cup back off Voldemort's long forefinger and restored it gently to its box, too intent upon settling it carefully back into position to notice the shadow that crossed Voldemort's face as the cup was taken away.
-"Now then," said Hepzibah happily, "where’s Hokey? Oh yes, there you are -- take that away now, Hokey."
+"Now then," said Hepzibah happily, "where's Hokey? Oh yes, there you are -- take that away now, Hokey."
 The elf obediently took the boxed cup, and Hepzibah turned her attention to the much flatter box in her lap.
 "I think you'll like this even more, Tom," she whispered. "Lean in a little, dear boy, so you can see... . Of course, Burke knows I've got this one, I bought it from him, and I daresay he'd love to get it back when I'm gone. ..."
 She slid back the fine filigree clasp and flipped open the box. There upon the smooth crimson velvet lay a heavy golden locket.
@@ -4032,11 +4032,11 @@ She looked him full in the face and for the first time, Harry saw her foolish sm
 "-- because she was a house-elf," said Harry. He had rarely felt more in sympathy with the society Hermione had set up, S.P.E.W. "Precisely," said Dumbledore. "She was old, she admitted to having tampered with the drink, and nobody at the Ministry bothered to inquire further. As in the case of Morfin, by the time I traced her and managed to extract this memory, her life was almost over -- but her memory, of course, proves nothing except that Voldemort knew of the existence of the cup and the locket.
 "By the time Hokey was convicted, Hepzibah's family had realized that two of her greatest treasures were missing. It took them a while to be sure of
 this, for she had many hiding places, having always guarded her collection most jealously. But before they were sure beyond doubt that the cup and the locket were both gone, the assistant who had worked at Borgin and Burkes, the young man who had visited Hepzibah so regularly and charmed her so well, had resigned his post and vanished. His superiors had no idea where he had gone; they were as surprised as anyone at his disappearance. And that was the last that was seen or heard of Tom Riddle for a very long time.
-"Now," said Dumbledore, "if you don't mind, Harry, I want to pause once more to draw your attention to certain points of our story. Voldemort had committed another murder; whether it was his first since he killed the Riddles, I do not know, but I think it was. This time, as you will have seen, he killed not for revenge, but for gain. He wanted the two fabulous trophies that poor, besotted, old woman showed him. Just as he had once robbed the other children at his orphanage, just as he had stolen his Uncle Morfin’s ring, so he ran off now with Hepzibahs cup and locket."
+"Now," said Dumbledore, "if you don't mind, Harry, I want to pause once more to draw your attention to certain points of our story. Voldemort had committed another murder; whether it was his first since he killed the Riddles, I do not know, but I think it was. This time, as you will have seen, he killed not for revenge, but for gain. He wanted the two fabulous trophies that poor, besotted, old woman showed him. Just as he had once robbed the other children at his orphanage, just as he had stolen his Uncle Morfin's ring, so he ran off now with Hepzibahs cup and locket."
 "But," said Harry, frowning, "it seems mad... . Risking everything, throwing away his job, just for those . . ."
 "Mad to you, perhaps, but not to Voldemort," said Dumbledore. "I hope you will understand in due course exactly what those objects meant to him, Harry, but you must admit that it is not difficult to imagine that he saw the locket, at least, as rightfully his." "The locket maybe," said Harry, "but why take the cup as well?"
-"It had belonged to another of Hogwarts’s founders," said Dumbledore. "I think he still felt a great pull toward the school and that he could not resist an object so steeped in Hogwarts history. There were other reasons, I think.... I hope to be able to demonstrate them to you in due course.
-"And now for the very last recollection I have to show you, at least until you manage to retrieve Professor Slughorn's memory for us. Ten years separates Hokey’s memory and this one, ten years during which we can only guess at what Lord Voldemort was doing... ." Harry got to his feet once more as Dumbledore emptied the last memory into the Pensieve.
+"It had belonged to another of Hogwarts's founders," said Dumbledore. "I think he still felt a great pull toward the school and that he could not resist an object so steeped in Hogwarts history. There were other reasons, I think.... I hope to be able to demonstrate them to you in due course.
+"And now for the very last recollection I have to show you, at least until you manage to retrieve Professor Slughorn's memory for us. Ten years separates Hokey's memory and this one, ten years during which we can only guess at what Lord Voldemort was doing... ." Harry got to his feet once more as Dumbledore emptied the last memory into the Pensieve.
 "Whose memory is it?" he asked. "Mine," said Dumbledore.
 And Harry dived after Dumbledore through the shifting silver mass, landing in the very office he had just left. There was Fawkes slumbering happily on his perch, and there behind the desk was Dumbledore, who looked very similar to the Dumbledore standing beside Harry, though both hands were whole and undamaged and his face was, perhaps, a little less lined. The one difference between the present-day office and this one was that it was snowing in the past; bluish flecks were drifting past the window in the dark and building up on the outside ledge.
 The younger Dumbledore seemed to be waiting for something, and sure enough, moments after their arrival, there was a knock on the door and he said, "Enter."
@@ -4051,7 +4051,7 @@ goblet of wine and poured one for himself, he returned to the seat behind his de
 Voldemort did not answer at once, but merely sipped his wine.
 "They do not call me 'Tom' anymore," he said. "These days, 1 am known as --"
 "I know what you are known as," said Dumbledore, smiling, pleasantly. "But to me, I'm afraid, you will always be Tom Riddle. It is one of the irritating things about old teachers. I am afraid that they never quite forget their charges' youthful beginnings."
-He raised his glass as though toasting Voldemort, whose face remained expressionless. Nevertheless, Harry felt the atmosphere in the room change subtly: Dumbledore's refusal to use Voldemort’s chosen name was a refusal to allow Voldemort to dictate the terms of the meeting, and Harry could tell that Voldemort took it as such.
+He raised his glass as though toasting Voldemort, whose face remained expressionless. Nevertheless, Harry felt the atmosphere in the room change subtly: Dumbledore's refusal to use Voldemort's chosen name was a refusal to allow Voldemort to dictate the terms of the meeting, and Harry could tell that Voldemort took it as such.
 "I am surprised you have remained here so long," said Voldemort after a short pause. "I always wondered why a wizard such as yourself never wished to leave school."
 "Well," said Dumbledore, still smiling, "to a wizard such as myself, there can be nothing more important than passing on ancient skills, helping hone young minds. If I remember correctly, you once saw the attraction of teaching too."
 "I see it still," said Voldemort. "I merely wondered why you -- who are so often asked for advice by the Ministry, and who have twice, I think, been offered the post of Minister --"
@@ -4070,7 +4070,7 @@ For the first time, Voldemort smiled. It was a taut leer, an evil thing, more th
 "Well, then, what better place to start my fresh researches than here, at Hogwarts?" said Voldemort. "Will you let me return? Will you let me share
 my knowledge with your students? I place myself and my talents at your disposal. I am yours to command."
 Dumbledore raised his eyebrows. "And what will become of those whom you command? What will happen to those who call themselves -- or so rumor has it -- the Death Eaters?"
-Harry could tell that Voldemort had not expected Dumbledore to know this name; he saw Voldemort’s eyes flash red again and the slitlike nostrils flare.
+Harry could tell that Voldemort had not expected Dumbledore to know this name; he saw Voldemort's eyes flash red again and the slitlike nostrils flare.
 "My friends," he said, after a moment's pause, "will carry on without me, I am sure."
 "I am glad to hear that you consider them friends," said Dumbledore. "I was under the impression that they are more in the order of servants."
 "You are mistaken," said Voldemort.
@@ -4111,11 +4111,11 @@ Ron had panicked on reading this notice; he had still not man-aged to Apparate a
 Having wasted a lot of time worrying aloud about Apparition, Ron was now struggling to finish a viciously difficult essay for Snape that Harry and Hermione had already completed. Harry fully expected to receive low marks on his, because he had disagreed with Snape on the best way to tackle dementors, but he did not care: Slughorns memory was the most important thing to him now.
 "I'm telling you, the stupid Prince isn't going to be able to help you with this, Harry!" said Hermione, more loudly. "There's only one way to force someone to do what you want, and that's the Imperius Curse, which is illegal --"
 "Yeah, I know that, thanks," said Harry, not looking up from the book. "That's why I'm looking for something different. Dumbledorf says Veritaserum won't do it, but there might be something else, a potion or a spell... ."
-"You're going about it the wrong way," said Hermione. "Only you can get the memory, Dumbledore says. That must mean you can persuade Slughorn where other people can’t. It's not a question of slipping him a potion, anyone could do that --"
+"You're going about it the wrong way," said Hermione. "Only you can get the memory, Dumbledore says. That must mean you can persuade Slughorn where other people can't. It's not a question of slipping him a potion, anyone could do that --"
 "How do you spell 'belligerent'?" said Ron, shaking his quill very hard while staring at his parchment. "It can't be B -- U -- M --"
 "No, it isn't," said Hermione, pulling Ron's essay toward her. "And 'augury' doesn't begin O -- R -- G either. What kind of quill are you using?"
 "It's one of Fred and George's Spell-Check ones, but I think the charm must be wearing off."
-"Yes, it must," said Hermione, pointing at the title of his essay, "because we were asked how we'd deal with dementors, not 'Dug-bogs', and I don't remember you changing your name to 'Roonil Wazlib’ either."
+"Yes, it must," said Hermione, pointing at the title of his essay, "because we were asked how we'd deal with dementors, not 'Dug-bogs', and I don't remember you changing your name to 'Roonil Wazlib' either."
 "Ah no!" said Ron, staring horror-struck at the parchment. "Don't say I'll have to write the whole thing out again!"
 "It's okay, we can fix it," said Hermione, pulling the essay toward her and taking out her wand.
 "I love you, Hermione," said Ron, sinking back in his chair, rub-bing his eyes wearily. Hermione turned faintly pink, but merely said, "Don't let Lavender hear you saying that."
@@ -4160,7 +4160,7 @@ Kreacher bowed again, looking furious, and then said, "Master Malfoy eats in the
 "How good is this?" said Harry enthusiastically, turning to Ron and Hermione the moment the room was elf-free again. "We know where Malfoy's going! We've got him cornered now!"
 "Yeah, it's great," said Ron glumly, who was attempting to mop up the sodden mass of ink chat had recently been an almost com-pleted essay. Hermione pulled it toward her and began siphoning the ink off with her wand.
 "But what's all this about him going up there with a variety of students'?" said Hermione. "How many people are in on it? You wouldn't think he'd trust lots of them to know what he's do-ing---"
-"Yeah, that is weird," said Harry, frowning. "I heard him telling Crabbe it wasn't Crabbe's business what he was doing... so what's he telling all these... all these..." Harry's voice tailed away; he was staring at the fire. "God, I've been stupid," he said quietly. "Its obvious, isn't it? There was a great vat of it down in the dungeon... . He could’ve nicked some any time during that lesson. . . ."
+"Yeah, that is weird," said Harry, frowning. "I heard him telling Crabbe it wasn't Crabbe's business what he was doing... so what's he telling all these... all these..." Harry's voice tailed away; he was staring at the fire. "God, I've been stupid," he said quietly. "Its obvious, isn't it? There was a great vat of it down in the dungeon... . He could've nicked some any time during that lesson. . . ."
 "Nicked what?" said Ron.
 "Polyjuice Potion. He stole some of the Polyjuice Potion Slug-horn showed us in our first Potions lesson... There aren't a whole variety of students standing guard for Malfoy... it's just Crabbe and Goyle as usual....Yeah, it all fits!" said Harry, jumping up and starting to pace in front of the fire. "They're stupid enough to do what they're told even if he won't tell them what he's up to, but he doesn't want them to be seen lurking around outside the Room of Requirement, so he's got them taking Polyjuice to make them look like other people... Those two girls I saw him with when he missed Quidditch -- ha! Crabbe and Goyle!"
 "Do you mean to say," said Hermione in a hushed voice, "that that little girl whose scales I repaired -- ?"
@@ -4240,7 +4240,7 @@ Yet this hopeful mood did not last long. Half an hour later, hav-ing tried many 
 He thought he might have broken his toe; as he clutched it and hopped on one foot, the Invisibility Cloak slipped off him.
 "Harry?"
 He spun around, one-legged, and toppled over. There, to his utter astonishment, was Tonks, walking toward him as though she frequently strolled up this corridor.
-"What’re you doing here?" he said, scrambling to his feet again; why did she always have to find him lying on the floor?
+"What're you doing here?" he said, scrambling to his feet again; why did she always have to find him lying on the floor?
 "I came to see Dumbledore," said Tonks. Harry thought she looked terrible: thinner than usual, her mouse-colored hair lank.
 "His office isn't here," said Harry, "it's round the other side of the castle, behind the gargoyle --"
 "I know," said Tonks. "He's not there. Apparently he's gone away again."
@@ -4263,8 +4263,8 @@ He found Ron and Hermione in the Great Hall, already halfway through an early lu
 "Tonks?" repeated Ron and Hermione together, looking surprised.
 "Yeah, she said she'd come to visit Dumbledore."
 "If you ask me," said Ron once Harry had finished describing his conversation with Tonks, "she's cracking up a bit. Losing her nerve after what happened at the Ministry."
-"It’s a bit odd," said Hermione, who for some reason looked very concerned. "She's supposed to be guarding the school, why she suddenly abandoning her post to come and see Dumbledore when he's not even here?"
-"I had a thought," said Harry tentatively. He felt strange about voicing it; this was much more Hermione’s territory than his. "You don't think she can have been... you know... in love with Sirius?"
+"It's a bit odd," said Hermione, who for some reason looked very concerned. "She's supposed to be guarding the school, why she suddenly abandoning her post to come and see Dumbledore when he's not even here?"
+"I had a thought," said Harry tentatively. He felt strange about voicing it; this was much more Hermione's territory than his. "You don't think she can have been... you know... in love with Sirius?"
 Hermione stared at him. "What on earth makes you say that?"
 "I dunno," said Harry, shrugging, "but she was nearly crying when I mentioned his name, and her Patronus is a big four-legged thing now. I wondered whether it hadn't become... you know... him."
 "It's a thought," said Hermione slowly. "But I still don't know why she'd be bursting into the castle to see Dumbledore, if that's re-ally why she was here."
@@ -4389,7 +4389,7 @@ years, and some to spare if anybody over-stews them... . Well, good evening to y
 Professor Sprout headed off into the gathering darkness in the direction of her greenhouses, and Slughorn directed his steps to the spot where Harry stood, invisible.
 Seized with an immediate desire to reveal himself, Harry pullet I off the cloak with a flourish.
 "Good evening, Professor."
-"Merlin’s beard, Harry, you made me jump," said Slughotn, stopping dead in his tracks and looking wary. "How did you get out of the castle?"
+"Merlin's beard, Harry, you made me jump," said Slughotn, stopping dead in his tracks and looking wary. "How did you get out of the castle?"
 "I think Filch must've forgotten to lock the doors," said Harry cheerfully, and was delighted to see Slughorn scowl.
 "I'll be reporting that man, he's more concerned about litter than proper security if you ask me... . But why are you out then, Harry?"
 "Well, sir, it's Hagrid," said Harry, who knew that the right thing to do just now was to tell the truth. "He's pretty upset... But you won't tell anyone, Professor? I don't want trouble for him. ..."
@@ -4412,10 +4412,10 @@ Hagrid gave a great sob. He had made himself a black armband out of what looked 
 The honest answer was "yes"; Harry recalled with painful ease the scene when he and Ron had come face-to-face with the aero-mantulas. They had been quite clear that Aragog was the only thing that stopped them from eating Hagrid.
 "Never bin an area o' the forest I couldn' go before!" said Hagrid, shaking his head. "It wasn' easy, gettin' Aragog's body out o' there, I can tell yeh -- they usually eat their dead, see... . But I wanted ter give 'im a nice burial... a proper send-off. . ."
 He broke into sobs again and Harry resumed the patting of his elbow, saying as he did so (for the potion seemed to indicate that it was the right thing to do), "Professor Slughorn met me coming down here, Hagrid."
-"Not in trouble, are yeh?" said Hagrid, looking up, alarmed. "Yeh shouldn’ be outta the castle in the evenin', I know it, it's my fault --"
+"Not in trouble, are yeh?" said Hagrid, looking up, alarmed. "Yeh shouldn' be outta the castle in the evenin', I know it, it's my fault --"
 "No, no, when he heard what I was doing he said he'd like to come and pay his last respects to Aragog too," said Harry.
 "He's gone to change into something more suitable, I think...and he said he'd bring some bottles so we can drink to Aragog's mem-ory..."
-"Did he?" said Hagrid, looking both astonished and touched. "Tha's -- tha's righ' nice of him, that is, an' not turnin' yeh in ei-ther. I've never really had a lot ter do with Horace Slughorn before... . Comin' ter see old Aragog off, though, eh? Well. . . he’d've liked that, Aragog would. . . ."
+"Did he?" said Hagrid, looking both astonished and touched. "Tha's -- tha's righ' nice of him, that is, an' not turnin' yeh in ei-ther. I've never really had a lot ter do with Horace Slughorn before... . Comin' ter see old Aragog off, though, eh? Well. . . he'd've liked that, Aragog would. . . ."
 Harry thought privately that what Aragog would have liked most about Slughorn was the ample amount of edible flesh he pro-vided, but he merely moved to the rear window of Hagrid's hut, where he saw the rather horrible sight of the enormous dead spider lying on its back outside, its legs curled and tangled.
 "Are we going to bury him here, Hagrid, in your garden?"
 "Jus' beyond the pumpkin patch, I thought," said Hagrid in a choked voice. "I've already dug the -- yeh know -- grave. Jus' thought we'd say a few nice things over him -- happy memories, yeh know --"
@@ -4426,7 +4426,7 @@ His voice quivered and broke. There was a knock on the door, and he turned to an
 "Out here," said Hagrid in a shaking voice. "Shall we -- shall we do it, then?"
 The three of them stepped out into the back garden. The moon was glistening palely through the trees now, and its rays mingled with the light spilling from Hagrid's window to illuminate Aragogs body lying on the edge of a massive pit beside a ten-foot- high mound of freshly dug earth.
 "Magnificent," said Slughorn, approaching the spiders head, where eight milky eyes stared blankly at the sky and two huge, curved pincers shone, motionless, in the moonlight. Harry thougln he heard the tinkle of bottles as Slughorn bent over the pincers, apparently examining the enormous hairy head.
-"Its not ev'ryone appreciates how beau'iful they are’ said H grid to Slughorn's back, tears leaking from the corners of his crinkled eyes. "I didn' know yeh were interested in creatures like Aragog, Horace."
+"Its not ev'ryone appreciates how beau'iful they are' said H grid to Slughorn's back, tears leaking from the corners of his crinkled eyes. "I didn' know yeh were interested in creatures like Aragog, Horace."
 "Interested? My dear Hagrid, I revere them," said Slughorn, stepping back from the body. Harry saw the glint of a bottle disap-pear beneath his cloak,
 though Hagrid, mopping his eyes once more, noticed nothing. "Now ... shall we proceed to the burial?"
 Hagrid nodded and moved forward. He heaved the gigantic spi-der into his arms and, with an enormous grunt, rolled it into the dark pit. It hit the bottom with a rather horrible, crunchy thud. Hagrid started to cry again.
@@ -4521,7 +4521,7 @@ Nearly Headless Nick was gliding toward Harry, his head wob-bling as usual upon 
 But Harry was already hurtling back along the corridor and within minutes, he was saying "toffee eclairs" to Dumbledore's gar-goyle, which leapt aside, permitting Harry entrance onto the spiral staircase.
 "Enter," said Dumbledore when Harry knocked. He sounded exhausted. Harry pushed open the door. There was Dumbledore's office, looking the same as ever, but with black, star-strewn skies beyond the windows.
 "Good gracious, Harry," said Dumbledore in surprise. "To what do I owe this very late pleasure?"
-"Sir -- I've got it. I’ve got the memory from Slughorn."
+"Sir -- I've got it. I've got the memory from Slughorn."
 Harry pulled out the tiny glass bottle and showed it to Dumbledore. For a moment or two, the headmaster looked stunned. Then his face split in a wide smile.
 "Harry, this is spectacular news! Very well done indeed! I knew you could do it!"
 All thought of the lateness of the hour apparently forgotten, he hurried around his desk, took the bottle with Slughorn's memory in his uninjured hand, and strode over to the cabinet where he kepi the Pensieve.
@@ -4588,7 +4588,7 @@ out of the girl into whose hands it had fallen? No, something much more sinister
 "Well, it worked as a Horcrux is supposed to work -- in other words, the fragment of soul concealed inside it was kept safe and had undoubtedly played its part in preventing the death of its owner. But there could be no doubt that Riddle really wanted that diary read, wanted the piece of his soul to inhabit or possess some-body else, so that Slytherin's monster would be unleashed again."
 "Well, he didn't want his hard work to be wasted," said Harry. "He wanted people to know he was Slytherin's heir, because he couldn't take credit at the time."
 "Quite correct," said Dumbledore, nodding. "But don't you see, Harry, that if he intended the diary to be passed to, or planted on, some future Hogwarts student, he was being remarkably blase about that precious fragment of his soul concealed within it. The point of a Horcrux is, as Professor Slughorn explained, to keep part of the self hidden and safe, not to fling it into somebody else's path and run the risk that they might destroy it -- as indeed happened: That particular fragment of soul is no more; you saw to that.
-The careless way in which Voldemort regarded this Horcrux seemed most ominous to me. It suggested that he must have made -- or had been planning to make -- more Horcruxes, so that the loss of his first would not be so detrimental. I did not wish to be-lieve it, but nothing else seemed to make sense. Then you told me, two years later, that on the night that Volde-mort returned to his body, he made a most illuminating and alarm-ing statement to his Death Eaters. ‘I who have gone further than anybody along the path that leads to immortality.’ That was what you told me he said. 'Further than anybody!' And I thought I knew what that meant, though the Death Eaters did not. He was referring to his Horcruxes, Horcruxes in the plural, Harry, which I don’t believe any other wizard has ever had. Yet it fitted: Lord Voldomort has seemed to grow less human with the passing years, and the transformation he had undergone seemed to me to be only explainable if his soul was mutilated beyond the realms of what we might call 'usual evil' ..."
+The careless way in which Voldemort regarded this Horcrux seemed most ominous to me. It suggested that he must have made -- or had been planning to make -- more Horcruxes, so that the loss of his first would not be so detrimental. I did not wish to be-lieve it, but nothing else seemed to make sense. Then you told me, two years later, that on the night that Volde-mort returned to his body, he made a most illuminating and alarm-ing statement to his Death Eaters. 'I who have gone further than anybody along the path that leads to immortality.' That was what you told me he said. 'Further than anybody!' And I thought I knew what that meant, though the Death Eaters did not. He was referring to his Horcruxes, Horcruxes in the plural, Harry, which I don't believe any other wizard has ever had. Yet it fitted: Lord Voldomort has seemed to grow less human with the passing years, and the transformation he had undergone seemed to me to be only explainable if his soul was mutilated beyond the realms of what we might call 'usual evil' ..."
 "So he's made himself impossible to kill by murdering other people?" said Harry. "Why couldn't he make a Sorcerer's Stone, or steal one, if he was so interested in immortality?"
 "Well, we know that he tried to do just that, five years ago," s;n«l Dumbledore. "But there are several reasons why, I think, a Sorcerer's Stone would appeal less than Horcruxes to Lord Voldemort,
 "While the Elixir of Life does indeed extend life, it must lie drunk regularly, for all eternity, if the drinker is to maintain the immortality. Therefore, Voldemort would be entirely dependant on the Elixir, and if it ran
@@ -4600,7 +4600,7 @@ out, or was contaminated, or if the Stone was stolen, he would die just like any
 "You have?" said Harry eagerly.
 "Yes indeed," said Dumbledore, and he raised his blackened, burned-looking hand. "The ring, Harry. Marvolo's ring. And a ter-rible curse there was upon it too. Had it not been -- forgive me the lack of seemly modesty -- for my own prodigious skill, and for Professor Snape's timely action when I returned to Hogwarts, des-perately injured, I might not have lived to tell the tale. However, a withered hand does not seem an unreasonable exchange for a sev-enth of Voldemort's soul. The ring is no longer a Horcrux."
 "But how did you find it?"
-"Well, as you now know, for many years I have made it my business to discover as much as I can about Voldemort's past life. I have traveled widely, visiting those places he once knew. I stumbled across the ring hidden in the ruin of the Gaunt’s house. It seem that once Voldemort had succeeded in sealing a piece of his soul in side it, he did not want to wear it anymore. He hid it, protected by many powerful enchantments, in the shack where his ancestors had once lived (Morfin having been carted off to
+"Well, as you now know, for many years I have made it my business to discover as much as I can about Voldemort's past life. I have traveled widely, visiting those places he once knew. I stumbled across the ring hidden in the ruin of the Gaunt's house. It seem that once Voldemort had succeeded in sealing a piece of his soul in side it, he did not want to wear it anymore. He hid it, protected by many powerful enchantments, in the shack where his ancestors had once lived (Morfin having been carted off to
 Azkaban, of course), never guessing that I might one day take the trouble to visit the ruin, or that I might be keeping an eye open for traces of magical concealment.
 "However, we should not congratulate ourselves too heartily. You destroyed the diary and I the ring, but if we are right in our theory of a seven-part soul, four Horcruxes remain."
 "And they could be anything?" said Harry. "They could be oh, in tin cans or, I dunno, empty potion bottles... ."
@@ -4614,7 +4614,7 @@ Azkaban, of course), never guessing that I might one day take the trouble to vis
 Dumbledore pointed his blackened fingers to the wall behind him, where a ruby-encrusted sword reposed within a glass case.
 "Do you think that's why he really wanted to come back to Hogwarts, sir?" said Harry. "To try and find something from one of the other founders?"
 "My thoughts precisely," said Dumbledore. "But unfortunately, that does not advance us much further, for he was turned away, or so I believe, without the chance to search the school. I am forced to conclude that he never fulfilled his ambition of collecting four founders' objects. He definitely had two -- he may have found three -- that is the best we can do for now."
-"Even if he got something of Ravenclaw's or of Gryffindor's, that leaves a sixth Horcrux," said Harry, counting on his fingers. "Unless he’s got both?"
+"Even if he got something of Ravenclaw's or of Gryffindor's, that leaves a sixth Horcrux," said Harry, counting on his fingers. "Unless he's got both?"
 "I don't think so," said Dumbledore. "I think I know what the sixth Horcrux is. I wonder what you will say when I confess that I have been curious for a while about the behavior of the snake, Nagini?'
 "The snake?" said Harry, startled. "You can use animals as Horcruxes?"
 "Well, it is inadvisable to do so," said Dumbledore, "because to confide a part of your soul to something that can think and move for itself is obviously a very risky business. However, if my calculations are correct, Voldemort was still at least one Horcrux short of his goal of six when he entered your parents' house with the inten-tion of killing you. He seems to have reserved the process of making Horcruxes for particularly significant deaths. You would certainly have been that. He believed that in killing you, he was
@@ -4631,7 +4631,7 @@ Harry felt his heart lift. It was very good not to hear words of caution and pro
 "Does Voldemort know when a Horcrux is destroyed, sir? Can he feel it?" Harry asked, ignoring the portraits.
 "A very interesting question, Harry. I believe not. I believe that Voldemort is now so immersed in evil, and these crucial parts of himself have been detached for so long, he does not feel as we do. Perhaps, at the point of death, he might be aware of his loss ... but he was not aware, for instance, that the diary had been destroyed until he forced the truth out of Lucius Malfoy. When Voldemort discovered that the diary had been mutilated and robbed of all its powers, I am told that his anger was terrible to behold."
 "But I thought he meant Lucius Malfoy to smuggle it into Hogwarts?"
-"Yes, he did, years ago, when he was sure he would be able to create more Horcruxes, but still Lucius was supposed to wait for Voldemorts say-so, and he never received it, for Voldemort van-ished shortly after giving him the diary. No doubt he thought that Lucius would not dare do anything with the Horcrux other than guard it carefully, but he was counting too much upon Lucius’s fear of a master who had been gone for years and whom Lucius believed dead. Of course, Lucius did not know what the diary really was. I understand that Voldemort had told him the diary would cause the Chamber of Secrets to reopen because it was cleverly enchanted. Had Lucius known he held a portion of his mas-ters soul in his hands, he would undoubtedly have treated it with more reverence -- but instead he went ahead and carried out the old plan for his own ends. By planting the diary upon Arthur Weasleys daughter, he hoped to discredit Arthur and get rid of a highly incrim-inating magical object in one stroke. Ah, poor Lucius ... what with Voldemorts fury about the fact that he threw away the Horcrux for his own gain, and the fiasco at the Ministry last year, I would not be sur-prised if he is not secretly glad to be safe in Azkaban at the moment."
+"Yes, he did, years ago, when he was sure he would be able to create more Horcruxes, but still Lucius was supposed to wait for Voldemorts say-so, and he never received it, for Voldemort van-ished shortly after giving him the diary. No doubt he thought that Lucius would not dare do anything with the Horcrux other than guard it carefully, but he was counting too much upon Lucius's fear of a master who had been gone for years and whom Lucius believed dead. Of course, Lucius did not know what the diary really was. I understand that Voldemort had told him the diary would cause the Chamber of Secrets to reopen because it was cleverly enchanted. Had Lucius known he held a portion of his mas-ters soul in his hands, he would undoubtedly have treated it with more reverence -- but instead he went ahead and carried out the old plan for his own ends. By planting the diary upon Arthur Weasleys daughter, he hoped to discredit Arthur and get rid of a highly incrim-inating magical object in one stroke. Ah, poor Lucius ... what with Voldemorts fury about the fact that he threw away the Horcrux for his own gain, and the fiasco at the Ministry last year, I would not be sur-prised if he is not secretly glad to be safe in Azkaban at the moment."
 Harry sat in thought for a moment, then asked, "So if all of his Horcruxes are destroyed, Voldemort couldbe killed?"
 "Yes, I think so," said Dumbledore. "Without his Horcruxes, Voldemort will be a mortal man with a maimed and diminished soul. Never forget, though, that while his soul may be damaged be-yond repair, his brain and his magical powers remain intact. It will take uncommon skill and power to kill a wizard like Voldemort even without his Horcruxes."
 "But I haven't got uncommon skill and power," said Harry, be-fore he could stop himself.
@@ -4869,7 +4869,7 @@ whose surname was "Prince", and her mother was a Muggle, then that would make he
 'Listen, Hermione, I can tell it's not a girl. I can just tell.'
 The truth is that you don't think a girl would have been clever enough,' said Hermione angrily.
 'How can I have hung round with you for five years and not think girls are clever?' said Harry, stung by this. 'It's the way he writes. I just know the Prince was a bloke, I can tell. This girl hasn't got anything to do with it. Where did you get this, anyway?'
-‘The library,' said Hermione, predictably. There's a whole collection of old Prophets up there. Well, I'm going to find out more about Eileen Prince if I can.'
+'The library,' said Hermione, predictably. There's a whole collection of old Prophets up there. Well, I'm going to find out more about Eileen Prince if I can.'
 'Enjoy yourself,' said Harry irritably.
 'I will,' said Hermione. 'And the first place I'll look,' she shot at him, as she reached the portrait hole, 'is records of old Potions awards!'
 Harry scowled after her for a moment, then continued his contemplation of the darkening sky.
@@ -4883,7 +4883,7 @@ Harry scowled after her for a moment, then continued his contemplation of the da
 'Yeah, and the Saturday after that, and the Saturday after that,' sighed Harry. 'And he's hinting now that if I don't get all the boxes done by the end of term, we'll carry on next year.'
 He was finding these detentions particularly irksome because they cut into the already limited time he could have been spending with Ginny. Indeed, he had frequently won-dered lately whether Snape did not know this, for he was keeping Harry later and later every time, while making pointed asides about Harry having to miss the good weather and the varied opportunities it offered.
 Harry was shaken from these bitter reflections by the appearance at his side of Jimmy Peakes, who was holding out a scroll of parchment.
-‘Thanks, Jimmy ... hey, it's from Dumbledore!' said Harry excitedly, unrolling the parchment and scanning it. 'He wants me to go to his office as quick as 1 can!'
+'Thanks, Jimmy ... hey, it's from Dumbledore!' said Harry excitedly, unrolling the parchment and scanning it. 'He wants me to go to his office as quick as 1 can!'
 They stared at each other.
 'Blimey,' whispered Ron. 'You don't reckon ... he hasn't found ...?'
 'Better go and see, hadn't I?' said Harry, jumping to his feet.
@@ -4923,7 +4923,7 @@ Harry stared at her.
 'And then -?'
 'And then I called out, "Who's there?"'
 'You couldn't have found out who it was without asking?' Harry asked her, slightly frustrated.
-‘The Inner Eye,' said Professor Trelawney with dignity, straightening her shawls and many strands of glittering beads, 'was fixed upon matters well outside the mundane realms of whooping voices.'
+'The Inner Eye,' said Professor Trelawney with dignity, straightening her shawls and many strands of glittering beads, 'was fixed upon matters well outside the mundane realms of whooping voices.'
 'Right,' said Harry hastily; he had heard about Professor Trelawney's Inner Eye all too often before. 'And did the voice say who was there?'
 'No, it did not,' she said. 'Everything went pitch black and the next thing I knew, I was being hurled headfirst out of the Room!'
 'And you didn't see that coming?' said Harry, unable to help himself.
@@ -5034,7 +5034,7 @@ Quickly he told them where he was going, and why. He did not pause either for He
 '... so you see what this means?' Harry finished at a gallop. 'Dumbledore won't be here tonight, so Malfoy's going to have another clear shot at whatever he's up to. No, listen to me!" he hissed angrily, as both Ron and Hermione showed every sign of interrupting. 'I know it was Malfoy celebrating in the Room of Requirement. Here -' He shoved the Marauder's Map into Hermione's hand. 'You've got to watch him and you've got to watch Snape, too. Use anyone else who you can rustle up from the DA. Hermione, those contact Galleons will still work, right? Dumbledore says he's put extra protection in the school, but if Snape's involved, he'll know what Dumbledore's protection is, and how to avoid it - but he won't be expecting you lot to be on the watch, will he?'
 'Harry -' began Hermione, her eyes huge with fear.
 ' ? haven't got time to argue,' said Harry curtly. Take this as well -' He thrust the socks into Ron's hands.
-‘Thanks,' said Ron. 'Er - why do I need socks?'
+'Thanks,' said Ron. 'Er - why do I need socks?'
 'You need what's wrapped in them, it's the Felix Felicis. Share it between yourselves and Ginny too. Say goodbye to her from me. I'd better go, Dumbledore's waiting -'
 'No!' said Hermione, as Ron unwrapped the tiny little bottle of golden potion, looking awestruck. 'We don't want it, you take it, who knows what you're going to be facing?'
 'I'Il be fine, I'll be with Dumbledore,' said Harry. 'I want to know you lot are OK ... don't look like that, Hermione, I'll see you later

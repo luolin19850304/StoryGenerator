@@ -21,7 +21,7 @@ CHUNK_REGEX = re.compile(
     rb"([\n ]|((!(!!)?|\?(\?\?)?|\.(\.\.)?|-{1,2}|[\n:;,\"])|([A-Z]?[a-z]+|[A-Z][a-z]*)(-[A-Za-z]+)*('[a-z]{,7})?[,.?!:;\n]?) ?)")
 
 CLEAN_REGEX = re.compile(
-    rb'^\s*((-\s+)?chapter|[IVX]+|\[[^][]\]|[IV]\. |harry\s+potter|by\s+j\.\s*k\.|the\s+end)[^\n\r]*$|\r+',
+    rb'^\s*((-\s+)?chapter|volume|section|part|[IVX]+|\[[^][]\]|[IV]\. |harry\s+potter|by\s+j\.\s*k\.|the\s+end)[^\n\r]*$|\r+',
     MULTILINE | IGNORECASE)
 WRAP_REGEX = re.compile(rb'([^\n])\n([^\n])')
 NL_REGEX = re.compile(rb'\n{3,}')

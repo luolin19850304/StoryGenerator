@@ -12,23 +12,27 @@ The markov chain that underlies the text generation algorithm uses data from the
 8. Project Gutenberg (digitalized classic books where copyright has expired):
   a) Moby Dick; Or, The Whale by Herman Melville
   b) The Parent's Assistant, by Maria Edgeworth
-  c) Emma by Jane Austen
-  d) Pride and Prejudice by Jane Austen
-  e) Persuasion by Jane Austen
+  c) Emma, by Jane Austen
+  d) Pride and Prejudice, by Jane Austen
+  e) Persuasion, by Jane Austen
   f) Sense and Sensibility by Jane Austen
   g) Stories to Tell to Children by Sara Cone Bryant
-  h) The Adventures of Buster Bear by Thornton W. Burgess
-  i) The Ball and The Cross by G.K. Chesterton
-  j) The Wisdom of Father Brown by G. K. Chesterton
-  k) The Man Who Was Thursday by G. K. Chesterton
-  l) Parents by Chesterton
+  h) The Adventures of Buster Bear, by Thornton W. Burgess
+  i) The Ball and The Cross, by G.K. Chesterton
+  j) The Wisdom of Father Brown, by G. K. Chesterton
+  k) The Man Who Was Thursday, by G. K. Chesterton
+  l) Parents, by Chesterton
   m) Frankenstein; Or, The Modern Prometheus by Mary Wollstonecraft Shelley
   n) The Adventures of Sherlock Holmes, by Arthur Conan Doyle
-  o) A Christmas Carol by Charles Dickens
+  o) A Christmas Carol, by Charles Dickens
   p) The Strange Case Of Dr. Jekyll And Mr. Hyde, by Robert Louis Stevenson
-  r) Alice's Adventures in Wonderland by Lewis Carroll
-  s) The Adventures of Tom Sawyer, Complete by Mark Twain (Samuel Clemens)
+  r) Alice's Adventures in Wonderland, by Lewis Carroll
+  s) The Adventures of Tom Sawyer, by Mark Twain (Samuel Clemens)
   t) A Tale of Two Cities, by Charles Dickens
+  u) Oliver Twist, by Charles Dickens
+  v) Great Expectations, by Charles Dickens
+  u) Hard Times, by Charles Dickens
+  w) Grimms' Fairy Tales, by The Brothers Grimm
 
 Here is the full license for the Gutenberg Project:
 
