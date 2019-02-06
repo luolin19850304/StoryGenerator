@@ -15,18 +15,27 @@ logging.basicConfig(level=20, format='%(levelname)s %(funcName)-13s %(lineno)3d 
 log = logging.getLogger()
 
 SPACE: int = ord(b' ')
+DQUOTE: int = ord(b'"')
+COMMA: int = ord(b',')
+COLON: int = ord(b':')
+DOT: int = ord(b'.')
+E_MARK: int = ord(b'!')
+Q_MARK: int = ord(b'?')
+SEMICOLON: int = ord(b';')
 ROOT: str = dirname(abspath(__file__))
 
 CHUNK_REGEX = re.compile(
     rb"([\n ]|((!(!!)?|\?(\?\?)?|\.(\.\.)?|-{1,2}|[\n:;,\"])|([A-Z]?[a-z]+|[A-Z][a-z]*)(-[A-Za-z]+)*('[a-z]{,7})?[,.?!:;\n]?) ?)")
 
 CLEAN_REGEX = re.compile(
-    rb'^\s*((-\s+)?chapter|volume|section|part|[IVX]+|\[[^][]\]|[IV]\. |harry\s+potter|by\s+j\.\s*k\.|the\s+end)[^\n\r]*$|\r+',
+    rb'^\s*(-+\s*)?(chapter|volume|section|part|[IVX]+|harry\s+potter|by\s+|(the\s+)?end)[^\n\r]*$|\r+',
     MULTILINE | IGNORECASE)
 WRAP_REGEX = re.compile(rb'([^\n])\n([^\n])')
 NL_REGEX = re.compile(rb'\n{3,}')
+DASHES_REGEX = re.compile(rb'(- *){3,}')
+DOTS_REGEX = re.compile(rb'(\. *){3,}')
 
-IS_SENT_END = re.compile(rb'[.!?]([.!?]{2})? *$')
+IS_SENT_END = re.compile(rb'[.!?]([.!?]{2})? *$|\n$')
 
 TEXT: Optional[bytes] = None
 NGRAM_PS: Optional[Dict[Tuple, Dict[bytes, float]]] = None
@@ -61,28 +70,36 @@ def decapitalize(txt: bytes) -> bytes:
         return txt
 
 
-def normalize(tokens, unique_tokens) -> None:
-    return
+def postprocess(tokens: List[bytes]) -> None:
+    start = time()
+    log.info('starting postprocessing')
     for i in range(1, len(tokens) - 1):
-        if len(tokens[i + 1].lstrip()) > 1:
+        if len(tokens[i]) > 0 and len(tokens[i + 1]) > 0:
             # word. word2 => word. Word2
-            if IS_SENT_END.search(tokens[i]):
+            if len(tokens[i + 1].lstrip()) > 1 and IS_SENT_END.search(tokens[i]):
                 tokens[i + 1] = capitalize(tokens[i + 1])
-            # if  1st char of next token is unnecessarily capitalized
-            elif len(tokens[i + 1]) > 1 and \
-                    65 <= tokens[i + 1].lstrip()[0] <= 90 and \
-                    tokens[i + 1] in unique_tokens and \
-                    (decapitalize(tokens[i + 1].lstrip()) in unique_tokens or decapitalize(
-                        tokens[i + 1]) in unique_tokens):
-                tokens[i + 1] = decapitalize(tokens[i + 1])
-        # more than 1 consecutive spaces
-        if len(tokens[i]) > 0 and tokens[i][-1] == SPACE and len(tokens[i + 1]) > 0 and tokens[i + 1][0] == SPACE:
-            tokens[i + 1] = tokens[i + 1].lstrip()
+            # lack of space after punct
+            current_last = tokens[i][-1]
+            next_first = tokens[i + 1][0]
+            if (current_last == DOT or current_last == COMMA or current_last == SEMICOLON or current_last == COLON or current_last == E_MARK or current_last == Q_MARK) and next_first != SPACE:
+                tokens[i] += b' '
+            # more than 1 consecutive spaces
+            elif current_last == SPACE and next_first == SPACE:
+                tokens[i + 1] = tokens[i + 1].lstrip()
+            # two consecutive words (lack of space to separate them)
+            elif 60 <= current_last <= 90 or 97 <= current_last <= 122 and \
+                    (60 <= next_first <= 90 or 97 <= next_first <= 122):
+                tokens[i] += b' '
+            elif current_last == b'"' and next_first == b'"':
+                tokens[i] = tokens[i][:-1]
+            # elif current_last == DQUOTE and next_first == b'"':
+            #     tokens[i] = tokens[i][:-1]
+    log.info(f'finished postprocessing (took {time() - start} sec)')
 
 
 def tokenize(txt: bytes) -> List[bytes]:
     start = time()
-    log.info('tokenizing')
+    log.info('starting tokenizing')
     x = list((match[0] for match in CHUNK_REGEX.findall(txt)))
     log.info(f'finished tokenizing (took {time() - start:4.2f} sec)')
     return x
@@ -129,10 +146,10 @@ def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
 
     assert n >= 1, f'ngram len must be >= 1 but got n = {n}'
     if NGRAM_PS is not None:
-        log.info('got ngram ps from cache')
+        log.info('got ngram probabilities from cache')
         return NGRAM_PS
     start = time()
-    log.info('generating ngram ps')
+    log.info('generating ngram probabilities (this might take a couple of minutes)')
 
     tokens: List[bytes] = get_tokens()
 
@@ -157,7 +174,7 @@ def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
             for next_word in NGRAM_PS[ngram]:
                 NGRAM_PS[ngram][next_word] /= total
 
-    log.info(f'finished generating ngram ps (took {time() - start:4.2f} sec)')
+    log.info(f'finished generating ngram probabilities (took {time() - start:4.2f} sec)')
     return NGRAM_PS
 
 
@@ -204,17 +221,15 @@ def get_text(files=None, chunk_size_=10, quick=True) -> bytes:
     TEXT = CLEAN_REGEX.sub(b'', TEXT)
     TEXT = WRAP_REGEX.sub(rb'\1 \2', TEXT)
     TEXT = NL_REGEX.sub(b'\n\n', TEXT)
+    TEXT = DOTS_REGEX.sub(rb'...', TEXT)
+    TEXT = DASHES_REGEX.sub(rb'--', TEXT)
     log.info(f'finished loading text (took {time() - start:4.2f} sec)')
     return TEXT
 
 
-def generate(txt=b'Harry was in a great mood that day.', n=6, max_avg_txt_len=(10000 * 8)) -> str:
-    assert len(txt) // 3 >= n, \
-        'Not enough text to generate a story (try adding more text).'
+def generate(txt=b'Harry', n=6, max_avg_txt_len=(10000 * 8)) -> str:
     start = time()
     tokens: List[bytes] = tokenize(txt)
-    assert len(tokens) >= n, \
-        f'Not enough text to generate a story ({len(tokens)} but need {n}).'
     succ = [0 for _ in range(n + 1)]
     ps: Dict[bytes, float] = get_ps()
     unique_tokens: List[bytes] = list(ps.keys())
@@ -222,7 +237,7 @@ def generate(txt=b'Harry was in a great mood that day.', n=6, max_avg_txt_len=(1
     ps_ngrams = get_ngram_ps(n=n)
 
     # token generation
-    while len(tokens) * 8 < max_avg_txt_len:
+    while len(tokens) * 5 < max_avg_txt_len:
         found = False
         for m in range(n, 0, -1):
             ngram = tuple(tokens[-m:])
@@ -237,7 +252,7 @@ def generate(txt=b'Harry was in a great mood that day.', n=6, max_avg_txt_len=(1
             tokens.append(choice(a=unique_tokens, p=unique_tokens_ps))
 
     # post-processing
-    normalize(tokens=tokens, unique_tokens=unique_tokens)
+    postprocess(tokens=tokens)
 
     # metrics
     log.info('-' * 50)
