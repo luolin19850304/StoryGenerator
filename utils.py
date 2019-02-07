@@ -6,7 +6,7 @@ from os.path import dirname, abspath, join, isdir, isfile, basename
 from pathlib import Path
 from re import MULTILINE, IGNORECASE
 from time import time
-from typing import List, Optional, Tuple, Dict
+from typing import List, Optional, Tuple, Dict, Match, Iterable
 
 from numpy import ndarray
 from numpy.random import choice
@@ -14,28 +14,46 @@ from numpy.random import choice
 logging.basicConfig(level=20, format='%(levelname)s %(funcName)-13s %(lineno)3d %(message)s')
 log = logging.getLogger()
 
+ROOT: str = dirname(abspath(__file__))
+AVG_TOKEN_LEN = 5
+
 SPACE: int = ord(b' ')
-DQUOTE: int = ord(b'"')
 COMMA: int = ord(b',')
 COLON: int = ord(b':')
 DOT: int = ord(b'.')
 E_MARK: int = ord(b'!')
 Q_MARK: int = ord(b'?')
 SEMICOLON: int = ord(b';')
-ROOT: str = dirname(abspath(__file__))
+# DQUOTE: int = ord(b'"')
 
-CHUNK_REGEX = re.compile(
-    rb"([\n ]|((!(!!)?|\?(\?\?)?|\.(\.\.)?|-{1,2}|[\n:;,\"])|([A-Z]?[a-z]+|[A-Z][a-z]*)(-[A-Za-z]+)*('[a-z]{,7})?[,.?!:;\n]?) ?)")
+PUNCT_REGEX = rb'(?P<punct>-{1,2}|[:;,"])'
+NL_REGEX = rb'(?P<nl>(\n\r?|\r\n?)+)'
+SENT_END_REGEX = rb'(?P<sent_end>(!(!!)?|\?(\?\?)?|\.(\.\.)?))'
+WS_REGEX = rb'(?P<ws> )'
+WORD_REGEX = rb"(?P<word>([A-Z]?[a-z]+|[A-Z][a-z]*)(-[A-Za-z]+)*('[a-z]{0,7})?)"
+DATE_REGEX = rb"(?P<date>(([1-9]\d*)(th|[nr]d)|19\d{2}|20\d{2}))"
+TIME_REGEX = rb"(?P<time>\d+((:\d{2}){1,2}|(\.\d{2}){1,2}))"
+CHUNK_REGEX = re.compile(rb'(?P<token>' + rb'|'.join([
+    WS_REGEX,
+    SENT_END_REGEX,
+    PUNCT_REGEX,
+    NL_REGEX,
+    WORD_REGEX,
+    DATE_REGEX,
+    TIME_REGEX,
+]) + rb')')
 
 CLEAN_REGEX = re.compile(
-    rb'^\s*(-+\s*)?(chapter|volume|section|part|[IVX]+|harry\s+potter|by\s+|(the\s+)?end)[^\n\r]*$|\r+',
+    rb'^\s*(-+\s*)?(chapter|\*|note|volume|section|part|[IVX]+|harry\s+potter|by\s+|(the\s+)?end)[^\n\r]*$|\r+',
     MULTILINE | IGNORECASE)
-WRAP_REGEX = re.compile(rb'([^\n])\n([^\n])')
-NL_REGEX = re.compile(rb'\n{3,}')
-DASHES_REGEX = re.compile(rb'(- *){3,}')
-DOTS_REGEX = re.compile(rb'(\. *){3,}')
 
-IS_SENT_END = re.compile(rb'[.!?]([.!?]{2})? *$|\n$')
+# processing
+NEEDLESS_WRAP = re.compile(rb'([^\n])\n([^\n])')
+TOO_MANY_NL = re.compile(rb'\n{3,}')
+TOO_MANY_DASHES = re.compile(rb'(- *){3,}')
+TOO_MANY_DOTS = re.compile(rb'(\. *){3,}')
+
+IS_SENT_END = re.compile(rb'(!(!!)?|\?(\?\?)?|\.(\.\.)?\s*|\n+)$')
 
 TEXT: Optional[bytes] = None
 NGRAM_PS: Optional[Dict[Tuple, Dict[bytes, float]]] = None
@@ -94,15 +112,11 @@ def postprocess(tokens: List[bytes]) -> None:
                 tokens[i] = tokens[i][:-1]
             # elif current_last == DQUOTE and next_first == b'"':
             #     tokens[i] = tokens[i][:-1]
-    log.info(f'finished postprocessing (took {time() - start} sec)')
+    log.info(f'finished postprocessing (took {time() - start:4.2f} sec)')
 
 
-def tokenize(txt: bytes) -> List[bytes]:
-    start = time()
-    log.info('starting tokenizing')
-    x = list((match[0] for match in CHUNK_REGEX.findall(txt)))
-    log.info(f'finished tokenizing (took {time() - start:4.2f} sec)')
-    return x
+def tokenize(txt: bytes) -> Iterable[Match[bytes]]:
+    return CHUNK_REGEX.finditer(txt)
 
 
 def get_tokens() -> List[bytes]:
@@ -110,7 +124,23 @@ def get_tokens() -> List[bytes]:
     if TOKENS is not None:
         log.info('got tokens from cache')
         return TOKENS
-    TOKENS = tokenize(get_text())
+    log.info('generating tokens')
+    start = time()
+    ms: List[Match[bytes]] = list(tokenize(get_text()))
+    TOKENS = [ms[0].group(0)]
+    for i in range(1, len(ms) - 1):
+        # if ms[i].group('word') and ms[i -1 ].group('') and (97 <= TOKENS[-1][0] <= 122):
+        #     TOKENS[-1] = capitalize(TOKENS[-1])
+        if (ms[i].group('word') and ms[i + 1].group('word')) or (
+                ms[i].group('sent_end') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl'))
+        ) or (ms[i].group('punct') and not (ms[i + 1].group('ws')) or ms[i + 1].group('nl')):
+            TOKENS.append(b' ')
+        elif (ms[i].group('ws') and (ms[i + 1].group('ws') or ms[i + 1].group('sent_end'))) or (
+                ms[i].group('punct') and ms[i + 1].group('punct') and ms[i].group('punct') == ms[i + 1].group('punct')):
+            continue
+        TOKENS.append(ms[i].group(0))
+    TOKENS.append(ms[-1].group(0))
+    log.info(f'finished generating tokens (took {time() - start:4.2f} sec, {len(TOKENS)} tokens)')
     return TOKENS
 
 
@@ -129,15 +159,15 @@ def get_counts() -> Counter:
 def get_ps() -> Dict[bytes, float]:
     global PS
     if PS is not None:
-        log.info('got word ps from cache')
+        log.info('got word probabilities from cache')
         return PS
     start = time()
-    log.info('generating word ps')
+    log.info('generating word probabilities')
     PS = dict(get_counts())
     no_tokens: int = sum(PS.values())
     for token in PS:
         PS[token] /= no_tokens
-    log.info(f'finished generating word ps took {time() - start:4.2f} sec')
+    log.info(f'finished generating word probabilities (took {time() - start:4.2f} sec)')
     return PS
 
 
@@ -189,47 +219,38 @@ def root_path(*parts, mkparent=True, mkdir=False, mkfile=False) -> str:
     return p
 
 
-def get_text(files=None, chunk_size_=10, quick=True) -> bytes:
+def get_text(files=None) -> bytes:
     global TEXT
     if TEXT is not None:
         log.info('got text from cache')
         return TEXT
     start = time()
     if files is None:
-        files = [join(ROOT, 'data', fname) for fname in listdir(join(ROOT, 'data'))]
+        files = [join(ROOT, 'data', fname) for fname in listdir(join(ROOT, 'data')) if fname.endswith('.txt')]
     log.info(f'loading text from {len(files)} files {", ".join((basename(p) for p in files))}')
-    chunk_size = chunk_size_
-    chunks: List[bytes] = []
+    texts: List[bytes] = []
     for path in files:
+        start_file = time()
         with open(path, mode='rb') as f:
-            start_file = time()
             log.info(f'loading text from file "{path}"')
-            while True:
-                try:
-                    c = f.read(chunk_size)
-                    if not c:
-                        break
-                    else:
-                        chunks.append(c)
-                    chunk_size = min(chunk_size * 2, 100) if not quick else chunk_size * 2
-                except Exception as e:
-                    log.warning(str(e))
-                    chunk_size = 10
-        log.info(f'finished loading text from "{path}" (took {time() - start_file} sec)')
-        chunks.append(b'\n\n')
-    TEXT = b''.join(chunks)
+            try:
+                texts.append(f.read())
+            except Exception as e:
+                log.warning(str(e))
+        log.info(f'finished loading text from "{path}" (took {time() - start_file:4.2f} sec, read {len(texts[-1])} bytes)')
+    TEXT = b'\n\n'.join(texts)
     TEXT = CLEAN_REGEX.sub(b'', TEXT)
-    TEXT = WRAP_REGEX.sub(rb'\1 \2', TEXT)
-    TEXT = NL_REGEX.sub(b'\n\n', TEXT)
-    TEXT = DOTS_REGEX.sub(rb'...', TEXT)
-    TEXT = DASHES_REGEX.sub(rb'--', TEXT)
-    log.info(f'finished loading text (took {time() - start:4.2f} sec)')
+    TEXT = NEEDLESS_WRAP.sub(rb'\1 \2', TEXT)
+    TEXT = TOO_MANY_NL.sub(b'\n\n', TEXT)
+    TEXT = TOO_MANY_DOTS.sub(rb'...', TEXT)
+    TEXT = TOO_MANY_DASHES.sub(rb'--', TEXT)
+    log.info(f'finished loading text (took {time() - start:4.2f} sec, read {len(TEXT)} bytes)')
     return TEXT
 
 
-def generate(txt=b'Harry', n=6, max_avg_txt_len=(10000 * 8)) -> str:
+def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8)) -> str:
     start = time()
-    tokens: List[bytes] = tokenize(txt)
+    tokens: List[bytes] = [m.group(0) for m in tokenize(txt)]
     succ = [0 for _ in range(n + 1)]
     ps: Dict[bytes, float] = get_ps()
     unique_tokens: List[bytes] = list(ps.keys())
@@ -237,7 +258,7 @@ def generate(txt=b'Harry', n=6, max_avg_txt_len=(10000 * 8)) -> str:
     ps_ngrams = get_ngram_ps(n=n)
 
     # token generation
-    while len(tokens) * 5 < max_avg_txt_len:
+    while len(tokens) * AVG_TOKEN_LEN < max_avg_txt_len:
         found = False
         for m in range(n, 0, -1):
             ngram = tuple(tokens[-m:])
@@ -252,12 +273,12 @@ def generate(txt=b'Harry', n=6, max_avg_txt_len=(10000 * 8)) -> str:
             tokens.append(choice(a=unique_tokens, p=unique_tokens_ps))
 
     # post-processing
-    postprocess(tokens=tokens)
+    # postprocess(tokens=tokens)
 
     # metrics
-    log.info('-' * 50)
-    log.info('%s %12s %s' % ('NO', 'PROBABILITY', 'NO EXAMPLES'))
-    log.info('%s %12s %s' % ('--', '-----------', '-----------'))
+    log.info('-' * (40 + 12 + 2 + 2))
+    log.info('%2s %12s %s' % ('NO', 'PROBABILITY', 'NO EXAMPLES'))
+    log.info('%2s %12s %s' % ('-' * 2, '-' * 12, '-' * 40))
     no_gen_tokens: int = sum(succ)
     for i in range(n, -1, -1):
         log.info('%2d %12.10f (from %d examples)' % (i, succ[i] / no_gen_tokens, succ[i]))
