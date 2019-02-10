@@ -1081,8 +1081,8 @@ weapon which will always secure me from any steps which he might
 take in the future. I leave a photograph which he might care to
 possess; and I remain, dear Mr. Sherlock Holmes,
 
-                                      "Very truly yours,
-                                   "IRENE NORTON, née ADLER."
+"Very truly yours,
+"IRENE NORTON, née ADLER."
 
 "What a woman--oh, what a woman!" cried the King of Bohemia, when
 we had all three read this epistle. "Did I not tell you how quick
@@ -3884,7 +3884,7 @@ down in this chair and let me preach to you for a little. I don't
 know quite what to do, and I should value your advice. Light a
 cigar and let me expound."
 
- "Pray do so."
+"Pray do so."
 
 "Well, now, in considering this case there are two points about
 young McCarthy's narrative which struck us both instantly,
@@ -11570,7 +11570,7 @@ ran thus:
 I should or should not accept a situation which has been offered
 to me as governess. I shall call at half-past ten to-morrow if I
 do not inconvenience you. Yours faithfully,
-                                               "VIOLET HUNTER."
+"VIOLET HUNTER."
 
 "Do you know the young lady?" I asked.
 
@@ -11779,7 +11779,7 @@ back to the agency and inquire whether the place was still open
 when I received this letter from the gentleman himself. I have it
 here and I will read it to you:
 
-                       "'The Copper Beeches, near Winchester.
+"'The Copper Beeches, near Winchester.
 "'DEAR MISS HUNTER:--Miss Stoper has very kindly given me your
 address, and I write from here to ask you whether you have
 reconsidered your decision. My wife is very anxious that you

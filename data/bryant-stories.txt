@@ -2,7 +2,6 @@ Stories to Tell to Children by Sara Cone Bryant
 
 TWO LITTLE RIDDLES IN RHYME
 
-
      There's a garden that I ken,
      Full of little gentlemen;
      Little caps of blue they wear,
@@ -15,9 +14,7 @@ TWO LITTLE RIDDLES IN RHYME
      He sleeps outside in the night.
            (The path.)
 
-
 THE LITTLE YELLOW TULIP
-
 
 Once there was a little yellow Tulip, and she lived down in a little
 dark house under the ground. One day she was sitting there, all by
@@ -86,11 +83,7 @@ but she had the birds to sing to her and the sun to shine upon her
 pretty yellow head. She was so pleased, too, when the children exclaimed
 with pleasure that now they knew that the beautiful spring had come!
 
-
-
-
 THE COCK-A-DOO-DLE-DOO
-
 
 A very little boy made this story up "out of his head," and told it to
 his papa. I think you littlest ones will like it; I do.
@@ -100,10 +93,7 @@ cock-a-doo-dle-doo. So he was a cock-a-doo-dle-doo. And he wanted to fly
 up into the sky. So he did fly up into the sky. And he wanted to get
 wings and a tail So he did get some wings and a tail.
 
-
-
 THE CLOUD
-
 
 One hot summer morning a little Cloud rose out of the sea and floated
 lightly and happily across the blue sky. Far below lay the earth, brown,
@@ -161,9 +151,7 @@ sacrificed itself.
 Soon that, too, was gone, but long, long afterward the men and animals
 who were saved by the Cloud kept her blessing in their hearts.
 
-
 THE LITTLE RED HEN
-
 
 The little Red Hen was in the farmyard with her chickens, when she found
 a grain of wheat.
@@ -205,11 +193,7 @@ When the bread was baked, she said, "Who will eat this bread?"
 "No, you won't," said the little Red Hen. "I shall eat it myself. Cluck!
 cluck!" And she called her chickens to help her.
 
-
-
-
 THE GINGERBREAD MAN
-
 
 Once upon a time there was a little old woman and a little old man, and
 they lived all alone in a little old house. They hadn't any little
@@ -389,11 +373,7 @@ goodness gracious, I am three quarters gone!"
 And after that, the little Gingerbread Boy never said anything more at
 all.
 
-
-
-
 THE LITTLE JACKALS AND THE LION
-
 
 Once there was a great big jungle; and in the jungle there was a great
 big Lion; and the Lion was king of the jungle. Whenever he wanted
@@ -491,12 +471,7 @@ round the well, and sang,--
 
 "Ao! Ao! Ao!"
 
-
-
-
-
 THE COUNTRY MOUSE AND THE CITY MOUSE
-
 
 Once a little mouse who lived in the country invited a little mouse
 from the city to visit him. When the little City Mouse sat down to
@@ -575,12 +550,7 @@ prunes and cheese,--and be frightened to death all the time!"
 So the little Country Mouse went back to his home, and there he stayed
 all the rest of his life.
 
-
-
-
-
 LITTLE JACK ROLLAROUND
-
 
 Once upon a time there was a wee little boy who slept in a tiny
 trundle-bed near his mother's great bed. The trundle-bed had castors on
@@ -689,11 +659,7 @@ the middle of the sea!
 
 And I suppose he is there yet, unless somebody picked him out again.
 
-
-
-
 HOW BROTHER RABBIT FOOLED THE WHALE AND THE ELEPHANT
-
 
 One day little Brother Rabbit was running along on the sand, lippety,
 lippety, when he saw the Whale and the Elephant talking together.
@@ -797,12 +763,7 @@ other. So that broke up the bargain between them.
 And little Brother Rabbit sat in the bushes and laughed, and laughed,
 and laughed.
 
-
-
-
-
 THE LITTLE HALF-CHICK
-
 
 There was once upon a time a Spanish Hen, who hatched out some nice
 little chickens. She was much pleased with their looks as they came from
@@ -903,11 +864,7 @@ There he stands to this day, with his one eye, his one wing, and his one
 leg. He cannot hoppity-kick any more, but he turns slowly round when the
 wind blows, and keeps his head toward it, to hear what it says.
 
-
-
-
 THE BLACKBERRY-BUSH
-
 
 A little boy sat at his mother's knees, by the long western window,
 looking out into the garden. It was autumn, and the wind was sad; and
@@ -983,17 +940,14 @@ content, for my work is done. From the window he watches me and thinks,
 and I love it. I know it is safe out there nodding all alone, and next
 summer it will hold ripe berries up for me to gather again."'"
 
-       *       *       *       *       *
+
 
 Then the wee boy smiled, and said he liked the little story. His mother
 took him up in her arms, and they went out to supper and left the
 blackberry-bush nodding up and down in the wind; and there it is
 nodding yet.
 
-
-
 THE FAIRIES
-
 
      Up the airy mountain,
        Down the rushy glen,
@@ -1057,11 +1011,7 @@ THE FAIRIES
      Green jacket, red cap,
        And white owl's feather!
 
-
-
-
 THE ADVENTURES OF THE LITTLE FIELD MOUSE
-
 
 Once upon a time, there was a little brown Field Mouse; and one day he
 was out in the fields to see what he could find. He was running along in
@@ -1144,11 +1094,7 @@ she wasn't wearing it she kept it in the shiny acorn box.
 And the little Red Man never knew what had become of it, because he
 didn't know where the little Field Mouse lived.
 
-
-
-
 ANOTHER LITTLE RED HEN
-
 
 Once upon a time there was a little Red Hen, who lived on a farm all by
 herself. An old Fox, crafty and sly, had a den in the rocks, on a hill
@@ -1221,12 +1167,7 @@ And they were scalded to death.
 But the little Red Hen lived happily ever after, in her own little
 farmhouse.
 
-
-
-
-
 THE STORY OF THE LITTLE RID HIN
-
 
      There was once't upon a time
        A little small Rid Hin,
@@ -1268,7 +1209,7 @@ THE STORY OF THE LITTLE RID HIN
      And he tuk a great big bag
        And to his mither said,--
 
-     "Now have the pot all bilin'
+"Now have the pot all bilin'
        Agin the time I come;
      We'll ate the small Rid Hin to-night,
        For shure I'll bring her home."
@@ -1286,9 +1227,9 @@ THE STORY OF THE LITTLE RID HIN
      An' out she comes hersel',
        Jist as he got in sight,
      To pick up shticks to make her fire:
-       "Aha!" says Fox, "all right.
+"Aha!" says Fox, "all right.
 
-     "Begorra, now, I'll have yees
+"Begorra, now, I'll have yees
        Widout much throuble more";
      An' in he shlips quite unbeknownst,
        An' hides be'ind the door.
@@ -1310,10 +1251,10 @@ THE STORY OF THE LITTLE RID HIN
 
      An' lighted on the bame
        Across on top the room;
-     "Aha!" says she, "ye don't have me;
+"Aha!" says she, "ye don't have me;
        Ye may as well go home."
 
-     "Aha!" says Fox, "we'll see;
+"Aha!" says Fox, "we'll see;
        I'll bring yees down from that."
      So out he marched upon the floor
        Right under where she sat.
@@ -1368,22 +1309,22 @@ THE STORY OF THE LITTLE RID HIN
      Jist watchin' for him at the door
        He shpied ould mither Fox.
 
-     "Have ye the pot a-bilin'?"
+"Have ye the pot a-bilin'?"
        Says he to ould Fox thin;
-     "Shure an' it is, me child," says she;
-       "Have ye the small Rid Hin?"
+"Shure an' it is, me child," says she;
+"Have ye the small Rid Hin?"
 
-     "Yes, jist here in me bag,
+"Yes, jist here in me bag,
        As shure as I shtand here;
      Open the lid till I pit her in:
        Open it--nivir fear."
 
      So the rashkill cut the shtring,
        An' hild the big bag over;
-     "Now when I shake it in," says he,
-       "Do ye pit on the cover."
+"Now when I shake it in," says he,
+"Do ye pit on the cover."
 
-     "Yis, that I will"; an' thin
+"Yis, that I will"; an' thin
        The shtone wint in wid a dash,
      An' the pot o' bilin' wather
        Came over them ker-splash.
@@ -1393,11 +1334,7 @@ THE STORY OF THE LITTLE RID HIN
      An' the little small Rid Hin lived safe,
        Jist where she lived before.
 
-
-
-
 THE STORY OF EPAMINONDAS AND HIS AUNTIE
-
 
 Epaminondas used to go to see his Auntie 'most every day, and she nearly
 always gave him something to take home to his Mammy.
@@ -1497,16 +1434,12 @@ pies!
 
 He stepped (imitate)--right--in--the--middle--of--every--one.
 
-       *       *       *       *       *
+
 
 And, do you know, children, nobody knows what happened next! The person
 who told me the story didn't know; nobody knows. But you can guess.
 
-
-
-
 THE BOY WHO CRIED "WOLF!"
-
 
 There was once a shepherd-boy who kept his flock at a little distance
 from the village. Once he thought he would play a trick on the villagers
@@ -1533,11 +1466,7 @@ lost all his sheep.
 That is the kind of thing that happens to people who lie: even when they
 tell the truth no one believes them.
 
-
-
-
 THE FROG KING
-
 
 Did you ever hear the old story about the foolish Frogs? The Frogs in a
 certain swamp decided that they needed a king; they had always got along
@@ -1573,11 +1502,7 @@ Stork caught them in his long bill and gobbled them up. One after
 another they came bobbing up, and one after another the stork ate them.
 He was indeed a king worthy of them!
 
-
-
-
 THE SUN AND THE WIND
-
 
 The Sun and the Wind once had a quarrel as to which was the stronger.
 Each believed himself to be the more powerful. While they were arguing
@@ -1599,11 +1524,7 @@ Now it was the Sun's turn. He shone with all his beams on the man's
 shoulders. As it grew hotter and hotter, the man unfastened his cloak;
 then he threw it back; at last he took it off! The Sun had won.
 
-
-
-
 THE LITTLE JACKAL AND THE ALLIGATOR
-
 
 The little Jackal was very fond of shell-fish. He used to go down by the
 river and hunt along the edges for crabs and such things. And once, when
@@ -1788,12 +1709,7 @@ house; and then he set fire to it!
 And it smoked and burned till it smoked that old Alligator to smoked
 herring!
 
-
-
-
-
 THE LARKS IN THE CORNFIELD
-
 
 There was once a family of little Larks who lived with their mother in a
 nest in a cornfield. When the corn was ripe the mother Lark watched very
@@ -1837,11 +1753,7 @@ have to cut this corn ourselves.' And then he called his son and said,
 his own business, instead of asking somebody else to do it, things get
 done. I will move you out to-night."
 
-
-
-
 A TRUE STORY ABOUT A GIRL
-
 
 Once there were four little girls who lived in a big, bare house, in the
 country. They were very poor, but they had the happiest times you ever
@@ -1946,11 +1858,7 @@ I think the most beautiful thing about her is what I have been telling
 you: that she loved her mother so well that she gave her whole life to
 make her happy.
 
-
-
-
 MY KINGDOM
-
 
 The little Louisa I told you about, who wrote verses and stories in her
 diary, used to like to play that she was a princess, and that her
@@ -1999,12 +1907,7 @@ same thoughts.
      Thy happy kingdom in _myself_,
        And dare to take command.
 
-
-
-
-
 PICCOLA
-
 
      Poor, sweet Piccola! Did you hear
      What happened to Piccola, children dear?
@@ -2033,7 +1936,7 @@ PICCOLA
 
      In rushed Piccola sweet, half wild:
      Never was seen such a joyful child.
-     "See what the good saint brought!" she cried,
+"See what the good saint brought!" she cried,
      And mother and father must peep inside.
 
      Now such a story who ever heard?
@@ -2041,7 +1944,7 @@ PICCOLA
      A sparrow, that in at the window flew,
      Had crept into Piccola's tiny shoe!
 
-     "How good poor Piccola must have been!"
+"How good poor Piccola must have been!"
      She cried, as happy as any queen,
      While the starving sparrow she fed and warmed,
      And danced with rapture, she was so charmed.
@@ -2051,12 +1954,7 @@ PICCOLA
      In the far-off land of France, they say,
      Still do they live to this very day.
 
-
-
-
-
 THE LITTLE FIR TREE
-
 
 When I was a very little girl some one, probably my mother, read to me
 Hans Christian Andersen's story of the Little Fir Tree. It happened that
@@ -2208,11 +2106,7 @@ Christmas tree! And from his shiny head to his feet he was glad, through
 and through, because he was just little enough to be the nicest kind of
 tree in the world!
 
-
-
-
 HOW MOSES WAS SAVED
-
 
 Thousands of years ago, many years before David lived, there was a very
 wise and good man of his people who was a friend and adviser of the king
@@ -2294,11 +2188,7 @@ people from the king and rescued them from the Egyptians. The one child
 saved by the king's own daughter was the very one the king would most
 have wanted to kill, if he had known.
 
-
-
-
 THE TEN FAIRIES
-
 
 Once upon a time there was a dear little girl, whose name was Elsa.
 Elsa's father and mother worked very hard and became rich. But they
@@ -2398,10 +2288,7 @@ fingers on her hands!"
 
 When Elsa heard that, she used to laugh, but she never, never told.
 
-
-
 THE ELVES AND THE SHOEMAKER
-
 
 Once upon a time there was an honest shoemaker, who was very poor. He
 worked as hard as he could, and still he could not earn enough to keep
@@ -2478,11 +2365,7 @@ the clock struck two, they danced quite away, out of the window.
 They never came back any more, but from that day they gave the shoemaker
 and his wife good luck, so that they never needed any more help.
 
-
-
-
 WHO KILLED THE OTTER'S BABIES?
-
 
 Once the Otter came to the Mouse-deer and said, "Friend Mouse-deer, will
 you please take care of my babies while I go to the river, to catch
@@ -2562,12 +2445,7 @@ to the river to kill my children."
 Otter's children. And the Mouse-deer cannot be blamed, by the law of the
 land!"
 
-
-
-
-
 EARLY
-
 
      I like to lie and wait to see
        My mother braid her hair.
@@ -2589,11 +2467,7 @@ EARLY
      While I stay here all still and cool.
      Oh, isn't morning beautiful?
 
-
-
-
 THE BRAHMIN, THE TIGER, AND THE JACKAL
-
 
 Do you know what a Brahmin is? A Brahmin is a very good and gentle kind
 of man who lives in India, and who treats all the beasts as if they were
@@ -2799,11 +2673,7 @@ Then he made a very low bow to the Brahmin.
 "Good-bye, Brother," he said. "Your way lies that way, and mine lies
 this; good-bye!"
 
-
-
-
 THE LITTLE JACKAL AND THE CAMEL
-
 
 All these stories about the little Jackal that I have told you, show how
 clever the little Jackal was. But you know--if you don't, you will when
@@ -2889,11 +2759,7 @@ So he rolled over.
 And the little Jackal was drowned, for his sins, but the Camel came
 safely home.
 
-
-
-
 THE GULLS OF SALT LAKE
-
 
 The story I am going to tell you is about something that really
 happened, many years ago.
@@ -2983,11 +2849,7 @@ pioneer village, the little children are taught to love the sea gulls.
 And when they learn drawing and weaving in the schools, their first
 design is often a picture of a cricket and a gull.
 
-
-
-
 THE NIGHTINGALE
-
 
 A long, long time ago, as long ago as when there were fairies, there
 lived an emperor in China, who had a most beautiful palace, all made of
@@ -3198,11 +3060,7 @@ sceptre in his hand. And when the courtiers came in to see if he were
 dead, there stood the Emperor with his sword in one hand and his sceptre
 in the other, and said, "Good-morning!"
 
-
-
-
 MARGERY'S GARDEN
-
 
 There was once a little girl named Margery, who had always lived in the
 city. The flat where her mother and father lived was at the top of a big
@@ -3467,12 +3325,7 @@ on.
 "I have a garden! I have a garden!" was Margery's last thought as she
 went off to dreamland.
 
-
-
-
-
 THE LITTLE COTYLEDONS
-
 
 This is another story about Margery's garden.
 
@@ -3598,11 +3451,7 @@ country is a good place for little girls."
 
 And that was all that happened, that day.
 
-
-
-
 THE TALKATIVE TORTOISE
-
 
 Once upon a time, a Tortoise lived in a pond with two Ducks, who were
 her very good friends. She enjoyed the company of the Ducks, because she
@@ -3649,12 +3498,7 @@ was the end of the Tortoise.
 
 It is a very good thing to be able to hold one's tongue!
 
-
-
-
-
 ROBERT OF SICILY
-
 
 An old legend says that there was once a king named Robert of Sicily,
 who was brother to the Great Pope of Rome and to the Emperor of
@@ -3833,12 +3677,7 @@ more; he wore his crown and his royal ring. He was king. And when the
 courtiers came back they found their king kneeling by his throne,
 absorbed in silent prayer.
 
-
-
-
-
 THE JEALOUS COURTIERS
-
 
 I wonder if you have ever heard the anecdote about the artist of
 Duesseldorf and the jealous courtiers. This is it. It seems there was
@@ -3919,9 +3758,6 @@ that their reputation is pretty well hammered to pieces!"
 
 It was, indeed. The Elector laughed heartily, but the courtiers slunk
 away, one after another, without a word.
-
-
-
 
 PRINCE CHERRY
 
@@ -4174,12 +4010,7 @@ Cherry ruled again, with Zelia for his queen.
 He wore the little gold ring all the rest of his life, but never once
 did it have to prick him hard enough to make his finger bleed.
 
-
-
-
-
 THE GOLD IN THE ORCHARD
-
 
 There was once a farmer who had a fine olive orchard. He was very
 industrious, and the farm always prospered under his care. But he knew
@@ -4213,13 +4044,7 @@ And when they saw how much money had come from the orchard, they
 suddenly understood what the wise father had meant when he said, "There
 is gold hidden in the orchard; dig for it."
 
-
-
-
-
-
 MARGARET OF NEW ORLEANS
-
 
 If you ever go to the beautiful city of New Orleans, somebody will be
 sure to take you down into the old business part of the city, where
@@ -4305,12 +4130,7 @@ used to look, sitting in her own office door, or driving in her own
 little cart. And there it stands to-day, in memory of the great love and
 the great power of plain Margaret Haughery, of New Orleans.
 
-
-
-
-
 THE DAGDA'S HARP
-
 
 You know, dears, in the old countries there are many fine stories about
 things which happened so very long ago that nobody knows exactly how
@@ -4395,11 +4215,7 @@ When they were all deep in slumber, the Dagda took his magic harp, and
 he and his golden-haired warriors stole softly away, and came in safety
 to their own homes again.
 
-
-
-
 THE TAILOR AND THE THREE BEASTS
-
 
 There was once a tailor in Galway, and he started out on a journey to go
 to the king's court at Dublin.
@@ -4610,10 +4426,7 @@ the plough that I was caught in. I'll go no nearer to him."
 They all left him then and returned. The tailor and his wife came home
 to Galway.
 
-
-
 HOW THE SEA BECAME SALT
-
 
 This story was told long ago by our Northern forefathers who brought it
 with them in their dragon ships when they crossed the North Sea to
@@ -4629,7 +4442,7 @@ different from the other, all showing that the same childlike spirit of
 inquiry was at work in different places, striving to find an answer to
 this riddle of nature.
 
-       *       *       *       *       *
+
 
 There sprang from the sons of Odin a race of men who became mighty kings
 of the earth, and one of these, named Frode, ruled over the lands that
@@ -4656,7 +4469,7 @@ Directly the Giant-Maidens were brought before Frode, and before they
 had rested after their long journey, or satisfied their hunger, he bade
 them go to the mill, and grind for him gold and peace and happiness.
 
-     "They sang and swung
+"They sang and swung
       The swift mill stone,
       And with loud voice
       They made their moan.
@@ -4703,7 +4516,7 @@ the mighty shock of that breaking.
 But through the crash and din came the voices of the Giant-Maidens,
 loudly chanting,--
 
-     "We have turned the stone round;
+"We have turned the stone round;
       Though weary the maidens,
       See what they have ground!"
 
@@ -4727,11 +4540,7 @@ west, throughout the waters of the earth.
 
 And that is how the sea became salt.
 
-
-
-
 THE CASTLE OF FORTUNE
-
 
 One lovely summer morning, just as the sun rose, two travellers started
 on a journey. They were both strong young men, but one was a lazy fellow
@@ -4916,10 +4725,7 @@ made happy in the castle as long as he wanted to stay. And ever
 afterward she was his friend, helping him not only to happiness for
 himself, but also showing him how to help others, wherever he went.
 
-
-
 DAVID AND GOLIATH
-
 
 A long time ago, there was a boy named David, who lived in a country in
 the Far East. He was good to look upon, for he had fair hair and a ruddy
@@ -5069,11 +4875,7 @@ And after the battle, David was taken to the king's tent, and made a
 captain over many men; and he went no more to his father's house, to
 herd the sheep, but became a man, in the king's service.
 
-
-
-
 THE SHEPHERD'S SONG
-
 
 David had many fierce battles to fight for King Saul against the enemies
 of Israel, and he won them all. Then, later, he had to fight against the
@@ -5131,11 +4933,7 @@ you may learn it, to say for yourselves.
      Surely goodness and mercy shall follow me all the days of my
      life; and I will dwell in the house of the Lord for ever.=
 
-
-
-
 THE HIDDEN SERVANTS
-
 
 This is a legend about a hermit who lived long ago. He lived high up on
 the mountainside in a tiny cave; his food was roots and acorns, a bit of
@@ -5150,7 +4948,7 @@ One day, after the forty years, he had a great longing to know how far
 along he had got with his work,--how it looked to the Heavenly Father.
 And he prayed that he might be shown a man--
 
-     "Whose soul in the heavenly grace had grown
+"Whose soul in the heavenly grace had grown
       To the selfsame measure as his own;
       Whose treasure on the celestial shore
       Could neither be less than his nor more."
@@ -5252,7 +5050,7 @@ of God, fasting and praying, and doing no least thing that was wrong.
 Then, one day, the wish once more came, to know how his work was
 growing, and once more he prayed that he might see a being--
 
-     "Whose soul in the heavenly grace had grown
+"Whose soul in the heavenly grace had grown
       To the selfsame measure as his own;
       Whose treasure on the celestial shore
       Could neither be less than his nor more."
@@ -5310,16 +5108,11 @@ Heavenly Father sees.
 
 And so, as the hermit climbed the mountain again, he thought,--
 
-     "As he saw the star-like glow
+"As he saw the star-like glow
       Of light, in the cottage windows far,
       How many God's hidden servants are!"
 
-
-
-
-
 LITTLE GOTTLIEB
-
 
 Across the North Sea, in a country called Germany, lived a little boy
 named Gottlieb. His father had died when he was but a baby, and although
@@ -5379,12 +5172,7 @@ Burgomaster. The gifts you asked for are here, but they come from my
 hand." But Gottlieb answered him humbly, "Nay, sir, the Christ Child
 sent them, for He put the thought in your heart."
 
-
-
-
-
 HOW THE FIR TREE BECAME THE CHRISTMAS TREE
-
 
 When you stand round the Christmas tree and look longingly at the toys
 hanging from the prickly branches, it does not occur to you to ask why
@@ -5439,12 +5227,7 @@ children as the stars shone for Him on His first birthday.
 Was not the Fir Tree richly rewarded for its meekness? Surely there is
 no other tree that shines on so many happy faces!
 
-
-
-
-
 THE DIAMOND AND THE DEWDROP
-
 
 A costly Diamond, that had once sparkled in a lady's ring, lay in a
 field amid tall grasses and oxeye daisies.

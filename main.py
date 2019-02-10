@@ -19,7 +19,7 @@ output_file: str = join(
 )
 
 parser = argparse.ArgumentParser(
-    description='Process some integers.',
+    description='Generate prose.',
     prog=basename(dirname(abspath(__file__))))
 
 parser.add_argument(
@@ -55,13 +55,6 @@ parser.add_argument(
     required=False,
     default=output_file,
     help=f'output path (DEFAULT: ./{relpath(output_file)})')
-parser.add_argument(
-    '--print',
-    '-p',
-    action='store_true',
-    required=False,
-    default=True,
-    help='print output')
 parser.add_argument(
     '--no-print',
     '-P',

@@ -51,8 +51,6 @@ And I may safely write it now, and you may safely read.
 
 G. K. C.
 
-
-
 CHAPTER I
 
 THE TWO POETS OF SAFFRON PARK
@@ -463,8 +461,6 @@ trap the address of an obscure public-house on the Chiswick bank
 of the river. The cab whisked itself away again, and in it these
 two fantastics quitted their fantastic town.
 
-
-
 CHAPTER II
 
 THE SECRET OF GABRIEL SYME
@@ -807,8 +803,6 @@ From the doorway there came a murmur of "Mr. Joseph Chamberlain."
 It was repeated twice and thrice, and then thirty times, and the
 crowd of Joseph Chamberlains (a solemn thought) could be heard
 trampling down the corridor.
-
-
 
 CHAPTER III
 
@@ -1259,8 +1253,6 @@ you?"
 "A very entertaining evening," said Syme, and he made a military
 salute with the sword-stick as the steamboat slid away.
 
-
-
 CHAPTER IV
 
 THE TALE OF A DETECTIVE
@@ -1649,8 +1641,6 @@ to one slimy step, and stood, a dark and slender figure, amid the
 enormous masonry. The two men in the tug put her off again and
 turned up stream. They had never spoken a word.
 
-
-
 CHAPTER V
 
 THE FEAST OF FEAR
@@ -1974,8 +1964,6 @@ that he might be the wickedest of all those wicked men. Syme even
 had the thought that his eyes might be covered up because they were
 too frightful to see.
 
-
-
 CHAPTER VI
 
 THE EXPOSURE
@@ -2289,8 +2277,6 @@ flash three men sprang at his throat. Even the Professor made
 an effort to rise. But Syme saw little of the scene, for he was
 blinded with a beneficent darkness; he had sunk down into his
 seat shuddering, in a palsy of passionate relief.
-
-
 
 CHAPTER VII
 
@@ -2629,8 +2615,6 @@ place where opium might be smoked or knives drawn.
 
 A moment later Professor de Worms entered the place, sat down
 carefully, and asked for a glass of milk.
-
-
 
 CHAPTER VIII
 
@@ -3143,8 +3127,6 @@ Syme laid down his knife and fork.
 "I know," he said, "because you talked to him in a dark room."
 
 Professor de Worms nodded and drained his glass.
-
-
 
 CHAPTER IX
 
@@ -3783,8 +3765,6 @@ at which sat the Marquis de St. Eustache, his teeth shining in
 his thick, black beard, and his bold, brown face shadowed by a
 light yellow straw hat and outlined against the violet sea.
 
-
-
 CHAPTER X
 
 THE DUEL
@@ -4379,7 +4359,7 @@ railway line--especially of that railway line!" and he pointed a
 shaking finger towards the small wayside station. "The whole
 movement was controlled by him; half the world was ready to rise
 for him. But there were just five people, perhaps, who would have
-resisted him . . . and the old devil put them on the Supreme
+resisted him ...and the old devil put them on the Supreme
 Council, to waste their time in watching each other. Idiots that
 we are, he planned the whole of our idiocies! Sunday knew that the
 Professor would chase Syme through London, and that Syme would
@@ -4430,8 +4410,6 @@ it impossible to conclude anything from the clean-shaven jaws and
 chins of the men talking in the front. But presently as they
 talked they all smiled and one of them smiled on one side.
 
-
-
 CHAPTER XI
 
 THE CRIMINALS CHASE THE POLICE
@@ -4449,7 +4427,7 @@ President among all those people?"
 
 "Could I know a white elephant among all those people!" answered
 Syme somewhat irritably. "As you very truly say, they are on the
-horizon; but if he were walking with them . . . by God! I believe
+horizon; but if he were walking with them ...by God! I believe
 this ground would shake."
 
 After an instant's pause the new man called Ratcliffe said with
@@ -4778,8 +4756,6 @@ of the down behind the innkeeper, there appeared an army of
 black-clad and marching men. They seemed to hang above the good
 man and his house like a black cloud of locusts. The horses had
 been saddled none too soon.
-
-
 
 CHAPTER XII
 
@@ -5486,8 +5462,6 @@ distance on both sides. "Vulgar people are never mad. I'm vulgar
 myself, and I know. I am now going on shore to stand a drink to
 everybody here."
 
-
-
 CHAPTER XIII
 
 THE PURSUIT OF THE PRESIDENT
@@ -5978,8 +5952,6 @@ There was a short silence, and then Syme said, biting his beard--
 "I'm not beaten yet. The blasted thing must come down somewhere.
 Let's follow it!"
 
-
-
 CHAPTER XIV
 
 THE SIX PHILOSOPHERS
@@ -6053,8 +6025,8 @@ bursting with some good news. Haven't you sometimes felt it on a
 spring day? You know Nature plays tricks, but somehow that day
 proves they are good-natured tricks. I never read the Bible myself,
 but that part they laugh at is literal truth, 'Why leap ye, ye high
-hills?' The hills do leap--at least, they try to. . . . Why do I
-like Sunday? . . . how can I tell you? . . . because he's such a
+hills?' The hills do leap--at least, they try to...Why do I
+like Sunday? ...how can I tell you? ...because he's such a
 Bounder."
 
 There was a long silence, and then the Secretary said in a curious,
@@ -6456,8 +6428,6 @@ flung the folds across his shoulder with a gesture, his sword
 stood out at an angle, and he had all the swagger of a troubadour.
 For these disguises did not disguise, but reveal.
 
-
-
 CHAPTER XV
 
 THE ACCUSER
@@ -6757,7 +6727,7 @@ brain he seemed to hear a distant voice saying a commonplace text
 that he had heard somewhere, "Can ye drink of the cup that I drink
 of?"
 
-*    *    *
+
 
 When men in books awake from a vision, they commonly find
 themselves in some place in which they might have fallen asleep;

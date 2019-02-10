@@ -1,14 +1,16 @@
+# Standard Library
 import logging
 import re
-from sys import getsizeof
 from collections import Counter
 from os import listdir, makedirs
-from os.path import dirname, abspath, join, isdir, isfile, basename
+from os.path import abspath, dirname, isdir, isfile, join, relpath
 from pathlib import Path
-from re import MULTILINE, IGNORECASE
+from re import IGNORECASE, MULTILINE, VERBOSE
+from sys import getsizeof
 from time import time
-from typing import List, Optional, Tuple, Dict, Match, Iterable
+from typing import Dict, Iterable, List, Match, Optional, Tuple
 
+# 3rd Party
 from numpy.random import choice
 
 log = logging.getLogger()
@@ -23,14 +25,14 @@ DOT: int = ord(b'.')
 E_MARK: int = ord(b'!')
 Q_MARK: int = ord(b'?')
 SEMICOLON: int = ord(b';')
-# DQUOTE: int = ord(b'"')
+DQUOTE: int = ord(b'"')
 
 PUNCT_REGEX = rb'(?P<punct>-{1,2}|[:;,"])'
 NL_REGEX = rb'(?P<nl>(\n\r?|\r\n?)+)'
 SENT_END_REGEX = rb'(?P<sent_end>(!(!!)?|\?(\?\?)?|\.(\.\.)?))'
-WS_REGEX = rb'(?P<ws> )'
-WORD_REGEX = rb"(?P<word>([A-Z]?[a-z]+|[A-Z][a-z]*)(-[A-Za-z]+)*('[a-z]{0,7})?)"
-DATE_REGEX = rb"(?P<date>(([1-9]\d*)(th|[nr]d)|19\d{2}|20\d{2}))"
+WS_REGEX = rb'(?P<ws>\s+)'
+WORD_REGEX = rb"(?P<word>[A-Za-z]+(-[A-Za-z]+)*?('[a-z]{0,7})?)"
+DATE_REGEX = rb"(?P<date>([1-9]\d*)(th|st|[nr]d)|(19|20)\d{2})"
 TIME_REGEX = rb"(?P<time>\d+((:\d{2}){1,2}|(\.\d{2}){1,2}))"
 CHUNK_REGEX = re.compile(rb'(?P<token>' + rb'|'.join([
     WS_REGEX,
@@ -40,17 +42,17 @@ CHUNK_REGEX = re.compile(rb'(?P<token>' + rb'|'.join([
     WORD_REGEX,
     DATE_REGEX,
     TIME_REGEX,
-]) + rb')')
+]) + rb')', IGNORECASE)
 
 CLEAN_REGEX = re.compile(
-    rb'^\s*(-+\s*)?(chapter|\*|note|volume|section|part|[IVX]+|harry\s+potter|by\s+|(the\s+)?end)[^\n\r]*$|\r+',
-    MULTILINE | IGNORECASE)
+    rb'^\s*([-*]+\s*)?(chapter|\*|note|volume|section|part|[IVX]+|harry\s+potter|by\s+|(the\s+)?end)[^\n\r]*$|\r+',
+    MULTILINE | IGNORECASE | VERBOSE)
 
 # processing
 NEEDLESS_WRAP = re.compile(rb'([^\n])\n([^\n])')
 TOO_MANY_NL = re.compile(rb'\n{3,}')
-TOO_MANY_DASHES = re.compile(rb'(- *){3,}')
-TOO_MANY_DOTS = re.compile(rb'(\. *){3,}')
+TOO_MANY_DASHES = re.compile(rb'(-\s*){3,}')
+TOO_MANY_DOTS = re.compile(rb'(\.\s*){3,}')
 
 IS_SENT_END = re.compile(rb'(!(!!)?|\?(\?\?)?|\.(\.\.)?\s*|\n+)$')
 
@@ -62,7 +64,8 @@ PS: Optional[Dict[bytes, float]] = None
 
 
 def capitalize(txt: bytes) -> bytes:
-    if len(txt) <= 1: return txt
+    if len(txt) <= 1:
+        return txt
     pos = 0
     while txt[pos] == SPACE:
         pos += 1
@@ -74,7 +77,8 @@ def capitalize(txt: bytes) -> bytes:
 
 
 def decapitalize(txt: bytes) -> bytes:
-    if len(txt) <= 1: return txt
+    if len(txt) <= 1:
+        return txt
     pos = 0
     while txt[pos] == SPACE:
         pos += 1
@@ -87,7 +91,7 @@ def decapitalize(txt: bytes) -> bytes:
 
 def postprocess(tokens: List[bytes]) -> None:
     start = time()
-    log.info('starting postprocessing')
+    log.info('[postprocessing]')
     for i in range(1, len(tokens) - 1):
         if len(tokens[i]) > 0 and len(tokens[i + 1]) > 0:
             # word. word2 => word. Word2
@@ -96,7 +100,12 @@ def postprocess(tokens: List[bytes]) -> None:
             # lack of space after punct
             current_last = tokens[i][-1]
             next_first = tokens[i + 1][0]
-            if (current_last == DOT or current_last == COMMA or current_last == SEMICOLON or current_last == COLON or current_last == E_MARK or current_last == Q_MARK) and next_first != SPACE:
+            if (current_last == DOT or
+                current_last == COMMA or
+                current_last == SEMICOLON or
+                current_last == COLON or
+                current_last == E_MARK or
+                current_last == Q_MARK) and next_first != SPACE:
                 tokens[i] += b' '
             # more than 1 consecutive spaces
             elif current_last == SPACE and next_first == SPACE:
@@ -109,7 +118,7 @@ def postprocess(tokens: List[bytes]) -> None:
                 tokens[i] = tokens[i][:-1]
             # elif current_last == DQUOTE and next_first == b'"':
             #     tokens[i] = tokens[i][:-1]
-    log.info(f'finished postprocessing (took {time() - start:4.2f} sec)')
+    log.info(f'[finished] postprocessing (took {time() - start:4.2f} sec)')
 
 
 def tokenize(txt: bytes) -> Iterable[Match[bytes]]:
@@ -119,25 +128,32 @@ def tokenize(txt: bytes) -> Iterable[Match[bytes]]:
 def get_tokens() -> List[bytes]:
     global TOKENS
     if TOKENS is not None:
-        log.info('got tokens from cache')
+        log.debug('[cache hit] got tokens from cache')
         return TOKENS
-    log.info('generating tokens')
+    log.info('[generating] tokens')
     start = time()
     ms: List[Match[bytes]] = list(tokenize(get_text()))
-    TOKENS = [ms[0].group(0)]
-    for i in range(1, len(ms) - 1):
-        # if ms[i].group('word') and ms[i -1 ].group('') and (97 <= TOKENS[-1][0] <= 122):
-        #     TOKENS[-1] = capitalize(TOKENS[-1])
-        if (ms[i].group('word') and ms[i + 1].group('word')) or (
-                ms[i].group('sent_end') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl'))
-        ) or (ms[i].group('punct') and not (ms[i + 1].group('ws')) or ms[i + 1].group('nl')):
-            TOKENS.append(b' ')
-        elif (ms[i].group('ws') and (ms[i + 1].group('ws') or ms[i + 1].group('sent_end'))) or (
-                ms[i].group('punct') and ms[i + 1].group('punct') and ms[i].group('punct') == ms[i + 1].group('punct')):
+    TOKENS = [ms[0].group(0), ms[0].group(0)]
+    for i in range(2, len(ms) - 1):
+        if ms[i].group('word') and ms[i - 2].group('sent_end') and (97 <= TOKENS[-2][0] <= 122):
+            TOKENS[-2] = capitalize(TOKENS[-2])
+        if ms[i].group('word') and (97 <= ms[i].group(0)[0] <= 122) and (ms[i - 2].group('sent_end') or ms[i - 1].group('nl')):
+            TOKENS.append(capitalize(ms[i].group(0)))
             continue
-        TOKENS.append(ms[i].group(0))
+        elif (ms[i].group('word') and ms[i + 1].group('word')) \
+                or (ms[i].group('sent_end') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl'))) \
+                or (ms[i].group('punct') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl') or ms[i + 1].group(0)[0] == DQUOTE)):
+            TOKENS.append(ms[i].group(0))
+            TOKENS.append(b' ')
+            continue
+        elif (ms[i].group('nl') and not ms[i - 1].group('sent_end')) \
+                or (ms[i].group('ws') and (ms[i + 1].group('ws') or ms[i + 1].group('sent_end'))) \
+                or (ms[i].group('punct') and ms[i + 1].group('punct') and ms[i].group('punct') == ms[i + 1].group('punct')):
+            continue
+        else:
+            TOKENS.append(ms[i].group(0))
     TOKENS.append(ms[-1].group(0))
-    log.info(f'finished generating tokens (took {time() - start:4.2f} sec, {len(TOKENS)} tokens, object size: {getsizeof(TOKENS) / 1e6:4.2f}MB)')
+    log.info(f'[finished] generating tokens (took {time() - start:4.2f} sec, {len(TOKENS)} tokens, size: {getsizeof(TOKENS) / 1e6:4.2f}MB)')
     return TOKENS
 
 
@@ -146,25 +162,25 @@ def get_counts() -> Counter:
     if COUNTS is not None:
         log.info('got word counts from cache')
         return COUNTS
-    log.info('generating word counts')
+    log.info('[generating] word counts')
     start = time()
     COUNTS = Counter(get_tokens())
-    log.info(f'finished generating word counts (took {time() - start:4.2f} sec, object size: {getsizeof(COUNTS) / 1e6:4.2f}MB)')
+    log.info(f'[finished] generating word counts (took {time() - start:4.2f} sec, size: {getsizeof(COUNTS) / 1e6:4.2f}MB)')
     return COUNTS
 
 
 def get_ps() -> Dict[bytes, float]:
     global PS
     if PS is not None:
-        log.info('got word probabilities from cache')
+        log.info('[cache hit] got word probabilities from cache')
         return PS
     start = time()
-    log.info('generating word probabilities')
+    log.info('[generating] word probabilities')
     PS = dict(get_counts())
     no_tokens: int = sum(PS.values())
     for token in PS:
         PS[token] /= no_tokens
-    log.info(f'finished generating word probabilities (took {time() - start:4.2f} sec, object size: {getsizeof(PS) / 1e6:4.2f}MB)')
+    log.info(f'[finished] generating word probabilities (took {time() - start:4.2f} sec, size: {getsizeof(PS) / 1e6:4.2f}MB)')
     return PS
 
 
@@ -173,10 +189,10 @@ def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
 
     assert n >= 1, f'ngram len must be >= 1 but got n = {n}'
     if NGRAM_PS is not None:
-        log.info('got ngram probabilities from cache')
+        log.info('[cache hit] got ngram probabilities from cache')
         return NGRAM_PS
     start = time()
-    log.info('generating ngram probabilities (this might take a couple of minutes)')
+    log.info('[generating] ngram probabilities (this might take a couple of minutes)')
 
     tokens: List[bytes] = get_tokens()
 
@@ -201,7 +217,7 @@ def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
             for next_word in NGRAM_PS[ngram]:
                 NGRAM_PS[ngram][next_word] /= total
 
-    log.info(f'finished generating ngram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS) / 1e6:4.2f}MB)')
+    log.info(f'[finished] generating ngram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS) / 1e6:4.2f}MB)')
     return NGRAM_PS
 
 
@@ -219,33 +235,33 @@ def root_path(*parts, mkparent=True, mkdir=False, mkfile=False) -> str:
 def get_text(files=None) -> bytes:
     global TEXT
     if TEXT is not None:
-        log.info('got text from cache')
+        log.debug('[cache hit] got text from cache')
         return TEXT
     start = time()
     if files is None:
         files = [join(ROOT, 'data', fname) for fname in listdir(join(ROOT, 'data')) if fname.endswith('.txt')]
-    log.info(f'loading text from {len(files)} files {", ".join((basename(p) for p in files))}')
+    log.info(f'[loading] text from {len(files)} files')
     texts: List[bytes] = []
     for path in files:
         start_file = time()
         with open(path, mode='rb') as f:
-            log.info(f'loading text from file "{path}"')
+            log.debug(f'[loading] text from file {relpath(path)}')
             try:
                 texts.append(f.read())
             except Exception as e:
                 log.warning(str(e))
-        log.info(f'finished loading text from "{path}" (took {time() - start_file:4.2f} sec, read {len(texts[-1])} bytes, object size: {getsizeof(texts[-1]) / 1e6:4.2f}MB)')
+        log.debug(f'[finished] reading from {relpath(path)} (read {getsizeof(texts[-1]) / 1e6:4.2f}MB in {time() - start_file:4.2f}s)')
     TEXT = b'\n\n'.join(texts)
     TEXT = CLEAN_REGEX.sub(b'', TEXT)
     TEXT = NEEDLESS_WRAP.sub(rb'\1 \2', TEXT)
     TEXT = TOO_MANY_NL.sub(b'\n\n', TEXT)
     TEXT = TOO_MANY_DOTS.sub(rb'...', TEXT)
     TEXT = TOO_MANY_DASHES.sub(rb'--', TEXT)
-    log.info(f'finished loading text (took {time() - start:4.2f} sec, read {len(TEXT)} bytes, object size: {getsizeof(TEXT) / 1e6:4.2f}MB)')
+    log.info(f'[finished] reading (read {getsizeof(TEXT) / 1e6:4.2f}MB in {time() - start:4.2f}s)')
     return TEXT
 
 
-def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8)) -> str:
+def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8), show_metrics=True) -> str:
     start = time()
     tokens: List[bytes] = [m.group(0) for m in tokenize(txt)]
     succ = [0 for _ in range(n + 1)]
@@ -272,15 +288,18 @@ def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8)) -> str:
     # post-processing
     # postprocess(tokens=tokens)
 
-    # metrics
-    log.info('-' * (40 + 12 + 2 + 2))
-    log.info('%2s %12s %s' % ('NO', 'PROBABILITY', 'NO EXAMPLES'))
-    log.info('%2s %12s %s' % ('-' * 2, '-' * 12, '-' * 40))
-    no_gen_tokens: int = sum(succ)
-    for i in range(n, -1, -1):
-        log.info('%2d %12.10f (%d tokens)' % (i, succ[i] / no_gen_tokens, succ[i]))
+    if show_metrics:
+        # metrics
+        log.info('-' * (40 + 12 + 2 + 2))
+        log.info('METRICS')
+        log.info('-' * (40 + 12 + 2 + 2))
+        log.info('%2s %12s %s' % ('NO', 'PROBABILITY', 'NO EXAMPLES'))
+        log.info('%2s %12s %s' % ('-' * 2, '-' * 12, '-' * 40))
+        no_gen_tokens: int = sum(succ)
+        for i in range(n, -1, -1):
+            log.info('%2d %12.10f (%d tokens)' % (i, succ[i] / no_gen_tokens, succ[i]))
 
-    log.info(f'finished generating text (took {time() - start:4.2f} sec)')
+    log.info(f'[finished] generating text (took {time() - start:4.2f} sec)')
 
     # text (outcome)
     return (b''.join(tokens) + b'.\n\nTHE END.').decode('ascii', 'ignore')
