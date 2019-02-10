@@ -1,5 +1,6 @@
 import logging
 import re
+from sys import getsizeof
 from collections import Counter
 from os import listdir, makedirs
 from os.path import dirname, abspath, join, isdir, isfile, basename
@@ -8,10 +9,8 @@ from re import MULTILINE, IGNORECASE
 from time import time
 from typing import List, Optional, Tuple, Dict, Match, Iterable
 
-from numpy import ndarray
 from numpy.random import choice
 
-logging.basicConfig(level=20, format='%(levelname)s %(funcName)-13s %(lineno)3d %(message)s')
 log = logging.getLogger()
 
 ROOT: str = dirname(abspath(__file__))
@@ -57,8 +56,6 @@ IS_SENT_END = re.compile(rb'(!(!!)?|\?(\?\?)?|\.(\.\.)?\s*|\n+)$')
 
 TEXT: Optional[bytes] = None
 NGRAM_PS: Optional[Dict[Tuple, Dict[bytes, float]]] = None
-NGRAM_INDEX: Optional[ndarray] = None
-NGRAM_INDEX_REV: Optional[Dict[Tuple, int]] = None
 TOKENS: Optional[List[bytes]] = None
 COUNTS: Optional[Counter] = None
 PS: Optional[Dict[bytes, float]] = None
@@ -140,7 +137,7 @@ def get_tokens() -> List[bytes]:
             continue
         TOKENS.append(ms[i].group(0))
     TOKENS.append(ms[-1].group(0))
-    log.info(f'finished generating tokens (took {time() - start:4.2f} sec, {len(TOKENS)} tokens)')
+    log.info(f'finished generating tokens (took {time() - start:4.2f} sec, {len(TOKENS)} tokens, object size: {getsizeof(TOKENS) / 1e6:4.2f}MB)')
     return TOKENS
 
 
@@ -152,7 +149,7 @@ def get_counts() -> Counter:
     log.info('generating word counts')
     start = time()
     COUNTS = Counter(get_tokens())
-    log.info(f'finished generating word counts (took {time() - start:4.2f} sec)')
+    log.info(f'finished generating word counts (took {time() - start:4.2f} sec, object size: {getsizeof(COUNTS) / 1e6:4.2f}MB)')
     return COUNTS
 
 
@@ -167,7 +164,7 @@ def get_ps() -> Dict[bytes, float]:
     no_tokens: int = sum(PS.values())
     for token in PS:
         PS[token] /= no_tokens
-    log.info(f'finished generating word probabilities (took {time() - start:4.2f} sec)')
+    log.info(f'finished generating word probabilities (took {time() - start:4.2f} sec, object size: {getsizeof(PS) / 1e6:4.2f}MB)')
     return PS
 
 
@@ -204,7 +201,7 @@ def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
             for next_word in NGRAM_PS[ngram]:
                 NGRAM_PS[ngram][next_word] /= total
 
-    log.info(f'finished generating ngram probabilities (took {time() - start:4.2f} sec)')
+    log.info(f'finished generating ngram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS) / 1e6:4.2f}MB)')
     return NGRAM_PS
 
 
@@ -237,14 +234,14 @@ def get_text(files=None) -> bytes:
                 texts.append(f.read())
             except Exception as e:
                 log.warning(str(e))
-        log.info(f'finished loading text from "{path}" (took {time() - start_file:4.2f} sec, read {len(texts[-1])} bytes)')
+        log.info(f'finished loading text from "{path}" (took {time() - start_file:4.2f} sec, read {len(texts[-1])} bytes, object size: {getsizeof(texts[-1]) / 1e6:4.2f}MB)')
     TEXT = b'\n\n'.join(texts)
     TEXT = CLEAN_REGEX.sub(b'', TEXT)
     TEXT = NEEDLESS_WRAP.sub(rb'\1 \2', TEXT)
     TEXT = TOO_MANY_NL.sub(b'\n\n', TEXT)
     TEXT = TOO_MANY_DOTS.sub(rb'...', TEXT)
     TEXT = TOO_MANY_DASHES.sub(rb'--', TEXT)
-    log.info(f'finished loading text (took {time() - start:4.2f} sec, read {len(TEXT)} bytes)')
+    log.info(f'finished loading text (took {time() - start:4.2f} sec, read {len(TEXT)} bytes, object size: {getsizeof(TEXT) / 1e6:4.2f}MB)')
     return TEXT
 
 
@@ -281,7 +278,7 @@ def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8)) -> str:
     log.info('%2s %12s %s' % ('-' * 2, '-' * 12, '-' * 40))
     no_gen_tokens: int = sum(succ)
     for i in range(n, -1, -1):
-        log.info('%2d %12.10f (from %d examples)' % (i, succ[i] / no_gen_tokens, succ[i]))
+        log.info('%2d %12.10f (%d tokens)' % (i, succ[i] / no_gen_tokens, succ[i]))
 
     log.info(f'finished generating text (took {time() - start:4.2f} sec)')
 
