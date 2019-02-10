@@ -134,6 +134,7 @@ def get_tokens() -> List[bytes]:
     start = time()
     ms: List[Match[bytes]] = list(tokenize(get_text()))
     TOKENS = [ms[0].group(0), ms[0].group(0)]
+    # not checking for len of tokens because every token has len >= 1
     for i in range(2, len(ms) - 1):
         if ms[i].group('word') and ms[i - 2].group('sent_end') and (97 <= TOKENS[-2][0] <= 122):
             TOKENS[-2] = capitalize(TOKENS[-2])
@@ -142,7 +143,7 @@ def get_tokens() -> List[bytes]:
             continue
         elif (ms[i].group('word') and ms[i + 1].group('word')) \
                 or (ms[i].group('sent_end') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl'))) \
-                or (ms[i].group('punct') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl') or ms[i + 1].group(0)[0] == DQUOTE)):
+                or (ms[i].group('punct') and not (ms[i + 1].group('ws') or ms[i - 1].group('nl') or ms[i].group(0)[0] == DQUOTE)):
             TOKENS.append(ms[i].group(0))
             TOKENS.append(b' ')
             continue
@@ -290,14 +291,14 @@ def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8), show_metrics=Tru
 
     if show_metrics:
         # metrics
-        log.info('-' * (40 + 12 + 2 + 2))
+        log.info('-' * (1 + 6 + 15 + 2))
         log.info('METRICS')
-        log.info('-' * (40 + 12 + 2 + 2))
-        log.info('%2s %12s %s' % ('NO', 'PROBABILITY', 'NO EXAMPLES'))
-        log.info('%2s %12s %s' % ('-' * 2, '-' * 12, '-' * 40))
+        log.info('-' * (1 + 6 + 15 + 2))
+        log.info('%1s %6s %15s' % ('#', 'P', 'NO EXAMPLES'))
+        log.info('%1s %6s %15s' % ('-' * 2, '-' * 6, '-' * 15))
         no_gen_tokens: int = sum(succ)
         for i in range(n, -1, -1):
-            log.info('%2d %12.10f (%d tokens)' % (i, succ[i] / no_gen_tokens, succ[i]))
+            log.info('%1d %6.4f %15d' % (i, succ[i] / no_gen_tokens, succ[i]))
 
     log.info(f'[finished] generating text (took {time() - start:4.2f} sec)')
 
