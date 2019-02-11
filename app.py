@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-if __name__ != "__main__":
-    raise Exception('Must be run as a script.')
-
 from os.path import join, abspath, dirname
 from typing import Dict, Union
 from time import time
