@@ -1,0 +1,42 @@
+#story {
+  max-width: 80vw;
+  font-family: Amiri, Times, serif;
+}
+
+footer p {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+h1 + h2 {
+  color: #7b7b7b;
+}
+
+textarea {
+  width: 60%;
+}
+
+#col-opt > div {
+  min-width: 200px;
+}
+
+#col-opt {
+  min-width: 30%;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}

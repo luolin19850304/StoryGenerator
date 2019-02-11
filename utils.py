@@ -1,12 +1,12 @@
 # Standard Library
-import pickle
 import logging
+import pickle
 import re
 from collections import Counter
 from os import listdir, makedirs
 from os.path import abspath, dirname, isdir, isfile, join, relpath
 from pathlib import Path
-from re import IGNORECASE, MULTILINE, VERBOSE
+from re import IGNORECASE, MULTILINE
 from sys import getsizeof
 from time import time
 from typing import Dict, Iterable, List, Match, Optional, Tuple
@@ -58,7 +58,7 @@ TOO_MANY_DOTS = re.compile(rb'(\.\s*){3,}')
 IS_SENT_END = re.compile(rb'(!(!!)?|\?(\?\?)?|\.(\.\.)?\s*|\n+)$')
 
 TEXT: Optional[bytes] = None
-NGRAM_PS: Optional[Dict[Tuple, Dict[bytes, float]]] = None
+NGRAM_PS: List[Optional[Dict[Tuple, Dict[bytes, float]]]] = [None for _ in range(20)]
 TOKENS: Optional[List[bytes]] = None
 COUNTS: Optional[Counter] = None
 PS: Optional[Dict[bytes, float]] = None
@@ -96,12 +96,12 @@ def tokenize(txt: bytes) -> Iterable[Match[bytes]]:
 
 def get_tokens(save=True, force=False) -> List[bytes]:
     global TOKENS
+    cache_file = root_path('cache', 'tokens')
     if not force:
         if TOKENS is not None:
             log.debug('[cache hit] got tokens from cache')
             return TOKENS
-        cache_file = root_path('cache', 'tokens')
-        if isfile(cache_file):
+        elif isfile(cache_file):
             with open(cache_file, mode='rb') as f:
                 TOKENS = pickle.load(f)
             log.debug('[cache hit] got tokens from file')
@@ -150,12 +150,12 @@ def get_tokens(save=True, force=False) -> List[bytes]:
 
 def get_counts(save=True, force=False) -> Counter:
     global COUNTS
+    cache_file = root_path('cache', 'word_counts')
     if not force:
         if COUNTS is not None:
             log.info('[cache hit] got word counts from cache')
             return COUNTS
-        cache_file = root_path('cache', 'word_counts')
-        if isfile(cache_file):
+        elif isfile(cache_file):
             with open(cache_file, mode='rb') as f:
                 COUNTS = pickle.load(f)
             log.info('[cache hit] got word counts from file')
@@ -173,12 +173,12 @@ def get_counts(save=True, force=False) -> Counter:
 
 def get_ps(save=True, force=False) -> Dict[bytes, float]:
     global PS
+    cache_file = root_path('cache', 'word_ps')
     if not force:
         if PS is not None:
             log.info('[cache hit] got word probabilities from cache')
             return PS
-        cache_file = root_path('cache', 'word_ps')
-        if isfile(cache_file):
+        elif isfile(cache_file):
             with open(cache_file, mode='rb') as f:
                 PS = pickle.load(f)
             log.info('[cache hit] got word probabilities from file')
@@ -199,49 +199,49 @@ def get_ps(save=True, force=False) -> Dict[bytes, float]:
 
 def get_ngram_ps(n=2, save=True, force=False) -> Dict[Tuple, Dict[bytes, float]]:
     global NGRAM_PS
+    cache_file = root_path('cache', f'{n}gram-ps')
     assert n >= 1, f'ngram len must be >= 1 but got n = {n}'
     if not force:
-        if NGRAM_PS is not None:
+        if NGRAM_PS[n] is not None:
             log.info(f'[cache hit] got {n}gram probabilities from cache')
-            return NGRAM_PS
-        cache_file = root_path('cache', f'{n}gram-ps')
-        if isfile(cache_file):
+            return NGRAM_PS[n]
+        elif isfile(cache_file):
             with open(cache_file, mode='rb') as f:
-                NGRAM_PS = pickle.load(f)
+                NGRAM_PS[n] = pickle.load(f)
             log.info(f'[cache hit] got {n}gram probabilities from file')
-            return NGRAM_PS
+            return NGRAM_PS[n]
     start = time()
     log.info(f'[generating] {n}gram probabilities (this might take a couple of minutes)')
 
     tokens: List[bytes] = get_tokens(save=save, force=force)
 
-    NGRAM_PS = dict()
+    NGRAM_PS[n] = dict()
 
     for i in range(len(tokens) - n - 1):
         for m in range(1, n + 1):
             words_before: Tuple = tuple(tokens[i:i + m])
             next_word: bytes = tokens[i + m]
-            if words_before not in NGRAM_PS:
-                NGRAM_PS[words_before] = {next_word: 1}
-            elif next_word in NGRAM_PS[words_before]:
-                NGRAM_PS[words_before][next_word] += 1
+            if words_before not in NGRAM_PS[n]:
+                NGRAM_PS[n][words_before] = {next_word: 1}
+            elif next_word in NGRAM_PS[n][words_before]:
+                NGRAM_PS[n][words_before][next_word] += 1
             else:
-                NGRAM_PS[words_before][next_word] = 1
+                NGRAM_PS[n][words_before][next_word] = 1
 
-    for ngram in NGRAM_PS:
+    for ngram in NGRAM_PS[n]:
         total = 0
-        for count in NGRAM_PS[ngram].values():
+        for count in NGRAM_PS[n][ngram].values():
             total += count
         if total > 0:
-            for next_word in NGRAM_PS[ngram]:
-                NGRAM_PS[ngram][next_word] /= total
+            for next_word in NGRAM_PS[n][ngram]:
+                NGRAM_PS[n][ngram][next_word] /= total
 
     if save:
         with open(cache_file, mode='wb') as f:
             log.info(f'[caching] generated {n}gram probabilities')
-            pickle.dump(NGRAM_PS, f)
-    log.info(f'[finished] generating {n}gram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS) / 1e6:4.2f}MB)')
-    return NGRAM_PS
+            pickle.dump(NGRAM_PS[n], f)
+    log.info(f'[finished] generating {n}gram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS[n]) / 1e6:4.2f}MB)')
+    return NGRAM_PS[n]
 
 
 def root_path(*parts, mkparent=True, mkdir=False, mkfile=False) -> str:
@@ -284,7 +284,7 @@ def get_text(files=None) -> bytes:
     return TEXT
 
 
-def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8), show_metrics=True, save=True, force=False) -> str:
+def generate(txt=b'That day', n=6, max_avg_txt_len=(1000 * 5), show_metrics=True, save=True, force=False) -> str:
     start = time()
     tokens: List[bytes] = [m.group(0) for m in tokenize(txt)]
     succ = [0 for _ in range(n + 1)]

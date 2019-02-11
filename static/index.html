@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="Norbert Logiewa">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto|Amiri" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+  <header class="my-5">
+    <h1>Stories Generator</h1>
+    <h2>Generate Stories!</h2>
+  </header>
+
+  <main>
+
+    <textarea class="mx-auto mb-4" cols="20" rows="5" spellcheck="true" autocomplete="true" maxlength="9999"
+              placeholder="Anne didn't plan her wedding. In fact, she had no idea it was about to take place."></textarea>
+
+    <div id="col-opt" class="flex-row">
+      <div class="mx-auto">
+        <h3>Text Length</h3>
+        <select id="picker-len" class="mb-4 d-block mx-auto">
+          <option value="1200">Short</option>
+          <option value="3000">Medium</option>
+          <option value="8000">Large</option>
+          <option value="80000">Huge</option>
+        </select>
+      </div>
+      <div class="mx-auto">
+        <h3>Word Lookbehind</h3>
+        <select id="picker-n" class="mb-4 d-block mx-auto">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="7">7</option>
+          <!--<option value="8">8</option>-->
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-lg d-block mx-auto btn-primary mb-4">
+      Create
+    </button>
+
+    <p id="story"></p>
+
+  </main>
+
+  <hr />
+
+  <footer><p>Built with Python3</p></footer>
+
+  <script src="/static/script.js"></script>
+
+</body>
+</html>
