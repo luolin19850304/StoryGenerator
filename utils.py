@@ -1,4 +1,5 @@
 # Standard Library
+import pickle
 import logging
 import re
 from collections import Counter
@@ -30,7 +31,7 @@ DQUOTE: int = ord(b'"')
 PUNCT_REGEX = rb'(?P<punct>-{1,2}|[:;,"])'
 NL_REGEX = rb'(?P<nl>(\n\r?|\r\n?)+)'
 SENT_END_REGEX = rb'(?P<sent_end>(!(!!)?|\?(\?\?)?|\.(\.\.)?))'
-WS_REGEX = rb'(?P<ws>\s+)'
+WS_REGEX = rb'(?P<ws>\s)'
 WORD_REGEX = rb"(?P<word>[A-Za-z]+(-[A-Za-z]+)*?('[a-z]{0,7})?)"
 DATE_REGEX = rb"(?P<date>([1-9]\d*)(th|st|[nr]d)|(19|20)\d{2})"
 TIME_REGEX = rb"(?P<time>\d+((:\d{2}){1,2}|(\.\d{2}){1,2}))"
@@ -46,7 +47,7 @@ CHUNK_REGEX = re.compile(rb'(?P<token>' + rb'|'.join([
 
 CLEAN_REGEX = re.compile(
     rb'^\s*([-*]+\s*)?(chapter|\*|note|volume|section|part|[IVX]+|harry\s+potter|by\s+|(the\s+)?end)[^\n\r]*$|\r+',
-    MULTILINE | IGNORECASE | VERBOSE)
+    MULTILINE | IGNORECASE)
 
 # processing
 NEEDLESS_WRAP = re.compile(rb'([^\n])\n([^\n])')
@@ -89,113 +90,130 @@ def decapitalize(txt: bytes) -> bytes:
         return txt
 
 
-def postprocess(tokens: List[bytes]) -> None:
-    start = time()
-    log.info('[postprocessing]')
-    for i in range(1, len(tokens) - 1):
-        if len(tokens[i]) > 0 and len(tokens[i + 1]) > 0:
-            # word. word2 => word. Word2
-            if len(tokens[i + 1].lstrip()) > 1 and IS_SENT_END.search(tokens[i]):
-                tokens[i + 1] = capitalize(tokens[i + 1])
-            # lack of space after punct
-            current_last = tokens[i][-1]
-            next_first = tokens[i + 1][0]
-            if (current_last == DOT or
-                current_last == COMMA or
-                current_last == SEMICOLON or
-                current_last == COLON or
-                current_last == E_MARK or
-                current_last == Q_MARK) and next_first != SPACE:
-                tokens[i] += b' '
-            # more than 1 consecutive spaces
-            elif current_last == SPACE and next_first == SPACE:
-                tokens[i + 1] = tokens[i + 1].lstrip()
-            # two consecutive words (lack of space to separate them)
-            elif 60 <= current_last <= 90 or 97 <= current_last <= 122 and \
-                    (60 <= next_first <= 90 or 97 <= next_first <= 122):
-                tokens[i] += b' '
-            elif current_last == b'"' and next_first == b'"':
-                tokens[i] = tokens[i][:-1]
-            # elif current_last == DQUOTE and next_first == b'"':
-            #     tokens[i] = tokens[i][:-1]
-    log.info(f'[finished] postprocessing (took {time() - start:4.2f} sec)')
-
-
 def tokenize(txt: bytes) -> Iterable[Match[bytes]]:
     return CHUNK_REGEX.finditer(txt)
 
 
-def get_tokens() -> List[bytes]:
+def get_tokens(save=True, force=False) -> List[bytes]:
     global TOKENS
-    if TOKENS is not None:
-        log.debug('[cache hit] got tokens from cache')
-        return TOKENS
+    if not force:
+        if TOKENS is not None:
+            log.debug('[cache hit] got tokens from cache')
+            return TOKENS
+        cache_file = root_path('cache', 'tokens')
+        if isfile(cache_file):
+            with open(cache_file, mode='rb') as f:
+                TOKENS = pickle.load(f)
+            log.debug('[cache hit] got tokens from file')
+            return TOKENS
     log.info('[generating] tokens')
     start = time()
     ms: List[Match[bytes]] = list(tokenize(get_text()))
     TOKENS = [ms[0].group(0), ms[0].group(0)]
     # not checking for len of tokens because every token has len >= 1
     for i in range(2, len(ms) - 1):
-        if ms[i].group('word') and ms[i - 2].group('sent_end') and (97 <= TOKENS[-2][0] <= 122):
+        s: bytes = ms[i].group(0)
+        is_q = s[0] == DQUOTE
+        is_w = bool(ms[i].group('word'))
+        is_ws = bool(ms[i].group('ws'))
+        is_p = bool(ms[i].group('punct'))
+        is_nl = bool(ms[i].group('nl'))
+        is_end = bool(ms[i].group('sent_end'))
+        is_cap = 97 <= s[0] <= 122
+        if is_w and ms[i - 2].group('sent_end') and (97 <= TOKENS[-2][0] <= 122):
             TOKENS[-2] = capitalize(TOKENS[-2])
-        if ms[i].group('word') and (97 <= ms[i].group(0)[0] <= 122) and (ms[i - 2].group('sent_end') or ms[i - 1].group('nl')):
-            TOKENS.append(capitalize(ms[i].group(0)))
+        if is_w and ms[i - 1].group('word'):
+            TOKENS.append(b'. ' if is_cap else b' ')
+        if is_w and is_cap and (ms[i - 2].group('sent_end') or ms[i - 1].group('nl')):
+            TOKENS.append(capitalize(s))
             continue
-        elif (ms[i].group('word') and ms[i + 1].group('word')) \
-                or (ms[i].group('sent_end') and not (ms[i + 1].group('ws') or ms[i + 1].group('nl'))) \
-                or (ms[i].group('punct') and not (ms[i + 1].group('ws') or ms[i - 1].group('nl') or ms[i].group(0)[0] == DQUOTE)):
-            TOKENS.append(ms[i].group(0))
+        elif (is_w and ms[i + 1].group('word')) \
+                or (is_end and not (ms[i + 1].group('ws') or ms[i + 1].group('nl'))) \
+                or (is_p and not (is_q or ms[i + 1].group('ws') or ms[i - 1].group('nl'))):
+            TOKENS.append(s)
             TOKENS.append(b' ')
             continue
-        elif (ms[i].group('nl') and not ms[i - 1].group('sent_end')) \
-                or (ms[i].group('ws') and (ms[i + 1].group('ws') or ms[i + 1].group('sent_end'))) \
-                or (ms[i].group('punct') and ms[i + 1].group('punct') and ms[i].group('punct') == ms[i + 1].group('punct')):
+        elif (is_nl and not ms[i - 1].group('sent_end') and not ms[i + 1].group(0)[0] == DQUOTE and ms[i + 1].group('punct')) \
+                or ((is_end or is_p or is_ws or is_p) and s == ms[i + 1].group(0)) \
+               or (is_ws and (ms[i + 1].group('sent_end') or ms[i + 1].group('nl'))):
             continue
         else:
-            TOKENS.append(ms[i].group(0))
+            TOKENS.append(s)
     TOKENS.append(ms[-1].group(0))
+    if save:
+        with open(cache_file, mode='wb') as f:
+            log.info('[caching] generated tokens')
+            pickle.dump(TOKENS, f)
     log.info(f'[finished] generating tokens (took {time() - start:4.2f} sec, {len(TOKENS)} tokens, size: {getsizeof(TOKENS) / 1e6:4.2f}MB)')
     return TOKENS
 
 
-def get_counts() -> Counter:
+def get_counts(save=True, force=False) -> Counter:
     global COUNTS
-    if COUNTS is not None:
-        log.info('got word counts from cache')
-        return COUNTS
+    if not force:
+        if COUNTS is not None:
+            log.info('[cache hit] got word counts from cache')
+            return COUNTS
+        cache_file = root_path('cache', 'word_counts')
+        if isfile(cache_file):
+            with open(cache_file, mode='rb') as f:
+                COUNTS = pickle.load(f)
+            log.info('[cache hit] got word counts from file')
+            return COUNTS
     log.info('[generating] word counts')
     start = time()
-    COUNTS = Counter(get_tokens())
+    COUNTS = Counter(get_tokens(save=save, force=force))
+    if save:
+        with open(cache_file, mode='wb') as f:
+            log.info(f'[caching] generated word counts')
+            pickle.dump(COUNTS, f)
     log.info(f'[finished] generating word counts (took {time() - start:4.2f} sec, size: {getsizeof(COUNTS) / 1e6:4.2f}MB)')
     return COUNTS
 
 
-def get_ps() -> Dict[bytes, float]:
+def get_ps(save=True, force=False) -> Dict[bytes, float]:
     global PS
-    if PS is not None:
-        log.info('[cache hit] got word probabilities from cache')
-        return PS
+    if not force:
+        if PS is not None:
+            log.info('[cache hit] got word probabilities from cache')
+            return PS
+        cache_file = root_path('cache', 'word_ps')
+        if isfile(cache_file):
+            with open(cache_file, mode='rb') as f:
+                PS = pickle.load(f)
+            log.info('[cache hit] got word probabilities from file')
+            return PS
     start = time()
     log.info('[generating] word probabilities')
-    PS = dict(get_counts())
+    PS = dict(get_counts(force=force, save=save))
     no_tokens: int = sum(PS.values())
     for token in PS:
         PS[token] /= no_tokens
+    if save:
+        with open(cache_file, mode='wb') as f:
+            log.info(f'[caching] generated word probabilities')
+            pickle.dump(PS, f)
     log.info(f'[finished] generating word probabilities (took {time() - start:4.2f} sec, size: {getsizeof(PS) / 1e6:4.2f}MB)')
     return PS
 
 
-def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
+def get_ngram_ps(n=2, save=True, force=False) -> Dict[Tuple, Dict[bytes, float]]:
     global NGRAM_PS
-
     assert n >= 1, f'ngram len must be >= 1 but got n = {n}'
-    if NGRAM_PS is not None:
-        log.info('[cache hit] got ngram probabilities from cache')
-        return NGRAM_PS
+    if not force:
+        if NGRAM_PS is not None:
+            log.info(f'[cache hit] got {n}gram probabilities from cache')
+            return NGRAM_PS
+        cache_file = root_path('cache', f'{n}gram-ps')
+        if isfile(cache_file):
+            with open(cache_file, mode='rb') as f:
+                NGRAM_PS = pickle.load(f)
+            log.info(f'[cache hit] got {n}gram probabilities from file')
+            return NGRAM_PS
     start = time()
-    log.info('[generating] ngram probabilities (this might take a couple of minutes)')
+    log.info(f'[generating] {n}gram probabilities (this might take a couple of minutes)')
 
-    tokens: List[bytes] = get_tokens()
+    tokens: List[bytes] = get_tokens(save=save, force=force)
 
     NGRAM_PS = dict()
 
@@ -218,7 +236,11 @@ def get_ngram_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
             for next_word in NGRAM_PS[ngram]:
                 NGRAM_PS[ngram][next_word] /= total
 
-    log.info(f'[finished] generating ngram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS) / 1e6:4.2f}MB)')
+    if save:
+        with open(cache_file, mode='wb') as f:
+            log.info(f'[caching] generated {n}gram probabilities')
+            pickle.dump(NGRAM_PS, f)
+    log.info(f'[finished] generating {n}gram probabilities (took {time() - start:4.2f} sec, size is {getsizeof(NGRAM_PS) / 1e6:4.2f}MB)')
     return NGRAM_PS
 
 
@@ -262,14 +284,14 @@ def get_text(files=None) -> bytes:
     return TEXT
 
 
-def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8), show_metrics=True) -> str:
+def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8), show_metrics=True, save=True, force=False) -> str:
     start = time()
     tokens: List[bytes] = [m.group(0) for m in tokenize(txt)]
     succ = [0 for _ in range(n + 1)]
-    ps: Dict[bytes, float] = get_ps()
+    ps: Dict[bytes, float] = get_ps(force=force, save=save)
     unique_tokens: List[bytes] = list(ps.keys())
     unique_tokens_ps: List[float] = list(ps.values())
-    ps_ngrams = get_ngram_ps(n=n)
+    ps_ngrams = get_ngram_ps(n=n, force=force, save=save)
 
     # token generation
     while len(tokens) * AVG_TOKEN_LEN < max_avg_txt_len:
@@ -286,19 +308,16 @@ def generate(txt=b'That day', n=6, max_avg_txt_len=(10000 * 8), show_metrics=Tru
             succ[0] += 1
             tokens.append(choice(a=unique_tokens, p=unique_tokens_ps))
 
-    # post-processing
-    # postprocess(tokens=tokens)
-
     if show_metrics:
         # metrics
         log.info('-' * (1 + 6 + 15 + 2))
-        log.info('METRICS')
+        log.info('%9s%s' % (' ', 'METRICS'))
         log.info('-' * (1 + 6 + 15 + 2))
-        log.info('%1s %6s %15s' % ('#', 'P', 'NO EXAMPLES'))
-        log.info('%1s %6s %15s' % ('-' * 2, '-' * 6, '-' * 15))
+        log.info('%-1s %-6s %-15s' % ('#', 'PROB', 'NO EXAMPLES'))
+        log.info('%-1s %-6s %-15s' % ('-' * 1, '-' * 6, '-' * 15))
         no_gen_tokens: int = sum(succ)
         for i in range(n, -1, -1):
-            log.info('%1d %6.4f %15d' % (i, succ[i] / no_gen_tokens, succ[i]))
+            log.info('%-1d %-6.4f %-15d' % (i, succ[i] / no_gen_tokens, succ[i]))
 
     log.info(f'[finished] generating text (took {time() - start:4.2f} sec)')
 
