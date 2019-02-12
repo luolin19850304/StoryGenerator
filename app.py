@@ -37,8 +37,8 @@ def story():
 # pre-load
 log.warning('[pre-loading] this should take < 1min ...')
 start = time()
-genw(n=10)
-genc(n=10)
+genw(n=8)
+genc(n=8)
 log.warn(f'[finished] pre-loading (took {time() - start:4.2f}s)')
 
 app.run(port=3000)
