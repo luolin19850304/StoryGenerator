@@ -31,13 +31,16 @@ textarea {
   min-width: 200px;
 }
 
-#col-opt {
-  min-width: 30%;
-}
-
 .flex-row {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
   align-items: center;
 }
