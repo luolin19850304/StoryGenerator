@@ -25,6 +25,7 @@ document.querySelector('.btn[type=submit]').onclick = function () {
         method: 'post',
         body: JSON.stringify({
             seed: document.querySelector('textarea').value,
+            algo: document.getElementById('picker-algo').value,
             n: parseInt(document.getElementById('picker-n').value),
             len: parseInt(document.getElementById('picker-len').value),
         }),

@@ -7,7 +7,9 @@ from os.path import abspath, basename, dirname, join, relpath
 from time import strftime
 
 # 3rd Party
-from utils import ROOT, generate
+from markov_words import generate as genw
+from markov_chars import generate as genc
+from utils import ROOT
 
 if __name__ != '__main__':
     raise Exception('Must be run as a script')
@@ -72,16 +74,35 @@ parser.add_argument(
     choices={'noset', 'debug', 'info', 'warning', 'error', 'criticial'},
     default='info',
     help='set logging threshold')
+parser.add_argument(
+    '--force',
+    '-f',
+    required=False,
+    action='store_true',
+    default=False,
+    help="don't use cache")
+parser.add_argument(
+    '--chars',
+    '-c',
+    required=False,
+    action='store_true',
+    default=False,
+    help='use char lookbehind')
+parser.add_argument(
+    '--seed',
+    '-s',
+    required=False,
+    metavar='TEXT',
+    default='',
+    help='seed (text to bootstrap the algorithm)')
 
 args = parser.parse_args()
 
 logging.basicConfig(
-    level={'noset': 0, 'debug': 10, 'info': 20, 'warning': 30, 'error': 40, 'criticial': 50}[args.logging],
+    level={'noset': 0, 'debug': 10, 'info': 20, 'warning': 30, 'error': 40, 'critical': 50}[args.logging],
     format='%(levelname)s %(funcName)-13s %(lineno)3d %(message)s')
 
-txt: str = generate(
-    n=args.lookbehind,
-    max_avg_txt_len=args.length)
+txt: str = (genc if args.chars else genw)(args.seed.encode('ascii', 'ignore'), args.lookbehind, args.length, force=args.force)
 if not args.no_print:
     print(txt)
 if not args.no_output:
