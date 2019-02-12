@@ -11,68 +11,68 @@
   <title></title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto|Amiri" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
 
-  <header class="my-5">
-    <h1>Stories Generator</h1>
-    <h2>Generate Stories!</h2>
-  </header>
+<header class="my-5">
+  <h1>Stories Generator</h1>
+  <h2>Generate Stories!</h2>
+</header>
 
-  <main>
+<main>
 
     <textarea class="mx-auto mb-4" cols="20" rows="5" spellcheck="true" autocomplete="true" maxlength="9999"
               placeholder="Anne didn't plan her wedding. In fact, she had no idea it was about to take place."></textarea>
 
-    <div id="col-opt" class="flex-row">
-      <div class="mx-auto">
-        <label for="picker-len" class="h3">Text Length</label>
-        <select id="picker-len" class="mb-4 d-block mx-auto">
-          <option value="4000">Short</option>
-          <option value="8000">Medium</option>
-          <option value="14000">Large</option>
-          <option value="30000">Huge</option>
-        </select>
-      </div>
-      <div class="mx-auto">
-        <label for="picker-algo" class="h3">Algorithm</label>
-        <select id="picker-algo" class="mb-4 d-block mx-auto">
-          <option value="char">Markov Char Lookbehind</option>
-          <option value="word">Markov Word Lookbehind</option>
-        </select>
-      </div>
-      <div class="mx-auto">
-        <label for="picker-n" class="h3">Lookbehind</label>
-        <select id="picker-n" class="mb-4 d-block mx-auto">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-        </select>
-      </div>
+  <div id="col-opt" class="flex-row">
+    <div class="mx-auto">
+      <label for="picker-len" class="h3">Text Length</label>
+      <select id="picker-len" class="mb-4 d-block mx-auto">
+        <option value="4000">Short</option>
+        <option value="8000">Medium</option>
+        <option value="14000">Large</option>
+        <option value="30000">Huge</option>
+      </select>
     </div>
+    <div class="mx-auto">
+      <label for="picker-algo" class="h3">Algorithm</label>
+      <select id="picker-algo" class="mb-4 d-block mx-auto">
+        <option value="char">Markov Char Lookbehind</option>
+        <option value="word">Markov Word Lookbehind</option>
+      </select>
+    </div>
+    <div class="mx-auto">
+      <label for="picker-n" class="h3">Lookbehind</label>
+      <select id="picker-n" class="mb-4 d-block mx-auto">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </div>
+  </div>
 
-    <button type="submit" class="btn btn-lg d-block mx-auto btn-primary mb-4">
-      Create
-    </button>
+  <button type="submit" class="btn btn-lg d-block mx-auto btn-primary mb-4">
+    Create
+  </button>
 
-    <p id="story"></p>
+  <p id="story"></p>
 
-  </main>
+</main>
 
-  <hr />
+<hr/>
 
-  <footer><p>Built with Python3</p></footer>
+<footer><p>Built with Python3</p></footer>
 
-  <script src="/static/script.js"></script>
+<script src="/static/script.js"></script>
 
 </body>
 </html>
