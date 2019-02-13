@@ -5,7 +5,7 @@ from os.path import join, abspath, dirname
 from typing import Dict, Union
 from time import time
 from flask import Flask, request, send_from_directory
-from markov_words import generate as genw
+from markov_chunks import generate as genw
 from markov_chars import generate as genc
 from os import getenv
 import logging

@@ -7,7 +7,7 @@ from os.path import abspath, basename, dirname, join, relpath
 from time import strftime
 
 # 3rd Party
-from markov_words import generate as genw
+from markov_chunks import generate as genw
 from markov_chars import generate as genc
 from utils import ROOT
 
