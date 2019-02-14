@@ -1,5 +1,6 @@
 # Standard Library
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
+from collections import ChainMap
 from time import time
 from typing import Dict, List, Optional
 
@@ -12,33 +13,29 @@ from numpy.random import choice
 from utils import NO_CPUS, get_nchar_ps, get_char_ps, log
 
 
-def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True, save=True, force=False) -> str:
+def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> str:
     start = time()
     txt: bytearray = bytearray(seed)
-    succ: ndarray = np.array([0 for _ in range(n + 1)], dtype='int32')
-    ps: ndarray = get_char_ps(force=force, save=save)
-    char_idx: ndarray = np.arange(128, dtype='int8')
+    succ: ndarray = np.array([0 for _ in range(n + 1)], dtype='uint32')
+    ps: ndarray = get_char_ps()
+    char_idx: ndarray = np.arange(128, dtype='ubyte')
 
     with ThreadPool(max_workers=NO_CPUS, thread_name_prefix='markov/c') as pool:
-        ps_nchars: List[Dict[bytes, Dict[int, float]]] = [
+        lookup = ChainMap(*[
             task.result() for task in [
-                pool.submit(fn=get_nchar_ps, n=(i + 1), force=force, save=save)
-                for i in range(n, 0, -1)]]
+                pool.submit(fn=get_nchar_ps, n=(i + 1))
+                for i in range(n, 0, -1)]])
 
     while len(txt) < max_len:
         found = False
         for m in range(n, 0, -1):
             chars: bytes = bytes(txt[-m:])
-            maybe_ps: Optional[Dict[bytes, float]] = None
-            for d in ps_nchars:
-                maybe_ps = d.get(chars, None)
-                if maybe_ps:
-                    break
-            if maybe_ps and len(maybe_ps) > 1:
+            maybe_ps: Optional[Dict[bytes, float]] = lookup.get(chars, None)
+            if maybe_ps is not None and len(maybe_ps) > 1:
                 succ[m] += 1
                 txt.append(choice(
-                    a=list(maybe_ps.keys()),
-                    p=list(maybe_ps.values()),
+                    a=tuple(maybe_ps.keys()),
+                    p=tuple(maybe_ps.values()),
                 ))
                 found = True
                 break

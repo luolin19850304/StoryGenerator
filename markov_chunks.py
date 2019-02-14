@@ -1,6 +1,7 @@
 # Standard Library
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from time import time
+from collections import ChainMap
 from typing import Dict, List, Optional, Tuple
 
 # 3rd Party
@@ -9,35 +10,31 @@ from numpy import ndarray
 from numpy.random import choice
 
 # My Code
-from utils import log, NO_CPUS, AVG_CHUNK_LEN, tokenize, get_chunks_ps
+from utils import log, NO_CPUS, AVG_CHUNK_LEN, chunk, get_chunk_ps, get_nchunks_ps
 
 
-def generate(txt=b'That day', n=6, max_avg_txt_len=(1000 * 5), show_metrics=True, save=True, force=False) -> str:
+def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> str:
     start = time()
-    tokens: List[bytes] = [m.group(0) for m in tokenize(txt)]
+    tokens: List[bytes] = [m.group(0) for m in chunk(seed)]
     no_tokens = len(tokens)
-    succ = [0 for _ in range(n + 1)]
-    ps: Dict[bytes, float] = get_chunks_ps(force=force, save=save)
-    unique_tokens: ndarray = np.array(list(ps.keys()))
-    unique_tokens_ps: ndarray = np.array(list(ps.values()))
+    succ = np.array([0 for _ in range(n + 1)], dtype='uint32')
+    ps: Dict[bytes, float] = get_chunk_ps()
+    chunks: ndarray = np.array(list(ps.keys()))
+    chunk_ps: ndarray = np.array(list(ps.values()))
 
     with ThreadPool(max_workers=NO_CPUS, thread_name_prefix='markov/w') as pool:
-        ps_ngrams: List[Dict[Tuple, Dict[bytes, float]]] = [
+        lookup = ChainMap(*[
             task.result() for task in [
-                pool.submit(fn=get_chunks_ps, n=i, force=force, save=save)
-                for i in range(n, 0, -1)]]
+                pool.submit(fn=get_nchunks_ps, n=i)
+                for i in range(n, 0, -1)]])
 
     # token generation
-    while no_tokens * AVG_CHUNK_LEN < max_avg_txt_len:
+    while no_tokens * AVG_CHUNK_LEN < max_len:
         found = False
         for m in range(n, 0, -1):
             ngram = tuple(tokens[-m:])
-            maybe_ps: Optional[Dict[bytes, float]] = None
-            for d in ps_ngrams:
-                maybe_ps = d.get(ngram, None)
-                if maybe_ps:
-                    break
-            if maybe_ps and len(maybe_ps) > 1:
+            maybe_ps: Optional[Dict[bytes, float]] = lookup.get(ngram, None)
+            if maybe_ps is not None and len(maybe_ps) > 1:
                 succ[m] += 1
                 tokens.append(choice(
                     a=list(maybe_ps.keys()),
@@ -47,7 +44,7 @@ def generate(txt=b'That day', n=6, max_avg_txt_len=(1000 * 5), show_metrics=True
                 break
         if not found:
             succ[0] += 1
-            tokens.append(choice(a=unique_tokens, p=unique_tokens_ps))
+            tokens.append(choice(a=chunks, p=chunk_ps))
         no_tokens += 1
 
     if show_metrics:

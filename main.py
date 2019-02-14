@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 
-# Standard Library
-import argparse
-import logging
-from os.path import abspath, basename, dirname, join, relpath
-from time import strftime
-
-# 3rd Party
-from markov_chunks import generate as genw
-from markov_chars import generate as genc
-from utils import ROOT
-
 if __name__ != '__main__':
     raise Exception('Must be run as a script')
 
-output_file: str = join(
-    ROOT,
+# Standard Library
+import argparse
+import logging
+from os.path import abspath, basename, dirname, relpath
+from time import strftime
+
+# My Code
+from markov_chunks import generate as genw
+from markov_chars import generate as genc
+from utils import root_path
+
+
+output_file: str = root_path(
     'generated',
     f"{strftime('%H:%M:%S#%y-%m-%d')}.txt",
 )
@@ -31,6 +31,7 @@ parser.add_argument(
     type=int,
     nargs='?',
     default=6,
+    choices=tuple(range(1,20)),
     required=False,
     help='max length of lookbehind ngrams')
 parser.add_argument(
@@ -75,19 +76,12 @@ parser.add_argument(
     default='info',
     help='set logging threshold')
 parser.add_argument(
-    '--force',
-    '-f',
+    '--algo',
+    '-a',
     required=False,
-    action='store_true',
-    default=False,
-    help="don't use cache")
-parser.add_argument(
-    '--chars',
-    '-c',
-    required=False,
-    action='store_true',
-    default=False,
-    help='use char lookbehind')
+    default='chars',
+    choices={'chars', 'words', 'grammar'},
+    help='which algorithm to use')
 parser.add_argument(
     '--seed',
     '-s',
@@ -100,9 +94,13 @@ args = parser.parse_args()
 
 logging.basicConfig(
     level={'noset': 0, 'debug': 10, 'info': 20, 'warning': 30, 'error': 40, 'critical': 50}[args.logging],
-    format='%(levelname)s %(funcName)-13s %(lineno)3d %(message)s')
+    format='%(levelname)-s %(threadName)-s/%(module)-s:%(lineno)-d.%(funcName)-s %(message)s')
 
-txt: str = (genc if args.chars else genw)(args.seed.encode('ascii', 'ignore'), args.lookbehind, args.length, force=args.force)
+txt: str = (genc if args.algo == 'chars' else genw)(
+        seed=args.seed.encode('ascii', 'ignore'),
+        n=args.lookbehind,
+        max_len=args.length,
+        )
 if not args.no_print:
     print(txt)
 if not args.no_output:

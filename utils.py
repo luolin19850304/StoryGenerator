@@ -2,6 +2,7 @@ import logging
 import lzma
 import pickle
 import re
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from collections import Counter
 from os import makedirs, listdir
 from os.path import dirname, abspath, isfile, isdir, join, relpath
@@ -10,7 +11,7 @@ from re import MULTILINE, IGNORECASE
 from sys import getsizeof
 from threading import Lock, Semaphore
 from time import time
-from typing import List, Match, Iterable, Dict, Tuple, Any
+from typing import List, Match, Iterable, Dict, Tuple, Any, Optional, Generator, Union
 
 import nltk
 import numpy as np
@@ -40,6 +41,8 @@ CHUNK_REGEX = re.compile(rb'(?P<token>' + rb'|'.join([
     TIME_REGEX,
 ]) + rb')', IGNORECASE)
 
+# logging.basicConfig(format='%(levelname)s %(funcName)-13s %(lineno)3d %(message)s')
+
 log = logging.getLogger()
 
 ROOT: str = dirname(abspath(__file__))
@@ -55,43 +58,50 @@ TOO_MANY_DASHES = re.compile(rb'(-\s*){3,}')
 TOO_MANY_DOTS = re.compile(rb'(\.\s*){3,}')
 
 
-def cached(what: str, load=True, save=True):
+def cached(what: str, keep=True, load=True, save=True, archive=True):
     def outer(fn):
         def inner():
-            if globals().get(what + '_LK_R', None) is None:
-                globals()[what + '_LK_R'] = Semaphore(NO_CPUS)
-            with globals()[what + '_LK_R']:
+            lock_r = '{0}_LK_R'.format(what)
+            if globals().get(lock_r, None) is None:
+                globals()[lock_r] = Semaphore(NO_CPUS)
+            with globals()[lock_r]:
                 if globals().get(what, None) is not None:
                     log.debug(f'[cache hit] found {what}')
                     return globals()[what]
                 path = root_path('cache', what)
                 if load and isfile(path):
-                    if globals().get(what + '_LK_W', None) is None:
-                        globals()[what + '_LK_W'] = Lock()
-                    with globals()[what + '_LK_W']:
+                    lock_w = '{0}_LK_W'.format(what)
+                    if globals().get(lock_w, None) is None:
+                        globals()[lock_w] = Lock()
+                    with globals()[lock_w]:
                         log.debug(f'[cache hit] found {what} in file, loading ...')
                         start = time()
-                        with lzma.open(path) as f:
-                            globals()[what] = pickle.loads(f.read())
-                        log.info(f'[cache hit] loaded {what} from file (took {time() - start:4.2f}s, size: {getsizeof(globals()[what]) / 1e6:4.2f}MB)')
-                        return globals()[what]
+                        result = None
+                        with (lzma.open if archive else open)(path, mode='rb') as f:
+                            result = pickle.load(f)
+                        if keep:
+                            globals()[what] = result
+                        log.info(f'[cache hit] loaded {what} from file (took {time() - start:4.2f}s, size: {getsizeof(result) / 1e6:4.2f}MB)')
+                        return result
                 else:
                     log.info(f'[cache miss, generating] {what}')
                     start = time()
-                    globals()[what] = fn()
-                    log.debug(f'[finished] generating {what} (took {time() - start:4.2f}s, size: {getsizeof(globals()[what]) / 1e6:4.2f}MB)')
+                    result = fn()
+                    if keep:
+                        globals()[what] = result
+                    log.debug(f'[finished] generating {what} (took {time() - start:4.2f}s, size: {getsizeof(result) / 1e6:4.2f}MB)')
                     if save:
                         log.debug(f'[caching] {what}')
                         start = time()
-                        with lzma.open(path, mode='wb') as f:
-                            f.write(pickle.dumps(globals()[what]))
+                        with (lzma.open if archive else open)(path, mode='wb') as f:
+                            pickle.dump(result, f)
                         log.debug(f'[finished] caching {what} (took {time() - start:4.2f}s)')
-                    return globals()[what]
+                    return result
         return inner
     return outer
 
 
-def tokenize(txt: bytes) -> Iterable[Match[bytes]]:
+def chunk(txt: bytes) -> Iterable[Match[bytes]]:
     return CHUNK_REGEX.finditer(txt)
 
 
@@ -107,21 +117,29 @@ def root_path(*parts, mkparent=True, mkdir=False, mkfile=False) -> str:
 
 
 # noinspection PyDefaultArgument
-@cached('TEXT')
-def get_text(files=[root_path('data', fname) for fname in listdir(root_path('data')) if fname.endswith('.txt')]) -> bytes:
+@cached('TEXT', keep=True, load=False, save=False)
+def get_text(files=[root_path('data', fname) for fname in listdir(root_path('data')) if fname.endswith('.txt')]) -> bytearray:
     log.debug(f'[loading] text from {len(files)} files')
     texts: bytearray = bytearray()
-    for path in files:
+    lock = Lock()
+    def read_file(path: str):
         start_file = time()
+        fname = relpath(path)
         with open(path, mode='rb') as f:
-            log.debug(f'[loading] text from file {relpath(path)}')
+            log.debug(f'[loading] text from file {fname}')
             try:
-                texts.extend(f.read())
+                txt = f.read()
+                lock.acquire()
+                texts.extend(txt)
+                texts.extend(b'\n\n')
+                lock.release()
             except Exception as e:
                 log.warning(str(e))
-        log.debug(f'[finished] reading from {relpath(path)} (read {getsizeof(texts[-1]) / 1e6:4.2f}MB in {time() - start_file:4.2f}s)')
-    texts.extend(b'\n\n')
-    return b'\n'.join(texts)
+        log.debug(f'[finished] reading from {fname} (read {getsizeof(texts[-1]) / 1e6:4.2f}MB in {time() - start_file:4.2f}s)')
+    with ThreadPool(max_workers=NO_CPUS, thread_name_prefix='get_text') as pool:
+        for task in [pool.submit(fn=read_file, path=p) for p in files]:
+            task.result()
+    return texts
 
 
 def capitalize(txt: bytes) -> bytes:
@@ -138,8 +156,8 @@ def capitalize(txt: bytes) -> bytes:
 
 
 @cached('CHUNKS')
-def get_chunks(save=True, force=False) -> List[bytes]:
-    ms: List[Match[bytes]] = list(tokenize(get_text()))
+def get_chunks() -> List[bytes]:
+    ms: List[Match[bytes]] = list(chunk(get_text()))
     chunks = [ms[0].group(0), ms[0].group(0)]
     # not checking for len of tokens because every token has len >= 1
     for i in range(2, len(ms) - 1):
@@ -174,24 +192,21 @@ def get_chunks(save=True, force=False) -> List[bytes]:
     return chunks
 
 
-def get_chunks_ps(n=2, save=True, force=False) -> Dict[Tuple, Dict[bytes, float]]:
-    assert n >= 1, f'ngram len must be >= 1 but got n = {n}'
-    assert n <= 20, f'ngram len must be <= 20 but got n = {n}'
+def get_nchunks_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
+    assert 20 >= n >= 1, f'ngram len must be in [1, 20] but got n = {n}'
 
     @cached(f'{n}CHUNKS_PS')
-    def ps():
-        tokens: List[bytes] = get_chunks(save=save, force=force)
-        ps = dict()
+    def inner():
+        tokens: List[bytes] = get_chunks()
+        ps: Dict[Tuple, Dict[bytes, float]] = dict()
         for i in range(len(tokens) - n - 1):
             words_before: Tuple = tuple(tokens[i:i + n])
             next_word: bytes = tokens[i + n]
             if words_before not in ps:
                 ps[words_before] = {next_word: 1}
-            elif next_word in ps[n][words_before]:
-                ps[words_before][next_word] += 1
             else:
-                ps[words_before][next_word] = 1
-
+                ps[words_before][next_word] = \
+                        ps[words_before].get(next_word, 0) + 1
         for ngram in ps:
             total = 0
             for count in ps[ngram].values():
@@ -199,14 +214,14 @@ def get_chunks_ps(n=2, save=True, force=False) -> Dict[Tuple, Dict[bytes, float]
             if total > 0:
                 for next_word in ps[ngram]:
                     ps[ngram][next_word] /= total
-
-    return ps()
+        return ps
+    return inner()
 
 
 @cached('CHAR_COUNTS')
-def get_counts(save=True, force=False) -> ndarray:
+def get_char_counts() -> ndarray:
     bag = Counter(get_text())
-    counts = np.array([0 for _ in range(128)], dtype='int8')
+    counts: ndarray = np.arange(128, dtype='uint32')
     for k, v in bag.items():
         if k < 128:
             counts[k] = v
@@ -214,43 +229,37 @@ def get_counts(save=True, force=False) -> ndarray:
 
 
 @cached('CHAR_PS')
-def get_char_ps(save=True, force=False) -> ndarray:
-    counts: ndarray = get_counts(force=force, save=save)
+def get_char_ps() -> ndarray:
+    counts: ndarray = get_char_counts()
     ps: ndarray = np.zeros(shape=(counts.size,), dtype='float64')
-    no_chars: int = sum(ps)
+    no_chars: int = counts.sum()
     for c in range(128):
         ps[c] = counts[c] / no_chars
     return ps
 
 
-def get_nchar_ps(n=2, save=True, force=False) -> Dict[bytes, Dict[int, float]]:
-    assert n >= 1, f'nchar len must be >= 1 but got n = {n}'
-    assert n <= 20, f'nchar len must be <= 20 but got n = {n}'
+def get_nchar_ps(n=2) -> Dict[bytes, Dict[int, float]]:
+    assert 20 >= n >= 1, f'nchar len must be in [1, 20] but got n = {n}'
 
     @cached(f'{n}CHAR_PS')
     def inner():
-        txt: bytes = get_text()
-        ps = dict()
+        txt: bytes = bytes(get_text())
+        ps: Dict[bytes, Dict[int, float]] = dict()
 
         for i in range(len(txt) - n - 1):
-            chars_before = txt[i:i + n]
+            chars_before: bytes = txt[i:i + n]
             char_after: int = txt[i + n]
             if chars_before not in ps:
                 ps[chars_before] = {char_after: 1}
-            elif char_after in ps[chars_before]:
-                ps[chars_before][char_after] += 1
             else:
-                ps[chars_before][char_after] = 1
+                ps[chars_before][char_after] = ps[chars_before].get(char_after, 0) + 1
 
         for nchar in ps:
-            total = 0
-            for count in ps[nchar].values():
-                total += count
-            if total > 0:
-                for char_after in ps[nchar]:
-                    ps[nchar][char_after] /= total
+            total = sum(ps[nchar].values())
+            for char_after in ps[nchar]:
+                ps[nchar][char_after] /= total
 
-        return ps[n]
+        return ps
 
     return inner()
 
@@ -258,6 +267,10 @@ def get_nchar_ps(n=2, save=True, force=False) -> Dict[bytes, Dict[int, float]]:
 @cached('WORDS')
 def get_words() -> List[str]:
     return nltk.word_tokenize(get_text().decode('ascii', 'ignore'))
+
+@cached('WORDSPUNCTS')
+def get_wordpuncts() -> List[str]:
+    return nltk.wordpunct_tokenize(get_text().decode('ascii', 'ignore'))
 
 
 @cached('SENTS')
@@ -269,65 +282,72 @@ def get_sents() -> List[str]:
 def get_tagged_words() -> List[Tuple[str, str]]:
     return nltk.pos_tag(get_words())
 
+# BUGGY NLTK
+##  @cached('TAGGED_SENTS')
+##  def get_tagged_sents() -> List[List[Tuple[str, str]]]:
+    ##  return nltk.pos_tag_sents(
+            ##  [nltk.wordpunct_tokenize(sent) for sent in get_sents()])
+
 
 @cached('SENT_STRUCT_PS')
-def get_sents_structs_ps() -> Tuple[List[Tuple], ndarray]:
-    global SENT_STRUCTS, SENT_STRUCTS_PS
-    if SENT_STRUCTS_PS is not None:
-        return SENT_STRUCTS, SENT_STRUCTS_PS
-    bag: Dict[Tuple, Any] = dict()
-    buf: List[str] = []
-    for word, tag in get_tagged_words():
-        buf.append(tag)
-        if tag == '.':
-            s: Tuple = tuple(buf)
-            bag[s] = bag.get(s, 0) + 1
-            buf = []
+def get_sent_structs_ps() -> Tuple[List[Tuple], ndarray]:
+
+    @cached('SENT_STRUCTS')
+    def get_sent_structs() -> Generator[Tuple, None, None]:
+        buf: List[str] = []
+        for word, tag in get_tagged_words():
+            buf.append(tag)
+            if tag == '.':
+                yield tuple(buf)
+                buf = []
+
+    bag = Counter(get_sent_structs())
+
     total: int = sum(bag.values())
+
     for s in bag:
         bag[s] /= total
-    SENT_STRUCTS_PS = np.array(list(bag.values()))
-    SENT_STRUCTS = list(bag.keys())
-    return SENT_STRUCTS, SENT_STRUCTS_PS
+
+    return list(bag.keys()), np.array(list(bag.values()), dtype='float64')
 
 
 def rand_sent_struct() -> List[str]:
-    structs, ps = get_sents_structs_ps()
+    structs, ps = get_sent_structs_ps()
     return choice(a=structs, p=ps)
 
 
 @cached('TAG_PS')
-def get_tags_ps() -> Dict[str, Dict[str, float]]:
-    global TAG_PS
-    if TAG_PS is not None:
-        return TAG_PS
-    TAG_PS = dict()
+def get_tag_ps() -> Dict[str, Dict[str, float]]:
+    ps: Dict[str, Dict[str, Union[int, float]]] = dict()
     for word, tag in get_tagged_words():
-        if TAG_PS.get(tag, None) is None:
-            TAG_PS[tag] = dict()
-        TAG_PS[tag][word] = TAG_PS[tag].get(word, 0) + 1
+        if ps.get(tag, None) is None:
+            ps[tag] = dict()
+        ps[tag][word] = ps[tag].get(word, 0) + 1
 
-    for tag in TAG_PS:
-        total = sum(TAG_PS[tag].values())
-        for word in TAG_PS[tag]:
-            TAG_PS[tag][word] /= total
-    return TAG_PS
+    for tag in ps:
+        total = sum(ps[tag].values())
+        for word in ps[tag]:
+            ps[tag][word] /= total
+    return ps
 
 
-def rand_word(tag: str) -> str:
+def rand_word(tag: Optional[str] = None) -> str:
+    tags_ps = get_tag_ps()
+    if tag is None:
+        tag = choice(a=tuple(tags_ps.keys()), p=tuple(tags_ps.values()))
     return choice(
-        a=tuple(get_tags_ps()[tag].keys()),
-        p=tuple(get_tags_ps()[tag].values()))
+        a=tuple(tags_ps[tag].keys()),
+        p=tuple(tags_ps[tag].values()))
 
 
-@cached('TOKEN_COUNTS')
-def get_chunks_counts(save=True, force=False) -> Counter:
-    return Counter(get_chunks(save=save, force=force))
+@cached('CHUNK_COUNTS')
+def get_chunk_counts() -> Counter:
+    return Counter(get_chunks())
 
 
-@cached('CHUNKS_PS')
-def get_chunks_ps(save=True, force=False) -> Dict[bytes, float]:
-    ps = dict(get_chunks_counts(force=force, save=save))
+@cached('CHUNK_PS')
+def get_chunk_ps() -> Dict[bytes, float]:
+    ps = dict(get_chunk_counts())
     no_tokens: int = sum(ps.values())
     for token in ps:
         ps[token] /= no_tokens
