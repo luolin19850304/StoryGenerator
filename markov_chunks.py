@@ -1,8 +1,8 @@
 # Standard Library
+from collections import ChainMap
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from time import time
-from collections import ChainMap
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Generator
 
 # 3rd Party
 import numpy as np
@@ -10,12 +10,12 @@ from numpy import ndarray
 from numpy.random import choice
 
 # My Code
-from utils import log, NO_CPUS, AVG_CHUNK_LEN, chunk, get_chunk_ps, get_nchunks_ps
+from utils import AVG_CHUNK_LEN, NO_CPUS, chunk, get_chunk_ps, get_nchunks_ps, log
 
 
-def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> str:
+def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> Generator[bytes, None, None]:
     start = time()
-    tokens: List[bytes] = [m.group(0) for m in chunk(seed)]
+    tokens: List[bytes] = [m.group(0) for m in list(chunk(seed))[-n:]]
     no_tokens = len(tokens)
     succ = np.array([0 for _ in range(n + 1)], dtype='uint32')
     ps: Dict[bytes, float] = get_chunk_ps()
@@ -27,6 +27,7 @@ def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> st
             task.result() for task in [
                 pool.submit(fn=get_nchunks_ps, n=i)
                 for i in range(n, 0, -1)]])
+    yield seed
 
     # token generation
     while no_tokens * AVG_CHUNK_LEN < max_len:
@@ -35,16 +36,22 @@ def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> st
             ngram = tuple(tokens[-m:])
             maybe_ps: Optional[Dict[bytes, float]] = lookup.get(ngram, None)
             if maybe_ps is not None and len(maybe_ps) > 1:
+                found = True
                 succ[m] += 1
-                tokens.append(choice(
+                next_chunk: bytes = choice(
                     a=list(maybe_ps.keys()),
                     p=list(maybe_ps.values()),
-                ))
-                found = True
+                )
+                yield next_chunk
+                tokens.append(next_chunk)
+                tokens = tokens[-n:]
                 break
         if not found:
             succ[0] += 1
-            tokens.append(choice(a=chunks, p=chunk_ps))
+            next_chunk = choice(a=chunks, p=chunk_ps)
+            yield next_chunk
+            tokens.append(next_chunk)
+            tokens = tokens[-n:]
         no_tokens += 1
 
     if show_metrics:
@@ -59,6 +66,3 @@ def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> st
             log.info('%-1d %-6.4f %-15d' % (i, succ[i] / no_gen_tokens, succ[i]))
 
     log.debug(f'[finished] generating text (took {time() - start:4.2f}s)')
-
-    # text (outcome)
-    return (b''.join(tokens)).decode('ascii', 'ignore')

@@ -1,8 +1,8 @@
 # Standard Library
-from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from collections import ChainMap
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from time import time
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Generator
 
 # 3rd Party
 import numpy as np
@@ -10,12 +10,12 @@ from numpy import ndarray
 from numpy.random import choice
 
 # My Code
-from utils import NO_CPUS, get_nchar_ps, get_char_ps, log
+from utils import NO_CPUS, get_char_ps, get_nchar_ps, log
 
 
-def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> str:
+def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> Generator[int, None, None]:
     start = time()
-    txt: bytearray = bytearray(seed)
+    txt: bytearray = bytearray(seed[-n:])
     succ: ndarray = np.array([0 for _ in range(n + 1)], dtype='uint32')
     ps: ndarray = get_char_ps()
     char_idx: ndarray = np.arange(128, dtype='ubyte')
@@ -26,22 +26,32 @@ def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> st
                 pool.submit(fn=get_nchar_ps, n=(i + 1))
                 for i in range(n, 0, -1)]])
 
-    while len(txt) < max_len:
+    for byte in seed:
+        yield byte
+
+    while max_len > 0:
+        max_len -= 1
         found = False
         for m in range(n, 0, -1):
-            chars: bytes = bytes(txt[-m:])
-            maybe_ps: Optional[Dict[bytes, float]] = lookup.get(chars, None)
+            maybe_ps: Optional[Dict[bytes, float]] = \
+                    lookup.get(bytes(txt[-m:]), None)
             if maybe_ps is not None and len(maybe_ps) > 1:
                 succ[m] += 1
-                txt.append(choice(
+                next_char = choice(
                     a=tuple(maybe_ps.keys()),
                     p=tuple(maybe_ps.values()),
-                ))
+                )
+                txt.append(next_char)
+                txt = txt[-n:]
                 found = True
+                yield next_char
                 break
         if not found:
             succ[0] += 1
-            txt.append(choice(a=char_idx, p=ps))
+            next_char = choice(a=char_idx, p=ps)
+            txt.append(next_char)
+            txt = txt[-n:]
+            yield next_char
 
     if show_metrics:
         # metrics

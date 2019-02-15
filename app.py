@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from os.path import join, abspath, dirname
-from typing import Dict, Union
+from typing import Dict, Union, List
 from time import time
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_from_directory, Response
 from markov_chunks import generate as genw
 from markov_chars import generate as genc
 from os import getenv
@@ -26,19 +26,34 @@ def index():
 
 @app.route("/", methods=['POST'])
 def story():
-    d: Dict[str, Union[str, int]] = request.get_json()
-    print(d)
-    return (genw if d.get('algo', 'word') == 'word' else genc)(
-        d.get('seed', '').encode('ascii', 'ignore'),
-        d.get('n', 6),
-        d.get('len', 5000))
+    d: Dict[str, Union[str, int, bool, List, Dict, None]] = request.get_json()
+    algo: str = d['algo']
+    if algo == 'word':
+        print('is word')
+
+        return Response(
+                map(lambda b: b.decode('ascii', 'ignore'),
+                    genw(seed=d['seed'].encode('ascii', 'ignore'),
+                        n=d['n'],
+                        max_len=d['max_len'])),
+                mimetype='text/plain')
+
+    elif algo == 'char':
+        return Response(
+                map(chr,
+                    genc(seed=d['seed'].encode('ascii', 'ignore'),
+                        n=d['n'],
+                        max_len=d['max_len'])),
+                mimetype='text/plain')
+    else:
+        raise Exception('unknown algorithm')
 
 
 # pre-load
 log.warning('[pre-loading] this should take < 1min ...')
 start = time()
-genw(n=8)
-genc(n=8)
+list(genw(n=8, max_len=10))
+list(genc(n=8, max_len=10))
 log.warn(f'[finished] pre-loading (took {time() - start:4.2f}s)')
 
 app.run(port=3000)

@@ -1,18 +1,20 @@
+# Standard Library
 import logging
 import lzma
 import pickle
 import re
-from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from collections import Counter
-from os import makedirs, listdir
-from os.path import dirname, abspath, isfile, isdir, join, relpath
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
+from os import listdir, makedirs
+from os.path import abspath, dirname, isdir, isfile, join, relpath
 from pathlib import Path
-from re import MULTILINE, IGNORECASE
+from re import IGNORECASE, MULTILINE
 from sys import getsizeof
 from threading import Lock, Semaphore
 from time import time
-from typing import List, Match, Iterable, Dict, Tuple, Any, Optional, Generator, Union
+from typing import Any, Dict, Generator, Iterable, List, Match, Optional, Tuple, Union
 
+# 3rd Party
 import nltk
 import numpy as np
 from numpy import ndarray
@@ -117,11 +119,12 @@ def root_path(*parts, mkparent=True, mkdir=False, mkfile=False) -> str:
 
 
 # noinspection PyDefaultArgument
-@cached('TEXT', keep=True, load=False, save=False)
+@cached('TEXT', keep=False, load=False, save=False)
 def get_text(files=[root_path('data', fname) for fname in listdir(root_path('data')) if fname.endswith('.txt')]) -> bytearray:
     log.debug(f'[loading] text from {len(files)} files')
     texts: bytearray = bytearray()
     lock = Lock()
+
     def read_file(path: str):
         start_file = time()
         fname = relpath(path)
@@ -206,7 +209,7 @@ def get_nchunks_ps(n=2) -> Dict[Tuple, Dict[bytes, float]]:
                 ps[words_before] = {next_word: 1}
             else:
                 ps[words_before][next_word] = \
-                        ps[words_before].get(next_word, 0) + 1
+                    ps[words_before].get(next_word, 0) + 1
         for ngram in ps:
             total = 0
             for count in ps[ngram].values():
@@ -292,7 +295,6 @@ def get_tagged_words() -> List[Tuple[str, str]]:
 @cached('SENT_STRUCT_PS')
 def get_sent_structs_ps() -> Tuple[List[Tuple], ndarray]:
 
-    @cached('SENT_STRUCTS')
     def get_sent_structs() -> Generator[Tuple, None, None]:
         buf: List[str] = []
         for word, tag in get_tagged_words():
