@@ -3,11 +3,7 @@ from collections import ChainMap
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from time import time
 from typing import Dict, List, Optional, Generator
-
-# 3rd Party
-import numpy as np
-from numpy import ndarray
-from numpy.random import choice
+from random import choices
 
 # My Code
 from utils import NO_CPUS, get_char_ps, get_nchar_ps, log
@@ -16,9 +12,9 @@ from utils import NO_CPUS, get_char_ps, get_nchar_ps, log
 def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> Generator[int, None, None]:
     start = time()
     txt: bytearray = bytearray(seed[-n:])
-    succ: ndarray = np.array([0 for _ in range(n + 1)], dtype='uint32')
-    ps: ndarray = get_char_ps()
-    char_idx: ndarray = np.arange(128, dtype='ubyte')
+    succ: List[int] = [0 for _ in range(128)]
+    ps: List[float] = get_char_ps()
+    char_idx: List[int] = list(range(128))
 
     with ThreadPool(max_workers=NO_CPUS, thread_name_prefix='markov/c') as pool:
         lookup = ChainMap(*[
@@ -37,10 +33,10 @@ def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> Ge
                     lookup.get(bytes(txt[-m:]), None)
             if maybe_ps is not None and len(maybe_ps) > 1:
                 succ[m] += 1
-                next_char = choice(
-                    a=tuple(maybe_ps.keys()),
-                    p=tuple(maybe_ps.values()),
-                )
+                next_char = choices(
+                    tuple(maybe_ps.keys()),
+                    tuple(maybe_ps.values()),
+                )[0]
                 txt.append(next_char)
                 txt = txt[-n:]
                 found = True
@@ -48,7 +44,7 @@ def generate(seed=b'That day', n=6, max_len=(1000 * 5), show_metrics=True) -> Ge
                 break
         if not found:
             succ[0] += 1
-            next_char = choice(a=char_idx, p=ps)
+            next_char = choices(char_idx, ps)[0]
             txt.append(next_char)
             txt = txt[-n:]
             yield next_char

@@ -4,15 +4,22 @@
 from os.path import join, abspath, dirname
 from typing import Dict, Union, List
 from time import time
-from flask import Flask, request, send_from_directory, Response
+from flask import Flask, request, Response, send_file
 from markov_chunks import generate as genw
 from markov_chars import generate as genc
 from os import getenv
 import logging
-from utils import log
+from utils import log, root_path
 
 logging.basicConfig(
-    level={'noset': 0, 'debug': 10, 'info': 20, 'warning': 30, 'error': 40, 'critical': 50}[getenv('LOG', 'info')],
+    level={
+        'noset': 0,
+        'debug': 10,
+        'info': 20,
+        'warning': 30,
+        'error': 40,
+        'critical': 50,
+    }[getenv('LOG', 'info')],
     format='%(levelname)s %(funcName)-13s %(lineno)3d %(message)s')
 
 ROOT: str = dirname(abspath(__file__))
@@ -21,7 +28,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return send_from_directory(join(ROOT, 'static'), 'index.html')
+    return send_file(root_path('static', 'index.html'))
 
 
 @app.route("/", methods=['POST'])

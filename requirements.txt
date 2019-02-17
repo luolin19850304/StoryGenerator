@@ -1,4 +1,2 @@
-numpy
 flask
 nltk
-gunicorn
